@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ko">
-<!-- v1.1.0 -->
+<!-- v1.1.2 -->
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -22,7 +22,7 @@
     <!-- Tistory.com Basic Css -->
     <link rel="stylesheet" href="./images/color.css?VERSION=7">
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./images/icomoon.css">
+    <link rel="stylesheet" href="./images/icomoon.css?ver=22.0">
     <link rel="stylesheet" href="./images/dynamicscrollspy.min.css?v=19">
 
     <link rel="stylesheet" href="./images/github.css">
@@ -32,10 +32,10 @@
     <!-- 기본 전체  변수 -->
     <script type="text/javascript">
     var updated = ""; // 업데이트 날짜 들어갈 문구
-    var BlogVersion = "1.1.0"; // 버전
+    var BlogVersion = "1.1.2"; // 버전
     </script>
 
-    <!-- 애드센스 >
+    <!-- 애드센스 -->
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
          (adsbygoogle = window.adsbygoogle || []).push({
@@ -43,7 +43,7 @@
               enable_page_level_ads: true
          });
     </script>
-    <//애드센스 -->
+    <!-- //애드센스 -->
   </head>
   <body id="[##_body_id_##]" data-spy="scroll">
     <s_t3>
@@ -256,15 +256,19 @@
 
               <s_index_article_rep>
                 <div class="cgroup group-list" id="indexList">
-                  <div class="text post-list">
-                    <p class="post-category">[##_article_rep_category_##]</p>
+                  <div class="text">
+                    <div class="post-list">
                     <a href="[##_article_rep_link_##]">
                       <div class="article-info">
                         <span class="title">[##_article_rep_title_##]</span>      
                       </div>
                     </a>
                     <s_rp_count><p class="cnt">&nbsp;([##_article_rep_rp_cnt_##])</p></s_rp_count>
+                    </div>
+                    <div class="post-list mt--2">
+                    <p class="post-category"><abbr title="[##_article_rep_category_##]">[##_article_rep_category_##]</abbr></p>                    
                     <p class="date">[##_article_rep_simple_date_##]</p>
+                    </div>
                   </div>
                 </div>
               </s_index_article_rep>
@@ -571,6 +575,28 @@
     </script>
 
     <script src="./images/script.js?VER=35"></script>
+
+    <!-- 페이지내의 검색 JavaScript -->.
+    <script src="./images/jquery.sieve.min.js"></script>
+    <script>
+      var searchTemplate = "";
+      searchTemplate = "<div class='input-group mb-3'><div class='input-group-prepend'><span class='input-group-text' id='basic-addon1'>검 색</span></div><input type='text' class='form-control' placeholder='여기에 단어를 적으세요' aria-label='단어검색' aria-describedby='basic-addon1'></div>";
+
+      $(".table-sieve").sieve({
+          searchTemplate: searchTemplate
+      });
+
+      $(".p-sieve").sieve({
+          searchTemplate: searchTemplate,
+          itemSelector: "section"
+      });
+
+      $(".p-sieves").sieve({
+          searchTemplate: searchTemplate,
+          itemSelector: "li"
+      });
+    </script>
+    <!-- //페이지내의 검색 JavaScript -->
 
     </s_t3>
   </body>

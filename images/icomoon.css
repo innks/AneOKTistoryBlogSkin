@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('https://tistory1.daumcdn.net/tistory/3088055/skin/images/icomoon.eot?g3b3s6');
-  src:  url('https://tistory1.daumcdn.net/tistory/3088055/skin/images/icomoon.eot?g3b3s6#iefix') format('embedded-opentype'),
-    url('https://tistory2.daumcdn.net/tistory/3088055/skin/images/icomoon.ttf?g3b3s6') format('truetype'),
-    url('https://tistory1.daumcdn.net/tistory/3088055/skin/images/icomoon.woff?g3b3s6') format('woff'),
-    url('https://tistory2.daumcdn.net/tistory/3088055/skin/images/icomoon.svg?g3b3s6#icomoon') format('svg');
+  src:  url('https://tistory3.daumcdn.net/tistory/3088055/skin/images/icomoon.eot?lsd9jp');
+  src:  url('https://tistory3.daumcdn.net/tistory/3088055/skin/images/icomoon.eot?lsd9jp#iefix') format('embedded-opentype'),
+    url('https://tistory4.daumcdn.net/tistory/3088055/skin/images/icomoon.ttf?lsd9jp') format('truetype'),
+    url('https://tistory2.daumcdn.net/tistory/3088055/skin/images/icomoon.woff?lsd9jp') format('woff'),
+    url('https://tistory3.daumcdn.net/tistory/3088055/skin/images/icomoon.svg?lsd9jp#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -236,3 +236,11 @@
 .icon-exclamation-circle:before { content: "\e8e6"; }
 .icon-arrow-circle-right:before { content: "\e8e7"; }
 .icon-external-link:before { content: "\e8e8"; }
+.icon-down-load:before { content: "\e8e9"; }
+.icon-zip:before { content: "\e8ea"; }
+.icon-dll:before { content: "\e8eb"; }
+.icon-exe:before { content: "\e8ec"; }
+.icon-hwp:before { content: "\e8ed"; }
+.icon-pdf:before { content: "\e8ee"; }
+.icon-word:before { content: "\e8ef"; }
+.icon-zip7:before { content: "\e8f0"; }
