@@ -266,10 +266,10 @@ main {
     padding-inline-start: 0;
 }
 
-.sub-menu ul li a {
+.sub-menu ul li a, .sub-submenu a {
     color: #212529;
 }
-.sub-menu ul li a:hover {
+.sub-menu ul li a:hover, .sub-submenu a:hover {
     color: #fa3420;
     text-decoration: none;
 }
@@ -277,7 +277,14 @@ main {
     margin: 3px 10px;
 }
 .sub-menu .link_tit {display: none;}
-
+.sub-submenu {}
+.sub-submenu hr {
+    margin: 12px 0;
+    height: 1px;
+    border: none;
+    background-color: #ddd;
+    background-image: repeating-linear-gradient(-45deg, #fff, #fff 4px, transparent 4px, transparent 8px);
+}
 
 .content-wrap-page {
     box-sizing: border-box;
@@ -479,8 +486,8 @@ p.mt-60 {margin-top: 60px;}
 .entry-content h1, .entry-content h2 {letter-spacing: -1px;}
 .entry-content h2:after {content: ''; display: block; margin-top: 0; width: 100px; height: 1px; background-color: #dee2e6;}
 .entry-content h3:after {content: ''; display: block; margin-top: 0; width: 50px; height: 1px; background-color: #dee2e6;}
-.entry-content fieldset {border-color: #f8f8f8; border-radius: 5px;}
-.entry-content legend {padding: 0 10px;}
+.entry-content fieldset {border: 1px solid #999; border-radius: 5px; padding: .5rem .75rem 0;}
+.entry-content legend {padding: 0 10px;width:initial;}
 
 /* 기타 추가 */
 .entry-content a, .entry-content a:visited, .entry-content a:-webkit-any-link {
@@ -501,6 +508,9 @@ p.mt-60 {margin-top: 60px;}
 .entry-content a[target=_blank] {margin-right: 5px;}
 .entry-content a[target=_blank]:after {content: '\e8e8'; font-family: 'icomoon'; font-size: 80%; margin-left: 4px;}
 .entry-content a[target=_blank]:before {content: "#"; margin-right: 2px;}
+.entry-content a.bea-none:before,
+.entry-content a.bea-none:after {content:'';}
+.entry-content a.bea-none {border-bottom: 0;}
 
 .entry-content code {
     overflow-wrap: break-word;
@@ -511,10 +521,17 @@ p.mt-60 {margin-top: 60px;}
     border-radius: 3px;
     font-size: .85rem;
 }
-.entry-content code.bootstrap {
+.entry-content code.bootstrap, .entry-content code.b, .entry-content code.b4 {
     color: #e83e8c;
     background: #fff;
     padding: 2px 0;
+}
+.entry-content code.b3 {
+    padding: 2px 4px;
+    font-size: 80%;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 4px;
 }
 
 .entry-content .table {border: 1px solid #dee2e6;}
