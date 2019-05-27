@@ -498,27 +498,46 @@ p.mt-60 {margin-top: 60px;}
 .entry-content .add-info { float: right; margin: 10px 2%;}
 .entry-content .add-info ul {list-style: none; margin: 0; padding: 0}
 .entry-content .add-info ul li { font-size: 13px; position: relative; padding-left: 20px;}
+.entry-content .add-info *, .entry-content .add-info *:after, .entry-content .add-info *:before {
+    box-sizing: inherit;
+}
 .entry-content .add-info ul li:not(:last-of-type):before {
     content: "";
     position: absolute;
     height: 100%;
     width: 1px;
     left: 3px;
-    top: calc(.5em - 4px);
+    top: calc(.7em - 3px);
     background-color: #f73859;
 }
-.entry-content .add-info ul li .me {
-    display: flex;
-}
-.entry-content .add-info ul li .me p {
-    line-height: 1.6;
+.entry-content .add-info ul li div {
+    padding: 0 10px 10px 0;
     flex-basis: 100%;
     margin-top: -3px;
-    margin-bottom: 10px;
+    margin-bottom: 3px;
+}
+.entry-content .add-info ul li div h5 {
+    line-height: 1.6;
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: 0;
+    letter-spacing: 0;
+    display: block;
+    margin-bottom: 2px;
+}
+.entry-content .add-info ul li div span, .entry-content .add-info ul li div p {
+    line-height: 1.6;
+    font-size: 13px;
+    margin-top: -3px;
+    letter-spacing: 0;
+    color: #303030;
+    margin-bottom: 0;
+    word-break: break-word;
+    display: block;
 }
 .entry-content .add-info ul li:after {
     content: "";
-    top: calc(.5em - 4px);
+    top: calc(.7em - 3px);
     left: 0;
     position: absolute;
     display: inline-block;
