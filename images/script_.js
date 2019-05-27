@@ -18,18 +18,18 @@ function openbottom(el) {
 
 $( document ).ready( function() {
 var ibOffset = $( '.sidebar' ).offset();
-  $( window ).scroll( function() {
-    if ( $( document ).scrollTop() > ibOffset.top ) {
-      $( '.sidebar' ).addClass( 'sidebar-affix' );
+	$( window ).scroll( function() {
+	  if ( $( document ).scrollTop() > ibOffset.top ) {
+	    $( '.sidebar' ).addClass( 'sidebar-affix' );
       $( '.backtotop' ).addClass( 'on' );
       $( '.toc-backtotop' ).addClass( 'on' );
-    }
-    else {
-      $( '.sidebar' ).removeClass( 'sidebar-affix' );
+	  }
+	  else {
+	    $( '.sidebar' ).removeClass( 'sidebar-affix' );
       $( '.backtotop' ).removeClass( 'on' );
       $( '.toc-backtotop' ).removeClass( 'on' );
-    }
-  });
+	  }
+	});
 });
 
 $(document).ready(function() {
