@@ -108,13 +108,19 @@
         // 추가 {
         var n = $(this).html(),
         htopword;
+
+        if (n.includes("<i")) {
+          var nt = n.substr(n.indexOf("<i"), (n.indexOf("</i>") + 4)-n.indexOf("<i")); // <i class="icon-home"></i> 를 알아내기
+          n = n.replace(nt, ""); // <i class="icon-home"></i> 를 지우기
+        };
+
         var s = n
           .trim()
           .replace("<em>", "")
           .replace("</em>", "")
           .replace("<code>", "")
           .replace("</code>", "");
-        
+
         if (s.includes("&")) htopword = s.substr(0, s.indexOf("&"));
         else if (s.includes("<")) htopword = s.substr(0, s.indexOf("<"));
         else htopword = s;
@@ -152,6 +158,11 @@
 
           // 추가 {
           var i = $(this).html(),hzword;
+
+          if (i.includes("<i")) {
+          var itstr = i.substr(i.indexOf("<i"), (i.indexOf("</i>") + 4)-i.indexOf("<i")); // <i class="icon-home"></i> 를 알아내기
+          i = i.replace(itstr, ""); // <i class="icon-home"></i> 를 지우기
+          };
           var o = i
             .trim()
             .replace("<em>", "")

@@ -153,45 +153,102 @@ main { display: block;}
 .sidebar-panel { display: block; }
 .sidebar-panel-active { display: none; }
 
+.tt_category li a.link_tit {
+  display:none;
+}
 .sub-menu {
-    border-bottom: initial !important;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
-    margin: 10px 0 10px;
-    padding: 16px 0;
-    background: #fff !important;
-    border-bottom: 1px solid #ddd;
-    text-align: center;
-    font-size: 13px;
+  border-bottom: initial !important;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
+  margin: 10px 0 10px;
+  padding: 16px 0;
+  background: #fff !important;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  font-size: 13px;
 }
 .sub-menu ul {
-    list-style: none;
-    display: contents;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  padding-inline-start: 0;
 }
-.sub-menu ul li ul li{
-    display: inline-block;
+.category_list li {
+  display: inline-block;
 }
-.sub-menu ul {
-    padding-inline-start: 0;
+.category_list li a {
+  display: inline-block;
+  color: #212529;
+  text-decoration: none;
+  margin: 3px 7px 3px 14px;
 }
+.category_list li a:hover {
+  color: #fa3420;
+}
+/* 카테고리 icon 표시 { */
+.category_list li:nth-child(1) a:before {
+  content: '\e858';font-family: 'icomoon'; font-size: 12px;
+}
+.category_list li:nth-child(2) a:before {
+  content: '\e88d';font-family: 'icomoon'; font-size: 12px;
+}
+.category_list li:nth-child(3) a:before {
+  content: '\e89f';font-family: 'icomoon'; font-size: 12px;
+}
+.category_list li:nth-child(4) a:before {
+  content: '\e8b3';font-family: 'icomoon'; font-size: 12px;
+}
+.category_list li:nth-child(5) a:before {
+  content: '\e8d8';font-family: 'icomoon'; font-size: 12px;
+}
+.sub_category_list li:nth-child(1) a:before {
+  content: '\e810 \e80e' !important ; font-family: 'icomoon'; font-size: 12px;
+}
+.sub_category_list li:nth-child(2) a:before {
+  content: '\e8bc' !important ;font-family: 'icomoon'; font-size: 12px;
+}
+/* 카테고리 icon 표시 } */
 
-.sub-menu ul li a, .sub-submenu a {
-    color: #212529;
+.sub_category_list {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;  
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  font-size: 13px;
+  text-align: center;
+  z-index: 999;
+  margin-left: 0px;
 }
-.sub-menu ul li a:hover, .sub-submenu a:hover {
-    color: #fa3420;
-    text-decoration: none;
+.category_list li:hover .sub_category_list {
+  display: block;
 }
-.sub-menu ul li ul li a {
-    margin: 3px 10px;
+.sub_category_list li {
+  display: block;
 }
-.sub-menu .link_tit {display: none;}
-.sub-submenu {}
+.sub_category_list li a {
+  display: block;
+  color: #212529;
+  text-align: left;
+  padding: 10px 7px 10px 0;
+  text-decoration: none;  
+}
 .sub-submenu hr {
-    margin: 12px 0;
-    height: 1px;
-    border: none;
-    background-color: #ddd;
-    background-image: repeating-linear-gradient(-45deg, #fff, #fff 4px, transparent 4px, transparent 8px);
+  margin: 12px 0;
+  height: 1px;
+  border: none;
+  background-color: #ddd;
+  background-image: repeating-linear-gradient(-45deg, #fff, #fff 4px, transparent 4px, transparent 8px);
+}
+.sub-submenu a {
+  color: #212529;
+  text-decoration: none;
+  margin: 3px 10px 3px 20px;
+}
+.sub-submenu a:hover {
+  color: #fa3420;
+  text-decoration: none;
 }
 
 .content-wrap-page {
@@ -454,15 +511,15 @@ p.mt-60 {margin-top: 60px;}
 .entry-content pre>code::-webkit-scrollbar-thumb:window-inactive,
 .entry-content .example-memo::-webkit-scrollbar-thumb:window-inactive {background:rgba(136,136,136,0.4)}
 .entry-content pre>code.hljs {padding: 0 1em .7em;}
-.entry-content pre::before {content: "Source Code"; position: absolute;top: 0;left: 0;text-transform: uppercase;color:#fff;
-                            background-color: #000;padding: 0 10px;}
-.entry-content pre.html::before {content: "HTML Code"!important;}
-.entry-content pre.css::before {content: "CSS Code"!important;}
-.entry-content pre.js::before {content: "JavaScript Code"!important;}
-.entry-content pre.javascript::before {content: "JavaScript Code"!important;}
+.entry-content pre::before {content: "Source"; position: absolute;top: 0;left: 0;text-transform: uppercase; color:#212529;
+                            padding: 3px 10px 0; line-height: 21px; font-weight: 700; font-family: "Segoe UI", sans-serif;}
+.entry-content pre.html::before {content: "HTML"!important;}
+.entry-content pre.css::before {content: "CSS"!important;}
+.entry-content pre.js::before {content: "JavaScript"!important;}
+.entry-content pre.javascript::before {content: "JavaScript"!important;}
 .entry-content pre.bash::before {content: "Bash"!important;}
-.entry-content .example {position: relative;padding: 5px;margin: 0 0 15px;border: 1px solid rgba(0,0,0,.125);
-    background-color: #f8f8F8;border-radius: .25rem;}
+.entry-content .example {position: relative; padding: 5px; margin: 0 0 15px; border: 1px solid rgba(0,0,0,.125);
+    background-color: #f8f8F8; border-radius: .25rem;}
 .entry-content .example-top {position: relative;padding: 5px;margin: 0 0 -5px;border: 1px solid rgba(0,0,0,.125);border-bottom: 0;
     background-color: #f8f8F8;border-top-left-radius: .25rem;border-top-right-radius: .25rem;z-index: 10;}
 .entry-content .example-memo {background-color: #fff;padding: 1rem; overflow-x:auto;}
@@ -474,15 +531,16 @@ p.mt-60 {margin-top: 60px;}
 .entry-content .protect-fieldset button {position: absolute; top: 0; right: 0; z-index: 2; width: 50px; height: 50px;
     font-size: inherit; text-align: center; background-color: transparent; border: 0; cursor: pointer;}
 
-.entry-content pre figcaption { position: relative; font-size: 13px; color: #4d4d4c; line-height: .45;
-    margin: -32px -16px 1rem 95px; padding: 1px .5rem 0; background: #eee; border-bottom: 1px solid rgba(0,0,0,.125);}
+.entry-content pre figcaption { position: relative; font-size: 13px; color: #4d4d4c; line-height: 8px;
+    margin: -32px -16px 1rem 95px; padding: 1px .5rem 0; background: #eee; /* border-bottom: 1px solid rgba(0,0,0,.125); */
+    border-left: 1px solid #eee;}
 .entry-content pre figcaption:before, .entry-content pre figcaption:after {
     content: " "; display: table;}
-.entry-content pre.html figcaption { margin-left: 80px;}
-.entry-content pre.css figcaption { margin-left: 70px;}
+.entry-content pre.html figcaption { margin-left: 45px;}
+.entry-content pre.css figcaption { margin-left: 32px;}
 .entry-content pre.js figcaption, 
-.entry-content pre.javascript figcaption { margin-left: 125px;}
-.entry-content pre.bash figcaption { margin-left: 40px;}    
+.entry-content pre.javascript figcaption { margin-left: 88px;}
+.entry-content pre.bash figcaption { margin-left: 45px;}    
 
 .entry-content hr { margin: 40px 0; height: 3px; border: none; background-color: #ddd;
     background-image: repeating-linear-gradient(-45deg, #fff, #fff 4px, transparent 4px, transparent 8px);}
@@ -754,6 +812,14 @@ p.mt-60 {margin-top: 60px;}
         margin-top: 0;
         margin-bottom: 15px;
     }
+
+    .sub_category_list li {
+        display: inline-block;
+    }
+    .sub_category_list li a {
+        display: inline-block;
+        text-align: center;
+    }
    
     .entry-content {font-family: "Segoe UI", "Noto Sans DemiLight", 'Apple SD Gothic Neo', Helvetica, sans-serif; /* 영어 폰트 우선 */
     letter-spacing: .4px;
@@ -819,8 +885,6 @@ p.mt-60 {margin-top: 60px;}
 .links:nth-child(1) em:after{content: '02';}
 .links:nth-child(2) em:after{content: '03';}
 */
-
-ul.category_list li:nth-of-type(0) a:before {content: '\e858';font-family: 'icomoon';}
 
 /*
  * callout
