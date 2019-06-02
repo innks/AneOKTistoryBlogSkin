@@ -458,14 +458,14 @@
                 <div class="powered-by">Powered by <a class="text" href="https://hexo.io/">Hexo</a> v3.---</div>
                 <span class="post-meta-divider">|</span>
                 <div class="theme-info">Theme – <a class="text" href="https://theme-next.org">NexT.Gemini</a> v7.---</div>
-                <div class=""><a class="text" href="https://www.tistory.com/">Tistory</a> skin change : <a class="text" href="https://aneok.tistory.com/">AneOK <small class="gr">blog</small></a>
+                <div class=""><a class="text" href="https://www.tistory.com/">Tistory</a> skin change : <a class="text" href="https://aneok.tistory.com/">AneOK <small class="gr">blog</small></a> <a href="[##_blog_link_##]manage/" target="_top" title="Login → [##_blog_link_##]manage/"><i class="icon-user"></i></a> 
                   <script type='text/javascript'>
-                  document.write("v" + BlogVersion);
+                  document.write("v" + BlogVersion + "<br /><p style='font-size:10px;'>write : " + screen.width + ', height: ' + screen.height + "</p>");
                   </script>
                 </div>
                 <div class="footer-counter">
                   <script id="_waugyp">var _wau = _wau || []; _wau.push(["small", "dfj0xgk3px", "gyp"]);</script><script async src="//waust.at/s.js"></script>
-                  <a href="https://info.flagcounter.com/ux7n"><img src="https://s01.flagcounter.com/count/ux7n/bg_f7f7f7/txt_999999/border_f7f7f7/columns_3/maxflags_3/viewers_3/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>                  
+                  <a href="https://info.flagcounter.com/ux7n"><img src="https://s01.flagcounter.com/count/ux7n/bg_f7f7f7/txt_999999/border_f7f7f7/columns_3/maxflags_3/viewers_3/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>                 
                 </div>
               </div>
             </footer>
@@ -628,12 +628,12 @@
 
     $(".p-sieve").sieve({
       searchTemplate: searchTemplate,
-      itemSelector: "section"
+      itemSelector: ".keyword" // 페이지내에 keyword 클래스안을 검색합니다. 검색후 나머지 keyword 클래스는 숨깁니다.
     });
 
     $(".p-sieves").sieve({
       searchTemplate: searchTemplate,
-      itemSelector: "li"
+      itemSelector: "li" // li 태그 안을 검색합니다. 검색후 나머지 페이지내에 모든 li는 숨깁니다.
     });
     </script>
     <!-- } 페이지내의 검색 JavaScript -->

@@ -480,7 +480,7 @@ p.mt-60 {margin-top: 60px;}
 .entry-content a[target=_blank]:before {content: "#"; margin-right: 2px;}
 .entry-content a.a-none:before,
 .entry-content a.a-none:after {content:''; margin-right: 0; margin-left: 0;}
-.entry-content a.a-none {border-bottom: 0;}
+.entry-content a.a-none {border-bottom: 0; margin-right: 0}
 .entry-content a.a-none.img img,
 .entry-content .img img {
     padding: .25rem;
