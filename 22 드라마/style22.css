@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
 #movielist {padding:0;position:relative}
 #movielist ul.posters {padding:10px 0 0;list-style:none;margin:0 auto;width: 100%;}
 
@@ -24,20 +25,29 @@
 #movielist ul.posters li .cont .sbj a {color:#212529; text-decoration: underline;}
 #movielist ul.posters li .cont .sbj a:hover {color:#007bff;}
 #movielist ul.posters li .cont .sbj span { font-size: 11px; padding: 0 4px 0 3px; line-height: 15px; margin-left: 5px; color: #fff;}
-#movielist ul.posters li .cont .sbj span.all {background-color: #3da147;}
-#movielist ul.posters li .cont .sbj span.ax12 {background-color: #22a2dc;}
-#movielist ul.posters li .cont .sbj span.ax15 {background-color: #efa126;}
-#movielist ul.posters li .cont .sbj span.ax18 {background-color: #cb2126;}
-#movielist ul.posters li .cont .sbj span.axnot {background-color: #555;}
+#movielist ul.posters li .cont .sbj a.a-mobi,
+#movielist ul.posters li .cont .sbj a:hover.a-mobi {text-decoration: none;}
+
+#movielist ul.posters li .poster .hovercont ul li span.all,
+#movielist ul.posters li .poster .hovercont ul li span.ax12, 
+#movielist ul.posters li .poster .hovercont ul li span.ax15,
+#movielist ul.posters li .poster .hovercont ul li span.ax18, 
+#movielist ul.posters li .poster .hovercont ul li span.axnot {font-size: 11px;color: #fff;padding: 0 3px; margin-right: 0}
+#movielist ul.posters li .poster .hovercont ul li span.all {background-color: #3da147;}
+#movielist ul.posters li .poster .hovercont ul li span.ax12 {background-color: #22a2dc;}
+#movielist ul.posters li .poster .hovercont ul li span.ax15 {background-color: #efa126;}
+#movielist ul.posters li .poster .hovercont ul li span.ax18 {background-color: #cb2126;}
+#movielist ul.posters li .poster .hovercont ul li span.axnot {background-color: #555;}
 
 #movielist ul.posters li .cont {font-size:12px;font-weight:500;padding:7px 0 0 0;position:relative; margin: 0;}
-#movielist ul.posters li .cont .sbj {white-space: nowrap; overflow: hidden; text-overflow: ellipsis;height:24px;line-height:24px;text-align:center;color:#111;font-weight:700;padding:0 5px;margin:1px 0 5px;font-size: 14px;}
+#movielist ul.posters li .cont .sbj {white-space: nowrap; overflow: hidden; text-overflow: ellipsis;height:24px;line-height:24px;text-align:center;color:#111;font-weight:700;padding:0 5px;margin:1px 0 5px;font-size: 15px;}
 #movielist ul.posters li .cont .sbjsub {font-size: 11px; line-height: 13px; font-weight: 400; text-align: center; margin-top: -5px; margin-bottom: 8px; color: #999;}
 
 #movielist ul.posters li .cont .naverstar {margin-top:6px;padding:0;text-align:center; margin: 0; height: 15px;}
 #movielist ul.posters li .cont .naverstar .small_star {display:inline-block;position:relative;width:100px;height:15px;background: url('https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory&fname=http%3A%2F%2Fcfile28.uf.tistory.com%2Fimage%2F99B978345CF3B4DC248B18') 0 0 no-repeat;text-align:left;}
 #movielist ul.posters li .cont .naverstar .small_star .starval {position:absolute;width:100px;height:15px;background: url('https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory&fname=http%3A%2F%2Fcfile5.uf.tistory.com%2Fimage%2F99541A3B5CF3B4DD0E22B6') 0 0px no-repeat;left:0;top:0;text-align:left;}
-#movielist ul.posters li .cont .rate {text-align:center;font-size:14px;color:#777; margin: 7px 0 10px; line-height: 17px;}
+#movielist ul.posters li .cont .rate {text-align:center;font-size:14px;color:#777; margin: 12px 0 10px; line-height: 14px;}
+#movielist ul.posters li .cont .jum {font-family: 'Anton', sans-serif; color:#212529; font-size:110%; letter-spacing: 1px}
 
 #movielist ul.posters li .cont .ctrlbox {margin:0;background:#f9f9f9;height:auto}
 #movielist ul.posters li .cont .ctrlbox:after {content:""; display:block;float:none;clear:both;} 

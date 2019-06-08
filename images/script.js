@@ -177,5 +177,23 @@ $(document).ready(function() {
   var $cnt = $category.text();
   var $cnt_num = $cnt.substr(1 , $cnt.length - 2);
         
-  $('.category-cnt-num').append($cnt_num);
+  $('.category-cnt-num').append($cnt_num);  
+});
+
+$(document).ready(function() {
+  // 글 출력이 있는 경우 썸네일 제목 배경 표시
+  if ($('#post').length != false) {
+    var seoImage = $('meta[property="og:image"]').attr('content');
+    var seoArticleSection = $('meta[property="article:section"]').attr('content');
+    if (seoImage != undefined && seoImage != false) {
+      $('.group-border .inner_header').css({
+        "background-image": "url(" + seoImage + ")"
+      });
+      $('.group-border').addClass('group_cover');
+      $('.asection').html(seoArticleSection);
+    } else {
+      $('.group-border').addClass('group_common');
+      $('.asection').html(seoArticleSection);
+    }
+  }    
 });

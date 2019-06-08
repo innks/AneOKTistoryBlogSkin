@@ -1,0 +1,218 @@
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Kakao WebFont Test Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="../images/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="../images/bootstrap.min.css?VERSION=4.3.1">
+
+	<!-- script src="./script25.js"></script -->
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<div id="movielist">
+<ul class="posters row">
+
+<script src="https://tistory2.daumcdn.net/tistory/3088055/skin/images/script25.js?v=1"></script>
+<link rel="stylesheet" href="https://tistory3.daumcdn.net/tistory/3088055/skin/images/style25.css?v=1">
+
+
+<script>
+//<![CDATA[
+
+var movie = [
+
+// '제목','부제목','이미지주소','개봉','시간','등급','장르','나라', 평점, 'URL', 종류(0:영화, 1:드라마), 추천 , 시청률
+
+['뿌리깊은나무', // '제목'
+'Tree With Deep Roots', // '부제목'
+'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory&fname=http%3A%2F%2Fcfile6.uf.tistory.com%2Fimage%2F99EE973C5CFBDE1637E4A6',
+'2011', // 년도 (영화시 '개봉날자 2019.03.20')
+'SBS | 24부작', // '편성' (영화시 '시간')
+'15세이상관람가',
+'드라마,사극',
+'한국', // '국가'
+9.2, // (점수) 퍼센트
+'https://programs.sbs.co.kr/drama/rootedtree', // 맥스무비, 네이버 영화 & 공식 URL
+1, // 종류 (0:영화, 1:드라마)
+0, // 추천 (0, 1:추천)
+25.4], // (시간)number - 시청률 (영화시 시간)
+
+// ----------------------
+['미안하다, 사랑한다', // '제목'
+'Sorry, I Love You', // '부제목'
+'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory&fname=http%3A%2F%2Fcfile21.uf.tistory.com%2Fimage%2F999F61335CF3C46008DA30',
+'2004', // 년도 (영화시 '개봉날자 2019.03.20')
+'KBS 16부작', // '편성' (영화시 '개봉')
+'15세이상관람가',
+'드라마,로맨스',
+'한국', // '국가'
+9.17, // (점수) 퍼센트
+'http://program.kbs.co.kr/2tv/drama/misa/pc/', // 맥스무비, 네이버 영화 & 공식 URL
+1, // 종류 (0:영화, 1:드라마)
+0, // 추천 (0, 1:추천)
+17.7], // (시간)number - 시청률 (영화시 시간)
+
+// ----------------------
+['포도밭 그 사나이', // '제목'
+'Grapery The Man', // '부제목'
+'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory&fname=http%3A%2F%2Fcfile9.uf.tistory.com%2Fimage%2F99637F3B5CFBEB5D1D4AA3',
+'2006', // 년도 (영화시 '개봉날자 2019.03.20')
+'KBS 16부작', // '편성' (영화시 '개봉')
+'15세이상관람가',
+'드라마,로맨스,코미디',
+'한국', // '국가'
+7.72,  // (점수) 퍼센트
+'https://movie.naver.com/movie/bi/mi/basic.nhn?code=62623', // 맥스무비, 네이버 영화 & 공식 URL
+1, // 종류 (0:영화, 1:드라마)
+0, // 추천 (0, 1:추천)
+14.1], // (시간)number - 시청률 (영화시 시간)
+
+// ----------------------
+['시그널', // '제목'
+'signal', // '부제목'
+'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory&fname=http%3A%2F%2Fcfile28.uf.tistory.com%2Fimage%2F99C3B8445CF3C64D189080',
+'2016',  // 년도 (영화시 '개봉날자 2019.03.20')
+'tvN 16부작', // '편성' (영화시 '개봉')
+'15세이상관람가',
+'드라마,판타지,SF,액션,현대시대',
+'한국', // '국가'
+7.68,  // (점수) 퍼센트
+'http://program.tving.com/tvn/signal', // 맥스무비, 네이버 영화 & 공식 URL
+1, // 종류 (0:영화, 1:드라마)
+0, // 추천 (0, 1:추천)
+12.5], // (시간)number - 시청률 (영화시 시간)
+
+// ----------------------
+['미생', // '제목'
+'未生, Incomplete Life', // '부제목'
+'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory&fname=http%3A%2F%2Fcfile22.uf.tistory.com%2Fimage%2F994B114D5CF4029811F216',
+'2014', // 년도 (영화시 '개봉날자 2019.03.20')
+'tvN 20부작', // '편성' (영화시 '개봉')
+'15세이상관람가',
+'드라마,현대시대',
+'한국', // '국가'
+8.15, // (점수) 퍼센트
+'http://program.tving.com/tvn/misaeng/', // 맥스무비, 네이버 영화 & 공식 URL
+1, // 종류 (0:영화, 1:드라마)
+0, // 추천 (0, 1:추천)
+8.2], // (시간)number - 시청률 (영화시 시간)
+
+// ----------------------
+['도깨비', // '제목'
+'goblin', // '부제목'
+'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory&fname=http%3A%2F%2Fcfile9.uf.tistory.com%2Fimage%2F99C3084D5CFBEB5D0102D0',
+'2016', // 년도 (영화시 '개봉날자 2019.03.20')
+'tvN 16부작 + 3부작', // '편성' (영화시 '개봉')
+'15세이상관람가',
+'드라마,로맨스,판타지,코미디,현대시대',
+'한국', // '국가'
+9.25, // (점수) 퍼센트
+'http://program.tving.com/tvn/dokebi', // 맥스무비, 네이버 영화 & 공식 URL
+1, // 종류 (0:영화, 1:드라마)
+0, // 추천 (0, 1:추천)
+20.5], // (시간)number - 시청률 (영화시 시간)
+
+// ----------------------
+['궁', // '제목'
+'宮: Princess Hours, 2006', // '부제목'
+'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory&fname=http%3A%2F%2Fcfile3.uf.tistory.com%2Fimage%2F99B5F9385CFBEB5D045706',
+'2006', // 년도 (영화시 '개봉날자 2019.03.20')
+'MBC 24부작', // '편성' (영화시 '개봉')
+'12세이상관람가',
+'드라마,로맨스,판타지,코미디,현대시대',
+'한국', // '국가'
+7.23, // (점수) 퍼센트
+'http://www.imbc.com/broad/tv/drama/gung/', // 맥스무비, 네이버 영화 & 공식 URL
+1, // 종류 (0:영화, 1:드라마)
+0, // 추천 (0, 1:추천)
+16.2], // (시간)number - 시청률 (영화시 시간)
+
+// ----------------------
+['추노', // '제목'
+'推奴', // '부제목'
+'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory&fname=http%3A%2F%2Fcfile22.uf.tistory.com%2Fimage%2F999E70465CFBEB5D1CC962',
+'2010', // 년도 (영화시 '개봉날자 2019.03.20')
+'KBS 24부작', // '국가', '편성' (영화시 '개봉')
+'15세이상관람가',
+'드라마,사극',
+'한국', // '국가'
+8.61, // (점수) 퍼센트
+'https://movie.naver.com/movie/bi/mi/basic.nhn?code=71678', // 맥스무비, 네이버 영화 & 공식 URL
+1, // 종류 (0:영화, 1:드라마)
+0, // 추천 (0, 1:추천)
+37.1], // (시간)number - 시청률 (영화시 시간)
+
+// ----------------------
+['바람의 화원', // '제목'
+'The Painter of the Wind', // '부제목'
+'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory&fname=http%3A%2F%2Fcfile6.uf.tistory.com%2Fimage%2F990654415CF8ABA508BEBF',
+'2008', // 년도 (영화시 '개봉날자 2019.03.20')
+'SBS 20부작 + 2부작', // '국가', '편성' (영화시 '개봉')
+'15세이상관람가',
+'드라마,로맨스,사극',
+'한국', // '국가'
+7.11, // (점수) 퍼센트
+'https://programs.sbs.co.kr/drama/hwawon/about/53922', // 맥스무비, 네이버 영화 & 공식 URL
+1, // 종류 (0:영화, 1:드라마)
+0, // 추천 (0, 1:추천)
+16.6], // (시간)number - 시청률 (영화시 시간)
+
+// ----------------------
+['선덕여왕', // '제목'
+'The Great Queen Seondeok', // '부제목'
+'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory&fname=http%3A%2F%2Fcfile3.uf.tistory.com%2Fimage%2F998131415CF8ABA505FD1C',
+'2009', // 년도 (영화시 '개봉날자 2019.03.20')
+'MBC 62부작 + 1부작', // '국가', '편성' (영화시 '개봉')
+'15세이상관람가',
+'드라마,사극',
+'한국', // '국가'
+8.55, // (점수) 퍼센트
+'http://www.imbc.com/broad/tv/drama/seonduk/concept/', // 맥스무비, 네이버 영화 & 공식 URL
+1, // 종류 (0:영화, 1:드라마)
+0, // 추천 (0, 1:추천)
+43.6], // (시간)number - 시청률 (영화시 시간)
+
+// ----------------------
+['별에서 온 그대', // '제목'
+'My Love From the Star', // '부제목'
+'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory&fname=http%3A%2F%2Fcfile6.uf.tistory.com%2Fimage%2F99776A445CF8BDBD130C9F',
+'2013', // 년도 (영화시 '개봉날자 2019.03.20')
+'SBS 21부작 + 1부작', // '국가', '편성' (영화시 '개봉')
+'15세이상관람가',
+'드라마,로맨스,판타지,SF,코미디,현대시대',
+'한국', // '국가'
+8.05, // (점수) 퍼센트
+'https://programs.sbs.co.kr/drama/lovefromstar', // 맥스무비, 네이버 영화 & 공식 URL
+1, // 종류 (0:영화, 1:드라마)
+0, // 추천 (0, 1:추천)
+28.1], // (시간)number - 시청률 (영화시 시간)
+
+// ----------------------
+['더 패키지', // '제목'
+'the Package', // '부제목'
+'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory&fname=http%3A%2F%2Fcfile29.uf.tistory.com%2Fimage%2F99380A445CF8BDBD1ADD1F',
+'2017', // 년도 (영화시 '개봉날자 2019.03.20')
+'jtbc 12부작', // '국가', '편성' (영화시 '개봉')
+'15세이상관람가',
+'드라마,로맨스,가족,현대시대',
+'한국', // '국가'
+5.27, // (점수) 퍼센트
+'http://tv.jtbc.joins.com/thepackage', // 맥스무비, 네이버 영화 & 공식 URL
+1, // 종류 (0:영화, 1:드라마)
+0, // 추천 (0, 1:추천)
+2.3], // (시간)number - 시청률 (영화시 시간)
+
+];
+
+MovieList();
+//]]>
+</script>
+
+</ul>
+</div>  
+</body>
+</html>
+

@@ -50,6 +50,9 @@
   .nav > .active > .nav {
     display: block;
   }
+  .nav a{
+    color: #212529; 
+  }
   .nav a:hover{
     color: #fc6423; 
     text-decoration: underline;
@@ -62,94 +65,3 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
-
-/* #scrollspy {overflow: auto;}
-#scrollspy ul {
-	max-width: 250px;
-    text-align: left;
-    padding-left: 10px;
-}
-#scrollspy ul > ul {
-  padding-left: 0;
-}
-#scrollspy .hidden-print{display:block;position:static;clear:both}
-#scrollspy .nav .active .nav{display:none}
-#scrollspy a{  transition-duration: 0.2s;
-  transition-timing-function: ease-in-out;
-  transition-delay: 0s;
-  transition-property: all;
-  color: #666;
-  border-bottom-color: #ccc;}
-#scrollspy a:focus, #scrollspy a:hover{  color: #000;
-  border-bottom-color: #000;}
-#scrollspy ul{list-style:none;margin-bottom:0}
-#scrollspy ul li,
-#scrollspy ul li ul li{    overflow: hidden;
-    text-overflow: ellipsis;
-    line-height: 1.8;}
-#scrollspy .nav{padding-left:0;display:block}
-#scrollspy .nav>li>a{padding:1px 3px;border-left:0 transparent}
-#scrollspy .nav li>a:focus,#scrollspy .nav li>a:hover{border-left:1px solid #2565d0}
-#scrollspy .nav li>a{padding-left:10px;line-height: 1.25;}
-#scrollspy .nav .nav li>a{padding-left:20px;font-size:.9em}
-#scrollspy .nav .nav .nav li>a{padding-left:30px;font-size:.8em}
-#scrollspy .nav .nav .nav .nav li>a{padding-left:40px}
-#scrollspy .nav .nav .nav .nav .nav li>a{padding-left:50px}
-#scrollspy li.active>a{font-weight:400;border-left:2px solid #2565d0}
-#scrollspy .nav .nav{display:none;}
-.toctitle{display:flex;margin:1.5rem 0}
-*/
-
-
-/*
-#scrollspy ol {
-  margin: 0;
-  padding: 0 2px 5px 10px;
-  text-align: left;
-  list-style: none;
-  font-size: 14px;
-}
-#scrollspy ol > ol {
-  padding-left: 0;
-}
-#scrollspy ol a {
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in-out;
-  transition-delay: 0s;
-  transition-property: all;
-  color: #666;
-  border-bottom-color: #ccc;
-}
-#scrollspy ol a:hover {
-  color: #000;
-  border-bottom-color: #000;
-}
-#scrollspy .nav-item {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  line-height: 1.8;
-}
-#scrollspy .nav .nav-child {
-  display: none;
-}
-#scrollspy .nav .active > .nav-child {
-  display: block;
-}
-#scrollspy .nav .active-current > .nav-child {
-  display: block;
-}
-#scrollspy .nav .active-current > .nav-child > .nav-item {
-  display: block;
-}
-#scrollspy .nav .active > a {
-  color: #fc6423;
-  border-bottom-color: #fc6423;
-}
-#scrollspy .nav .active-current > a {
-  color: #fc6423;
-}
-#scrollspy .nav .active-current > a:hover {
-  color: #fc6423;
-}
-*/

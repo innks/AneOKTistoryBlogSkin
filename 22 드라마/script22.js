@@ -31,11 +31,11 @@ function Jang(iis, ies) {
 }
 function sCo(no) {
 	var p = no * 10;
-	if (p >= 80) return '추천해요.';
-	else if (p >= 60) return '재미있어요.';
-	else if (p >= 40) return '킬링타임용...';
-	else if (p >= 20) return '그다지...'
-	else return '비추에요 ~ 흐.';
+	if (p >= 80) return p = '<span class="jum">' + no + '</span> (추천해요.)';
+	else if (p >= 60) return p = '<span class="jum">' + no + '</span> (재미있어요.)';
+	else if (p >= 40) return p = '<span class="jum">' + no + '</span> (킬링타임용...)';
+	else if (p >= 20) return p = '<span class="jum">' + no + '</span> (그다지...)'
+	else return p = '<span class="jum">' + no + '</span> (비추에요 ~ 흐.)';
 }
 function JangIcon(iic, ii) {
 	var scric = '';
@@ -90,25 +90,27 @@ function JangIcon(iic, ii) {
 }
 function MoverList() {
     for (var i = 0; i < m.length; i++) {
-    	var er, ed, el, es, ef, ef2;
+    	var er, ed, el, es, ef, ef2, ml = '';
     	if(m[i][0] == true) {er = '연출'; ed = '편성'; es = '드라마';} 
     	else {er = '감독'; ed = "개봉"; es = '영화';};
 
-    	if(m[i][12] == 'all') {ef = ' <span class="all">전체</span>'; ef2 = '[국내] 전체 관람가';}
-    	else if (m[i][12] == '12') {ef = ' <span class="ax12">12</span>'; ef2 = '[국내] 12세 관람가';}
-    	else if (m[i][12] == '15') {ef = ' <span class="ax15">15</span>'; ef2 = '[국내] 15세 관람가';}
-    	else if (m[i][12] == '18') {ef = ' <span class="ax18">청불</span>'; ef2 = '[국내] 청소년 관람불가';}
-    	else {ef = ' <span class="axnot">제한</span>'; ef2 = '[국내] 제한상영가';}
+    	if(m[i][12] == 'all') {ef = ' <span class="all">전체</span>'; ef2 = '전체 관람가';}
+    	else if (m[i][12] == '12') {ef = ' <span class="ax12">12</span>'; ef2 = '12세 관람가';}
+    	else if (m[i][12] == '15') {ef = ' <span class="ax15">15</span>'; ef2 = '15세 관람가';}
+    	else if (m[i][12] == '18') {ef = ' <span class="ax18">청불</span>'; ef2 = '청소년 관람불가';}
+    	else {ef = ' <span class="axnot">제한</span>'; ef2 = '제한상영가';}
 
     	el = '<li class="col-6 col-sm-3 keyword">' +
     	'<div class="cols"><div class="poster"><div class="pimage">';
     	if(m[i][4] == true) el = el + '<div class="dday">강력추천 <span>★</span></div>';
     	if(m[i][3] == '') el = el + '<div class="no_poster"></div>';
-    	else el = el + '<img src="' + m[i][3] + '" alt="" width="161" class="poster_img">';
+    	else el = el + '<img src="' + m[i][3] + '" alt="" class="poster_img">';
 
-    	el = el + '</div><div class="hovercont" style="top: 0px;"><ul><li class="tt">' + m[i][1] + 
+    	if(m[i][14] != '') ml = '<a href="' + m[i][14] + '" target="_blank" class="a-none a-mobi"><i class="icon-smartphone"></i></a>';
+
+    	el = el + '</div><div class="hovercont" style="top: 0px;"><ul><li class="tt">' + m[i][1] +	
     	'</li><li class="pyear"><span>제작</span>' + m[i][5] + 
-    	'</li><li><span>' + es + '</span>| ' + ef2 +  
+    	'</li><li><span>' + es + '</span>| ' + ef + ' ' + ef2 +  
     	'</li><li><span>' + er + '</span>' + m[i][6] + 
     	'</li><li><span>' + ed + '</span>' + m[i][8] + 
     	'</li><li><span>국가</span>' + m[i][7] + '</li>';
@@ -118,8 +120,8 @@ function MoverList() {
 
     	el = el + '<li><span>장르</span>' +
     	Jang(m[i][9], m[i][0]) + '</li></ul></div></div><div class="cont">' + 
-    	'<p class="sbj"><a href="https://movie.naver.com/movie/bi/mi/photoView.nhn?code=' + m[i][13] + '" target="_blank" class="a-none">' +
-    	m[i][1] + '</a><small>'+  ef +'</small></p><p class="sbjsub">' +
+    	'<p class="sbj"><a href="' + m[i][13] + '" target="_blank" class="a-none">' + 
+    	m[i][1] + '</a> '+  ml +'</p><p class="sbjsub">' +
 		m[i][2] + '</p>' +
     	'<p class="naverstar"><span class="small_star"><span class="starval" style="width:' +
     	m[i][10] * 10 + '%;"></span></span></p>' +

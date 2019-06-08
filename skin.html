@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ko">
-<!-- v1.1.5 -->
+<!-- v1.2.0 -->
 
 <head>
   <!-- Required meta tags -->
@@ -12,6 +12,7 @@
 
   <meta name="description" content="AneOK 블로그">
   <meta name="keywords" content="이야기, 개인생활">
+  <meta http-equiv="Refresh" content="No-Cache">
 
   <meta name="google-site-verification" content="mRasGLYRFmhiwSWYtp-KIgglQ2koRCrgr5So6CfDRbo" />
 
@@ -24,7 +25,7 @@
   <link rel="stylesheet" href="./images/color.css?VERSION=7">
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./images/icomoon.css?ver=22.0">
-  <link rel="stylesheet" href="./images/dynamicscrollspy.min.css?v=19">
+  <link rel="stylesheet" href="./images/dynamicscrollspy.min.css?v=20">
 
   <link rel="stylesheet" href="./images/github.css">
   <script src="./images/highlight.pack.js"></script>
@@ -35,7 +36,7 @@
   <!-- 기본 전체  변수 -->
   <script type="text/javascript">
   var updated = ""; // 업데이트 날짜 들어갈 문구
-  var BlogVersion = "1.1.5"; // 버전
+  var BlogVersion = "1.2.0"; // 버전
   function zerosCnt(el) { // 댓글 여부 판단 색 지정
     if (el == 0) {
       return document.write('<span>' + el + '</span>');
@@ -45,7 +46,7 @@
   };
   </script>
 
-  <!-- 구글 애드센스 { -->
+  <!-- 구글 애드센스 { - ->
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
          (adsbygoogle = window.adsbygoogle || []).push({
@@ -53,7 +54,7 @@
               enable_page_level_ads: true
          });
     </script>
-    <!-- } 구글 애드센스 -->
+    <!- - } 구글 애드센스 -->
 </head>
 
 <body id="[##_body_id_##]" data-spy="scroll" class="[##_page_title_##]">
@@ -236,11 +237,13 @@
 
               <s_article_rep>
                 <s_page_rep>
-                  <div class="cgroup group-border" id="page">
-                    <h1 class="title">[##_article_rep_title_##]</h1>
-                    <div class="post-meta">
-                      <span><i class="icon-user"></i> [##_article_rep_author_##]</span>
-                      <span><i class="icon-calendar"></i> [##_article_rep_date_##]</span>
+                  <div class="cgroup group-border" id="post">
+                    <div class="inner_header" style="background-image:url('')">
+                      <h1 class="title">[##_article_rep_title_##]</h1>
+                      <div class="post-meta">
+                        <span><i class="icon-user"></i> [##_article_rep_author_##]</span>
+                        <span><i class="icon-calendar"></i> [##_article_rep_date_##]</span>
+                      </div>
                     </div>
                   </div>
                   <div class="entry-content">
@@ -287,20 +290,23 @@
                 </s_index_article_rep>
 
                 <s_permalink_article_rep>
-                  <div class="cgroup group-border">
-                    <h1 class="title">[##_article_rep_title_##] </h1>
-                    <div class="post-meta">
-                      <div class="top-category"><abbr title="[##_article_rep_category_##]">[##_article_rep_category_##]</abbr> / [##_article_rep_title_##]<s_rp_count>
-                          Comments: <a href="#m3" class="abb">[##_article_rep_rp_cnt_##]</a>
-                        </s_rp_count>
-                      </div>
-                      <s_ad_div>
-                        <div class="sub-admin">
-                          <span><a href="[##_s_ad_m_link_##]">수정</a></span>
-                          <span>([##_s_ad_s1_label_##])→<a href="#" onclick="[##_s_ad_s2_onclick_##]">[##_s_ad_s2_label_##]</a></span>
-                          <span><a href="#" onclick="[##_s_ad_d_onclick_##]">삭제</a></span>
+                  <div class="cgroup group-border" id="post">
+                    <div class="inner_header" style="background-image:url('')">
+                      <h1 class="title">[##_article_rep_title_##] </h1>
+                      <div class="post-meta">
+                        <div class="top-category"><abbr title="[##_article_rep_category_##]">[##_article_rep_category_##]</abbr> / [##_article_rep_title_##]<span class="asection" title="티스토리 홈 및 외부 서비스 주제"></span><s_rp_count>
+                            Comments: <a href="#m3" class="abb">[##_article_rep_rp_cnt_##]</a>
+                          </s_rp_count>
+
                         </div>
-                      </s_ad_div>
+                        <s_ad_div>
+                          <div class="sub-admin">
+                            <span><a href="[##_s_ad_m_link_##]">수정</a></span>
+                            <span>([##_s_ad_s1_label_##])→<a href="#" onclick="[##_s_ad_s2_onclick_##]">[##_s_ad_s2_label_##]</a></span>
+                            <span><a href="#" onclick="[##_s_ad_d_onclick_##]">삭제</a></span>
+                          </div>
+                        </s_ad_div>
+                      </div>
                     </div>
                   </div>
 
@@ -614,7 +620,7 @@
     });
     </script>
 
-    <script src="./images/script.js?VER=65"></script>
+    <script src="./images/script.js?VER=70"></script>
 
     <!-- 페이지내의 검색 JavaScript { -->.
     <script src="./images/jquery.sieve.min.js"></script>

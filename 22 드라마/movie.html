@@ -4,169 +4,60 @@
     <title>Kakao WebFont Test Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <script src="./AneOKTistoryBlogSkin/images/jquery-3.3.1.min.js"></script>
-    <link rel="stylesheet" href="./AneOKTistoryBlogSkin/images/bootstrap.min.css?VERSION=4.3.1">
+    <script src="../images/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="../images/bootstrap.min.css?VERSION=4.3.1">
 
-	<script src="./script22.js"></script>
-	<link rel="stylesheet" href="./style22.css">
+	<!-- script src="./script25.js"></script -->
+	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
 <div id="movielist">
 <ul class="posters row">
 
-<script>	
+<script src="https://tistory2.daumcdn.net/tistory/3088055/skin/images/script25.js?v=1"></script>
+<link rel="stylesheet" href="https://tistory3.daumcdn.net/tistory/3088055/skin/images/style25.css?v=1">
+
+
+<script>
 //<![CDATA[
 
-// [종류 ↓ , '제목','이미지주소',추천 ↓ ,(제작년도)number,'감독이름','국가','기간날짜 || 개봉날짜','장르' ↓,(점수)number,(시간)number, 등급]
-// 종류 : true(기본,드라마), false(영화)	
-// 추천 : true, false (기본)
-// 장르 : 000000000000, 12자리 표현
-// 등급 : 'all', 12, 15, 18, 'not' 중 1개
-// 드라마,로맨스,판타지/모험,SF,가족,재난,미스테리(추리),스릴러,액션,코미디,호러/공포,현대시대,전쟁,서부(사극),기록,성인물
-//    1         1             0        1 - 1      0            1               1   -  0        1       1             0    -   0           1         0       1   : 1101-1011-0110-0101
+var movie = [
 
-var m = [
-[true, // 종류 : true(기본,드라마), false(영화)
-'뿌리깊은나무', // '제목'
-'Tree With Deep Roots', // '부제목'
-'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory&fname=http%3A%2F%2Fcfile6.uf.tistory.com%2Fimage%2F99EABA355CF3B74631B05B',
-false, // 추천 : true, false(기본)
-2011, // 년도
-'장태유, 신경수', // '연출자' (영화시 '감독이름')
-'한국','SBS 24부작', // '국가', '편성' (영화시 '개봉')
-// 드라마,로맨스,판타지/모험,SF,가족,재난,미스테리(추리),스릴러,액션,코미디,호러/공포,현대시대,전쟁,서부(사극),기록,성인물
-//    1         1             0        1 - 1      0            1               1   -  0        1       1             0    -   0           1         0       1   : 1101-1011-0110-0101
-'1000-0000-0000-0100',
-9, // (점수)number
-25.4, // (시간)number - 시청률 (영화시 시간)
-15, // 등급 (국내) - all,12,15,18,not
-'86276'], // 네이버 주소
+// '제목','부제목','이미지주소','개봉','시간','등급','장르','나라', 평점, 'URL', 종류(0:영화, 1:드라마), 추천 , 시청률
 
-// ----------------------
-[true, // 종류 : true(기본,드라마), false(영화)
-'미안하다, 사랑한다', // '제목'
-'Sorry, I Love You', // '부제목'
-'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory&fname=http%3A%2F%2Fcfile21.uf.tistory.com%2Fimage%2F999F61335CF3C46008DA30',
-true, // 추천 : true, false(기본)
-2004, // 년도
-'이형민', // '연출자' (영화시 '감독이름')
-'한국','KBS 16부작', // '국가', '편성' (영화시 '개봉')
-// 드라마,로맨스,판타지/모험,SF,가족,재난,미스테리(추리),스릴러,액션,코미디,호러/공포,현대시대,전쟁,서부(사극),기록,성인물
-//    1         1             0        1 - 1      0            1               1   -  0        1       1             0    -   0           1         0       1   : 1101-1011-0110-0101
-'1100-0000-0000-0000',
-9, // (점수)number
-17.7, // (시간)number - 시청률 (영화시 시간)
-15, // 등급 (국내) - all,12,15,18,not
-'39656'], // 네이버 주소
+['캡틴 마블', // '제목'
+'Captain Marvel', // '부제목'
+'Max2019CaptainMarvel2.jpg',
+'2019.03.06', // 년도 (영화시 '개봉날자 2019.03.20')
+'123분',  // '편성' (영화시 '시간')
+'12세이상관람가',
+'액션,어드벤처,SF', // 장르
+'미국', // '국가'
+8.72, // (점수) 퍼센트
+'http://www.maxmovie.com/Movie/M000108962', // 맥스무비, 네이버 영화 & 공식 URL
+0, // 종류 (0:영화, 1:드라마)
+1, // 추천 (0, 1:추천)
+0], // (시간)number - 시청률 (영화시 시간)
 
-// ----------------------
-[true, // 종류 : true(기본,드라마), false(영화)
-'포도밭 그 사나이', // '제목'
-'Grapery The Man', // '부제목'
-'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory&fname=http%3A%2F%2Fcfile28.uf.tistory.com%2Fimage%2F998D854D5CF3C584151BBE',
-false, // 추천 : true, false(기본)
-2006, // 년도
-'박만영, 김영조', // '연출자' (영화시 '감독이름')
-'한국','KBS 16부작', // '국가', '편성' (영화시 '개봉')
-// 드라마,로맨스,판타지/모험,SF,가족,재난,미스테리(추리),스릴러,액션,코미디,호러/공포,현대시대,전쟁,서부(사극),기록,성인물
-//    1         1             0        1 - 1      0            1               1   -  0        1       1             0    -   0           1         0       1   : 1101-1011-0110-0101
-'1100-0000-0100-0000',
-7, // (점수)number
-14.1, // (시간)number - 시청률 (영화시 시간)
-15,  // 등급 (국내) - all,12,15,18,not
-'62623'], // 네이버 주소
+['돈', // '제목'
+'Money', // '부제목'
+'Max2019Money3.jpg',
+'2019.03.20', // 년도 (영화시 '개봉날자 2019.03.20')
+'115분',  // '편성' (영화시 '시간')
+'15세이상관람가',
+'범죄', // 장르
+'한국', // '국가'
+7.23, // (점수) 퍼센트
+'http://www.maxmovie.com/Movie/M000110839', // 맥스무비, 네이버 영화 & 공식 URL
+0, // 종류 (0:영화, 1:드라마)
+1, // 추천 (0, 1:추천)
+0], // (시간)number - 시청률 (영화시 시간)
 
-// ----------------------
-[true, // 종류 : true(기본,드라마), false(영화)
-'시그널', // '제목'
-'signal', // '부제목'
-'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory&fname=http%3A%2F%2Fcfile28.uf.tistory.com%2Fimage%2F99C3B8445CF3C64D189080',
-false, // 추천 : true, false(기본)
-2016, // 년도
-'김원석', // '연출자' (영화시 '감독이름')
-'한국','tvN 16부작', // '국가', '편성' (영화시 '개봉')
-// 드라마,로맨스,판타지/모험,SF,가족,재난,미스테리(추리),스릴러,액션,코미디,호러/공포,현대시대,전쟁,서부(사극),기록,성인물
-//    1         1             0        1 - 1      0            1               1   -  0        1       1             0    -   0           1         0       1   : 1101-1011-0110-0101
-'1011-0001-0000-0000',
-7.6, // (점수)number
-12.5, // (시간)number - 시청률 (영화시 시간)
-15,  // 등급 (국내) - all,12,15,18,not
-'141774'], // 네이버 주소
 
-// ----------------------
-[true, // 종류 : true(기본,드라마), false(영화)
-'미생', // '제목'
-'未生, Incomplete Life', // '부제목'
-'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory&fname=http%3A%2F%2Fcfile22.uf.tistory.com%2Fimage%2F994B114D5CF4029811F216',
-false, // 추천 : true, false(기본)
-2014, // 년도
-'김원석, 정윤정', // '연출자' (영화시 '감독이름')
-'한국','tvN 20부작', // '국가', '편성' (영화시 '개봉')
-// 드라마,로맨스,판타지/모험,SF,가족,재난,미스테리(추리),스릴러,액션,코미디,호러/공포,현대시대,전쟁,서부(사극),기록,성인물
-//    1         1             0        1 - 1      0            1               1   -  0        1       1             0    -   0           1         0       1   : 1101-1011-0110-0101
-'1000-0000-0001-0000',
-8.1, // (점수)number
-8.2, // (시간)number - 시청률 (영화시 시간)
-15,  // 등급 (국내) - all,12,15,18,not
-'111898'], // 네이버 주소
-
-// ----------------------
-[true, // 종류 : true(기본,드라마), false(영화)
-'도깨비', // '제목'
-'goblin', // '부제목'
-'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory&fname=http%3A%2F%2Fcfile1.uf.tistory.com%2Fimage%2F994F05415CF45662294804',
-false, // 추천 : true, false(기본)
-2016, // 년도
-'이응복', // '연출자' (영화시 '감독이름')
-'한국','tvN 16부 + 스페셜 3부', // '국가', '편성' (영화시 '개봉')
-// 드라마,로맨스,판타지/모험,SF,가족,재난,미스테리(추리),스릴러,액션,코미디,호러/공포,현대시대,전쟁,서부(사극),기록,성인물
-//    1         1             0        1 - 1      0            1               1   -  0        1       1             0    -   0           1         0       1   : 1101-1011-0110-0101
-'1100-0000-0101-0000',
-9.2, // (점수)number
-20.5, // (시간)number - 시청률 (영화시 시간)
-15,  // 등급 (국내) - all,12,15,18,not
-'150091'], // 네이버 주소
-
-// ----------------------
-[true, // 종류 : true(기본,드라마), false(영화)
-'궁', // '제목'
-'宮: Princess Hours, 2006', // '부제목'
-'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory&fname=http%3A%2F%2Fcfile3.uf.tistory.com%2Fimage%2F9925203F5CF45443233537',
-false, // 추천 : true, false(기본)
-2006, // 년도
-'황인뢰', // '연출자' (영화시 '감독이름')
-'한국','MBC 24부작', // '국가', '편성' (영화시 '개봉')
-// 드라마,로맨스,판타지/모험,SF,가족,재난,미스테리(추리),스릴러,액션,코미디,호러/공포,현대시대,전쟁,서부(사극),기록,성인물
-//    1         1             0        1 - 1      0            1               1   -  0        1       1             0    -   0           1         0       1   : 1101-1011-0110-0101
-'1100-0000-0101-0000',
-7.2, // (점수)number
-16.2, // (시간)number - 시청률 (영화시 시간)
-12,  // 등급 (국내) - all,12,15,18,not
-'46579'], // 네이버 주소
-
-// ----------------------
-[true, // 종류 : true(기본,드라마), false(영화)
-'추노', // '제목'
-'推奴', // '부제목'
-'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory&fname=http%3A%2F%2Fcfile7.uf.tistory.com%2Fimage%2F9969BA395CF4544325BC50',
-false, // 추천 : true, false(기본)
-2010, // 년도
-'곽정환', // '연출자' (영화시 '감독이름')
-'한국','KBS 24부작', // '국가', '편성' (영화시 '개봉')
-// 드라마,로맨스,판타지/모험,SF,가족,재난,미스테리(추리),스릴러,액션,코미디,호러/공포,현대시대,전쟁,서부(사극),기록,성인물
-//    1         1             0        1 - 1      0            1               1   -  0        1       1             0    -   0           1         0       1   : 1101-1011-0110-0101
-'1000-0000-0000-0100',
-8.6, // (점수)number
-37.1, // (시간)number - 시청률 (영화시 시간)
-15,  // 등급 (국내) - all,12,15,18,not
-'71678'] // 네이버 주소
-
-// ↓ 영화
-// [false, '어린 누나 3','https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory&fname=http%3A%2F%2Fcfile21.uf.tistory.com%2Fimage%2F99DA7D375CF3B74622B4B7',false,2019,'계장혁','한국','2019.5.17','0100-0000-0000-0001',1.5,76,18,'185210']
 ];
 
-MoverList();
+MovieList();
 //]]>
 </script>
 
@@ -174,3 +65,4 @@ MoverList();
 </div>  
 </body>
 </html>
+
