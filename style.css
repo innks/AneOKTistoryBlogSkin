@@ -18,7 +18,7 @@
 
 body {
     background-color: #f7f7f7;
-    font-family: "Segoe UI", "Noto Sans Light", 'Apple SD Gothic Neo', Helvetica, sans-serif; /* 영어 폰트 우선 */
+    font-family: "Segoe UI", "Nanum Gothic", 'Apple SD Gothic Neo', Helvetica, sans-serif; /* 영어 폰트 우선 */
     padding: 0;
     margin: 0;
 }
@@ -38,7 +38,7 @@ a:hover,a:focus {
 }
 
 h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {font-family: 'Nanum BarunGothic', sans-serif; font-weight: bold; margin-bottom: 1.5rem;margin-top: 1rem;line-height: 1.5;}
+.h1, .h2, .h3, .h4, .h5, .h6 {font-family: 'Segoe UI', 'Nanum BarunGothic', sans-serif; font-weight: bold; margin-bottom: 1.5rem;margin-top: 1rem;line-height: 1.5;}
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small,
 .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small,
 h1 .small, h2 .small, h3 .small,  h4 .small, h5 .small, h6 .small,
@@ -321,8 +321,7 @@ main { display: block;}
 .group-border.group_common .post-meta a.abb  {color:#fff !important;}
 /* } 글 출력이 있는 경우 썸네일 제목 배경 표시 */
 
-.cgroup h1.title {
-    font-family: "Segoe UI", "Noto Sans Light", 'Apple SD Gothic Neo', Helvetica, sans-serif; /* 영어 폰트 우선 */
+.cgroup h1.title {    
     display: block; 
     margin-bottom: 30px;
     padding-top: 40px; 
@@ -331,7 +330,7 @@ main { display: block;}
     overflow-wrap: break-word;
     word-wrap: break-word;
     text-align: center;
-    font-weight: 400;
+    font-weight: 700;
     position: relative;
 }
 
@@ -362,12 +361,12 @@ p.mt-60 {margin-top: 60px;}
 
 .group-list {padding: 0;}
 .group-list:first-child {padding-top: 25px;}
-.group-list .post-list {display:flex;}
+.group-list .post-list {display:flex; margin-top: -20px;}
 .group-list .post-list.mt--2 {margin-top: -.7rem;} 
-.group-list .post-list a {text-decoration: none;}
-.group-list .post-list a:hover {text-decoration: underline;}
-.group-list .post-list .article-info .title {font-size: 1.5rem; letter-spacing: -1px;}
-.group-list .post-list .article-info {padding:0;}
+.group-list .post-list a {text-decoration: none; font-weight: 300;}
+.group-list .post-list a:hover {text-decoration: none; font-weight: 700;}
+.group-list .post-list .article-info .title {font-size: 30px; letter-spacing: -1px; line-height: 1.8;}
+.group-list .post-list .article-info {padding:0; max-width: 700px; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 .group-list .post-list .article-info span:before {content: ""; margin: 0;}
 
 /*
@@ -402,7 +401,7 @@ p.mt-60 {margin-top: 60px;}
     vertical-align: baseline; color: #212529;}
 
 .cgroup .post-tag {position: relative; margin: 0 auto 60px;}
-.cgroup .post-tag a:first-child {margin-left: 0;}
+.cgroup .post-tag a:first-child {margin-left: 15px;}
 .cgroup .post-tag a {display:inline-block;margin-left: 15px;font-size: 1rem;line-height: 1.5;}
 .cgroup .post-tag a:hover {color: #1e87f0 !important;}
 .cgroup .post-tag a:before {content: "#";}
@@ -450,7 +449,7 @@ p.mt-60 {margin-top: 60px;}
     background-color: transparent; border: 1px solid #959595; font-size: 13px;
     line-height: 19px; border-radius: 1rem; text-decoration: none; border-color: rgba(185,185,185,0.5);
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    font-family: "Noto Sans DemiLight",AppleSDGothicNeo,"Malgun Gothic","맑은 고딕","돋움",dotum,sans-serif !important;}
+}
 
 .container_postbtn {padding-bottom: 0 !important;}
 .footerBtn {display: flex; /* justify-content: center; */ margin: 8px 0 15px; padding-bottom: 30px;
@@ -460,7 +459,7 @@ p.mt-60 {margin-top: 60px;}
     background-color: transparent; border: 1px solid #959595; padding: .4rem .5rem .25rem; font-size: 14px;
     line-height: 19px; border-radius: 1rem; text-decoration: none; border-color: rgba(185,185,185,0.5);
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    font-family: "Noto Sans DemiLight",AppleSDGothicNeo,"Malgun Gothic","맑은 고딕","돋움",dotum,sans-serif !important;}
+}
 .footerBtn .btns:hover {color: #212529;}
 .footerBtn .btns:focus {outline: none !important;}
 .footerBtn .btns i {color:#909090; font-size: 11px;}
@@ -510,12 +509,12 @@ p.mt-60 {margin-top: 60px;}
 .pagination .next {display: block;float: right;margin: 0;}
 
 .footer-counter {margin-top: 10px;}
-.footer-counter a img {width: 221px; height: 19px;  object-fit: cover; object-position: top;}
+.footer-counter a img {width: 434px; height: 19px;  object-fit: cover; object-position: top;}
 .footer-counter div {vertical-align: sub; margin-right: 10px !important;}
 
 /* 글보기 */
 .entry-content {padding: 0; font-size: 14.6667px; line-height: 29.3333px; letter-spacing: .4px;}
-.entry-content h1, .entry-content h2 {letter-spacing: -1px;}
+.entry-content h1, .entry-content h2 {letter-spacing: -1px; font-weight: 800;}
 .entry-content h2:after {content: ''; display: block; margin-top: 0; width: 100px; height: 1px; background-color: #dee2e6;}
 .entry-content h3:after {content: ''; display: block; margin-top: 0; width: 50px; height: 1px; background-color: #dee2e6;}
 .entry-content fieldset {border: 1px solid #999; border-radius: 5px; padding: .5rem .75rem 0;}
@@ -891,6 +890,8 @@ p.mt-60 {margin-top: 60px;}
       padding: 20px 30px 40px;
     }
 
+    .group-list .post-list .article-info .title {font-size: 38px;}
+
     .content-wrap {width: 790px; float: right;}
 
     .content-wrap-page {
@@ -908,10 +909,11 @@ p.mt-60 {margin-top: 60px;}
         text-align: center;
     }
    
-    .entry-content {font-family: "Segoe UI", "Noto Sans DemiLight", 'Apple SD Gothic Neo', Helvetica, sans-serif; /* 영어 폰트 우선 */
+    .entry-content { /* 영어 폰트 우선 */
     letter-spacing: .4px;
     line-height: 31.3333px;
-    font-size: 16.6333px;}
+    font-size: 16.6333px;
+    }
 
     .pagination-wrap-page {padding: 20px 30px;}
 
@@ -1042,6 +1044,18 @@ p.mt-60 {margin-top: 60px;}
   margin-bottom: 0;
   border-bottom: initial;
   padding-top: 0 !important;
+}
+.entry-content .note h2:first-child {
+  margin-top: -10px;
+}
+.entry-content .note h3:first-child {
+  margin-top: -8px;
+}
+.entry-content .note h4:first-child {
+  margin-top: -4px;
+}
+.entry-content .note h5:first-child {
+  margin-top: -1px;
 }
 
 .entry-content .note p:first-child,
@@ -1410,6 +1424,7 @@ pre .add {background: #dfd;}
 
 .font-mjo {font-family: 'Nanum Myeongjo', serif;}
 .font-arial {font-family: Arial, sans-serif;}
+.font-s90, .f90p {font-size: 90%;}
 
 .cap2 {margin-left:0;margin-top:-5px;border-left:2px solid #e52e04;padding-left:10px;text-align:left;font-size:.75rem;color:#666;line-height:15px;}
 

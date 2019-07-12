@@ -89,7 +89,7 @@
     margin-top: 0px !important;
     margin-bottom: 0px !important;
 }
-.title {
+.title25 {
     font-size: 22px !important;
     line-height: 1.4;
     text-transform: none;
@@ -99,7 +99,12 @@
 	font-size: 13px;
     line-height: 1;
     text-transform: none;
-    margin-bottom: 20px;   
+    margin-bottom: 20px;
+    max-width: 210px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .color-g {
 	color: #999;
@@ -110,6 +115,11 @@
 .margin-small-top {
     margin: 10px 0 0 !important;
     font-weight: 700;
+    max-width: 170px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;    
 }
 .p-left-1 {
 	padding-left: 10px;
