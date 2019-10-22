@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ko">
-<!-- v1.2.0 -->
+<!-- v1.3.0 -->
 
 <head>
   <!-- Required meta tags -->
@@ -15,6 +15,8 @@
   <meta http-equiv="Refresh" content="No-Cache">
 
   <meta name="google-site-verification" content="mRasGLYRFmhiwSWYtp-KIgglQ2koRCrgr5So6CfDRbo" />
+	<!-- bing 마스터 도구 -->
+	<meta name="msvalidate.01" content="3EFEC7039A092E7FB06376A8457FB737" />
 
   <title>[##_title_##] :: [##_page_title_##]</title>
 
@@ -27,16 +29,18 @@
   <link rel="stylesheet" href="./images/icomoon.css?ver=22.0">
   <link rel="stylesheet" href="./images/dynamicscrollspy.min.css?v=20">
 
+  <!-- Highlight { -->
   <link rel="stylesheet" href="./images/github.css">
   <script src="./images/highlight.pack.js"></script>
   <script>
   hljs.initHighlightingOnLoad();
   </script>
+  <!-- } Highlight -->
 
   <!-- 기본 전체  변수 -->
   <script type="text/javascript">
   var updated = ""; // 업데이트 날짜 들어갈 문구
-  var BlogVersion = "1.2.0"; // 버전
+  var BlogVersion = "1.3.0"; // 버전
   function zerosCnt(el) { // 댓글 여부 판단 색 지정
     if (el == 0) {
       return document.write('<span>' + el + '</span>');
@@ -46,15 +50,8 @@
   };
   </script>
 
-  <!-- 구글 애드센스 { - ->
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({
-              google_ad_client: "ca-pub-2415402928090831",
-              enable_page_level_ads: true
-         });
-    </script>
-    <!- - } 구글 애드센스 -->
+  <!-- 구글 애드센스 { -->
+  <!-- } 구글 애드센스 -->
 
   <!-- 포스트 리스트(영화/드라마) { -->
   <script src="./images/script25.js?v=2"></script>
@@ -109,7 +106,7 @@
               <!-- 상단 카테고리 부분 - 서브 { -->
               <div class="sub-submenu">
                 <hr>
-                <a href="https://aneok.tistory.com/11"><i class="icon-utorrent"></i> 토렌트 주소 링크</a>
+                <a href="https://aneok.tistory.com/11"><i class="icon-utorrent"></i> 토렌트 주소 링크</a> <a href="https://aneok.tistory.com/60"><i class="icon-code-slash"></i> 인터넷 코드 정리 사이트</a>
               </div>
               <!-- } 상단 카테고리 부분 - 서브 -->
             </div>
@@ -320,12 +317,6 @@
                     [##_article_rep_desc_##]
                   </div>
 
-                  <!-- 애드 자리 { -->
-                  <div class="ads">
-
-                  </div>
-                  <!-- } 애드 자리 -->
-
                   <!-- 포스트 날짜 및 최근날짜(스크립트) { -->
                   <div class="post-metaed">
                     <p><span><i class="icon-user"></i> Author <abbr title="저자">[##_article_rep_author_##]</abbr></span>
@@ -446,6 +437,22 @@
               </s_article_rep>
             </div>
             <!-- } 댓글 -->
+						
+						<!-- 애드 자리 { -->
+						<div class="ads-wrap-page">
+						<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- AneoK.수평광고.하단 -->
+						<ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-2415402928090831"
+                 data-ad-slot="3142444562"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+						<script>
+     						(adsbygoogle = window.adsbygoogle || []).push({});
+						</script>	
+						</div>
+						<!-- } 애드 자리 -->
 
             <!-- 페이지 { -->
             <div class="pagination-wrap-page">
@@ -601,7 +608,7 @@
 
     <!-- Top 버튼 { -->
     <div class="back-to-top" style="display:none;"><a href="#"><img src="https://tistory3.daumcdn.net/tistory/3088055/skin/images/link-top.png"></a>
-      <div id="sTop"></div>
+      <!--div id="sTop"></div -->
     </div>
     <!-- } Top 버튼 -->
 
