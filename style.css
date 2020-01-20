@@ -11,7 +11,7 @@
  * iOS5:374px down (optional) 
  */
 
-@import url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css');
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
 ::selection, ::-moz-selection {
     background: #262a30;
@@ -23,6 +23,7 @@ body {
     font-family: 'Segoe UI', "Noto Sans DemiLight", 'Apple SD Gothic Neo', Helvetica, sans-serif; /* 영어 폰트 우선 */
     padding: 0;
     margin: 0;
+	  font-weight:400;
 }
 
 a, a:visited, a:-webkit-any-link {
@@ -38,6 +39,8 @@ a, a:visited, a:-webkit-any-link {
 a:hover,a:focus {
   color: #262a30;
 }
+
+b, strong {font-family: 'Segoe UI', "NanumSquare", 'Apple SD Gothic Neo', Helvetica, sans-serif; /* 영어 폰트 우선 */ font-weight:800;}
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {font-family: 'Segoe UI', 'NanumSquare', sans-serif; font-weight: bold; margin-bottom: 1.5rem;margin-top: 1rem;line-height: 1.5;}
@@ -107,23 +110,18 @@ h3 small, h4 small,.h3 small, .h4 small,h3 .small,  h4 .small,.h3 .small, .h4 .s
     height: 6px;
     background-color: #bbb;
     border-radius: 50%;}
+
 body#tt-body-index.AneOK .site-nav ul li.t_menu_home a,
-body.About.AneOK .site-nav ul li.t_menu_page a,
-body.Addition.to.blog .site-nav ul li.t_menu_link_1 a,
+body#tt-body-page.About.AneOK .site-nav ul li.t_menu_page a,
+body#tt-body-page.Addition.to.blog .site-nav ul li.t_menu_link_1 a,
+body#tt-body-page.Blog.history .site-nav ul li.t_menu_link_2 a,
 body#tt-body-guestbook .site-nav ul li.t_menu_guestbook a { background: #f9f9f9; border-bottom-color: #fff;}
 body#tt-body-index.AneOK .site-nav ul li.t_menu_home a:after,
-body.About.AneOK .site-nav ul li.t_menu_page a:after,
-body.Addition.to.blog .site-nav ul li.t_menu_link_1 a:after,
+body#tt-body-page.About.AneOK .site-nav ul li.t_menu_page a:after,
+body#tt-body-page.Addition.to.blog .site-nav ul li.t_menu_link_1 a:after,
+body#tt-body-page.Blog.history .site-nav ul li.t_menu_link_2 a:after,
 body#tt-body-guestbook .site-nav ul li.t_menu_guestbook a:after {
-    content: " ";
-    position: absolute;
-    top: 50%;
-    margin-top: -3px;
-    right: 15px;
-    width: 6px;
-    height: 6px;
-    background-color: #bbb;
-    border-radius: 50%;}
+    content: " "; position: absolute; top: 50%; margin-top: -3px; right: 15px; width: 6px; height: 6px; background-color: #bbb; border-radius: 50%;}    
 
 .site-nav .site-search {position: relative;}
 .site-nav .site-search input {position: relative; z-index: 1; padding-left: 15px; padding-right: 50px; width: calc(100% - 40px);
@@ -620,7 +618,7 @@ p.mt-60 {margin-top: 60px;}
 .entry-content .protect-fieldset button {position: absolute; top: 0; right: 0; z-index: 2; width: 50px; height: 50px;
   font-size: inherit; text-align: center; background-color: transparent; border: 0; cursor: pointer;}
 
-.entry-content pre figcaption { position: relative; font-size: 13px; color: #4d4d4c; line-height: 8px;
+.entry-content pre figcaption { position: relative; font-size: 13px; color: #007bff; line-height: 8px;
   margin: -32px -16px 1rem 95px; padding: 1px .5rem 0; background: #eee; /* border-bottom: 1px solid rgba(0,0,0,.125); */
   border-left: 1px solid #eee;}
 .entry-content pre figcaption:before, .entry-content pre figcaption:after {
@@ -712,7 +710,7 @@ p.mt-60 {margin-top: 60px;}
   width: 260px;
   background: #eee;
   box-shadow: none;
-  margin-top: 316px;
+  margin-top: 346px;
   margin-left: auto;
 }
 
@@ -1426,16 +1424,35 @@ figure.diff {
   margin: 10px 0;
   padding: 0;
   line-height: 1.6;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+figure.diff p{
+  padding: 5px .9rem;
+  background-color: #f1f8ff;
+  border-bottom: 1px solid #e1e4e8;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  font-size: 12px;
+  margin-bottom: 0;
 }
 
 figure.diff pre {
   padding: .7rem 1rem .7rem;
   border: 0;
+  margin: 0;
 }
 
 figure.diff pre::before {content: '';}
 pre .del {background: #fdd;}
 pre .add {background: #dfd;}
+
+figure.diff > pre + pre {
+  border-top: 1px solid #e1e4e8;
+  margin-top: -3px; 
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
 
 .font-mjo {font-family: 'Nanum Myeongjo', serif;}
 .font-arial {font-family: Arial, sans-serif;}
@@ -1456,6 +1473,28 @@ pre .add {background: #dfd;}
 
 .row + .row {margin-top: 16px;}
 
+.post-meta-code {    
+  background-color: #f5f5f5;
+  margin-top: 80px;
+  padding: 10px;
+  color: #909090;
+}
+.post-meta-code p {
+  font-size: 12px;
+  font-weight: 100;
+  line-height: 1.6em;
+  margin-bottom: 0;
+}
+.post-meta-code p a {
+  text-decoration: none!important;
+  color: #909090!important;
+  font-weight: 400!important;
+  border-bottom: 0!important;
+}
+
+.post-meta-code p a[target=_blank] {margin-right:2px;}
+.post-meta-code p a::after {margin-left: 0 !important;}
+.post-meta-code p a::after, .post-meta-code p a::before {content: '' !important;}
 
 /* 광고 */
 .ads {margin: 40px 0 20px;text-align: center;}
