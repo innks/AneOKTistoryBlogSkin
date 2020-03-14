@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'AritaDotum';
+    font-style: normal;
+    font-weight: 100;
+    src: local('※'),
+        url('https://tistory2.daumcdn.net/tistory/3088055/skin/images/Arita4.0_T.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'AritaDotum';
+    font-style: normal;
+    font-weight: 300;
+    src: local('※'),
+        url('https://tistory1.daumcdn.net/tistory/3088055/skin/images/Arita4.0_L.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'AritaDotum';
+    font-style: normal;
+    font-weight: 400;
+    src: local('※'),
+        url('https://tistory1.daumcdn.net/tistory/3088055/skin/images/Arita4.0_M.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'AritaDotum';
+    font-style: normal;
+    font-weight: 700;
+    src: local('※'),
+        url('https://tistory2.daumcdn.net/tistory/3088055/skin/images/Arita4.0_SB.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'AritaDotum';
+    font-style: normal;
+    font-weight: 900;
+    src: local('※'),
+        url('https://tistory3.daumcdn.net/tistory/3088055/skin/images/Arita4.0_B.woff') format('woff');
+}

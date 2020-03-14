@@ -1,0 +1,222 @@
+/*
+ * color
+ */
+
+.text-link{color:var(--link-color)!important}
+.text-color,.text,.text a{color:var(--e-text-color)!important}
+.red,.WWs{color:#F44336 !important}
+.blue,.point{color:#4A65F6 !important}
+.bg-transparent{background-color:transparent !important}
+.transparent{color:transparent !important}
+.t-muted{color:#97A1A9 !important}
+
+/* ak-title-size는 영어를 사용하는 것이 이쁨, 중앙 정렬이 이쁨 */
+.title-1{color:var(--e-text-color);font-size:45px;font-weight:900;line-height:1.2;margin-bottom:-.3rem!important;letter-spacing:.2px;}
+.title-2{color:var(--e-text-color);font-size:25px;font-weight:700;line-height:1.25;margin:.5em 0 .2em}
+.title-3{color:#6d7c90;margin-bottom:.5em}
+h2.title-1, h3.title-1{white-space:normal;}
+h2.title-1::after,h3.title-1::after,h2.title-2::after,h3.title-2::after{display:none}
+
+h2.title-1,h3.title-1,
+h2.title-2,h3.title-2 {white-space: nowrap;overflow: hidden;white-space: nowrap;display: block;width:calc(100vw - 32px);text-overflow: ellipsis;
+}
+@media(min-width:1024px) {
+  .title-1{font-size:50px}
+  .title-2{font-size:22px}
+  h2.title-1,h3.title-1,
+  h2.title-2,h3.title-2{margin-top:0;width:730px}
+}
+
+.cmain{ /* 영어가 잘보임 */
+  width:100%;font-weight:900;margin-bottom:.2em;-webkit-box-direction:normal;}
+.cmain small{color:var(--a-text-color);font-weight:400;background-image:none;-webkit-text-fill-color: var(--a-text-color);letter-spacing:.2px}
+h2.c1::after,h3.c1::after,
+h2.c2::after,h3.c2::after,
+h2.c3::after,h3.c3::after,
+h2.c4::after,h3.c4::after,
+h2.c5::after,h3.c5::after{display:none}
+.c1 {background: linear-gradient(120deg,#b142ec 0%,#812bea 50%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  color: #8f42ec} /* 청자색 */
+.c2 {background: linear-gradient(120deg,#425cec 0%,#342bea 50%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  color: #4a42ec} /* 연파랑색 */
+.c3 {background: linear-gradient(120deg,#008d62 0%,#005666 50%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  color: #205937} /* 진녹색 */
+.c4 {background: linear-gradient(120deg,#e52e71 0%,#ff8a00 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  color: #f1583e} /* 핑크 > 귤*/
+.c5 {background: linear-gradient(120deg,#8f42ec 0%,#ff4a9e 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  color: #ff4a9e} /* 천자색 > 선홍색 */
+.c6 {background: linear-gradient(120deg,#ffa52b 0%,#ff6b12 50%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  color: #ff4c00} /* 진한 귤색 */
+.c7 {background: linear-gradient(120deg,#d00016 0%,#2b121a 50%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  color: #ee2e2b} /* Cinnabar 중국 국기색*/
+.c8 {background: linear-gradient(120deg,#ff4ac2 0%,#ff3190 50%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  color: #ff3190} /* 진핑크 */
+
+/* 페이지 변경로그(Changelog) CSS */
+.changelog{text-transform:none;padding-top:20px;line-height:1.5;color:var(--e-text-color)}
+.changelog h3{font-weight:400 !important;margin:0 0 20px 0;line-height:1.4;font-size:30px}
+.changelog h3 small{font-weight:300 !important;color:var(--a-text-color) !important;line-height:1.4;font-size:24px}
+.changelog h3::after{display:none}
+.changelog * + h3{margin-top:40px !important}
+.changelog ul{letter-spacing:0;font-size:15px}
+.changelog li{padding-left:0 !important;margin-left:0 !important;align-items:flex-start;display:flex}
+.changelog li:nth-child(n+2),.changelog>li>ul{margin-top:10px}
+.changelog li:last-child{margin-bottom:0}
+.changelog li::after{clear:both}
+.changelog li::before,.changelog li::after{content:"";display:table}
+.changelog span{display:inline-block;padding:0 10px;background-color:#1e87f0;line-height:1.5;font-size:12px;color:var(--content-bg-color);vertical-align:middle;white-space:nowrap;border-radius:2px;text-transform:uppercase;flex:none;width:90px;margin-top:3px;margin-right:20px !important;color:var(--content-bg-color);box-sizing:border-box;max-width:100%;text-align:center}
+.changelog ul li div{color:var(--m-text-color)}
+.changelog .changed,.changelog .c{background-color:#1e87f0 !important}
+.changelog .fixed,.changelog .f{background-color:#f0506e !important}
+.changelog .added,.changelog .a{background-color:#32d296 !important}
+.changelog .removed,.changelog .r,.changelog .deprecated,.changelog .d{background-color:#faa05a !important}
+
+/* about-page style  -  img_square 버전 이미지 묻음, tit i 마우스 오버시 밑줄 */
+.img_square{display:inline-block;width:96px;height:56px;padding:0 6px;background-image:url('https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FcbC9Qb%2FbtqCl9fSIrU%2FcPMk6OYUo9OCPrejVbrrS0%2Fimg.png');background-position:50% 0;background-repeat:no-repeat;background-size:96px 56px;text-align:center}
+.img-reset img{margin:0}
+.tit em,.tit i{font-style: normal; font-weight: 700;}
+
+
+.exbody{background: #fff;box-shadow: 0 6px 8px rgba(102, 119, 136, .03), 0 1px 2px rgba(102, 119, 136, .3);border: 1px solid rgba(102, 119, 136, .12)}
+@media(max-width:480px) {
+.exbody{box-shadow: 0 1px 1px rgba(102, 119, 136, .55)}
+}
+@media (min-width:480px) { /* screen >= 480px 데스크톰 영역 */
+  .exbody {
+    border-radius: 2px
+  }
+  .exbody>:first-child {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px
+  }
+  .exbody>:last-child {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px
+  }
+}
+.exbody>pre {
+  margin: 0;
+  padding: 16px;
+  box-shadow: none;
+  border-left: 0;
+  overflow: hidden;
+  overflow-x: auto;
+  background: #f8f8f8;
+  font-size: .96em;
+  line-height: 1.5;
+}
+.exbody>pre::before {
+  display: none;
+}
+.exbody > ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none
+}
+.exbody > ul > li {
+  padding: 8px 8px 8px 36px;
+  position: relative
+}
+.exbody > ul > li > p {
+  margin: 0;
+  padding: 0
+}
+.exbody > ul > li:::before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background-color: #678;
+  border-radius: 50%;
+  left: 16px;
+  top: 18px
+}
+.exbody > ul > li+li {
+    border-top: solid 1px rgba(102, 119, 136, .05)
+}
+.exbody > p {
+  padding: 16px;
+  margin: 0
+}
+.exbody > pre~p,
+.exbody>ul~p,
+.exbody>iframe~p,
+.exbody > table~p {  
+  background-color: #f1f1f1;
+  color: #678;
+  font-size: 90%
+}
+.exbody > pre~p a,
+.exbody>pre~p a:visited,
+.exbody>ul~p a,
+.exbody>ul~p a:visited,
+.exbody>iframe~p a,
+.exbody>iframe~p a:visited,
+.exbody>table~p a,
+.exbody>table~p a:visited {
+  color: #345;
+  text-decoration: none;
+  border-bottom: solid 1px rgba(102, 119, 136, .05)
+}
+.exbody>pre~p a:hover,
+.exbody>ul~p a:hover,
+.exbody>iframe~p a:hover,
+.exbody>table~p a:hover {
+  color: var(--e-text-color)
+}
+.exbody>*:not(:first-child) {
+  border-top: solid 1px rgba(102, 119, 136, .05)
+}
+.exbody > p+p,
+.exbody>p+p:not(:first-child) {
+  margin-top: -1.5em;
+  border-top: 0
+}
+.exbody > div.extop {
+	background-color: #fff;
+	padding: 16px;
+}
+.exbody .hljs {
+	overflow-x: initial !important;
+}
+.exbody pre.-setup,
+.exbody p.-setup,
+.exbody ul.-setup {
+	background-color: #f1f1f1;
+}
+
+/* 	위에서 부터 한칸이 21px입니다. 
+		예) 7번째 줄이면 (7 * 21) + 7= 154입니다. 7은 code의 padding 값.
+		<pre class="js" data-line><code="js">
+		...
+		<div class="highlight" style="top:147px"></div>
+		</pre></code>
+ */
+.exbody pre[data-line] {
+    position: relative;
+}
+.exbody .highlight,
+.exbody .highlight .add {
+	position: absolute;
+  left: 0;
+  right: 0;
+	transform: translate3d(0,2px,0);
+  background: linear-gradient(to right,rgba(20,175,131,0.2) 25%,transparent);
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+  margin-top: 1em;
+  height: 21px;
+}
+.exbody .highlight .del {
+	background: linear-gradient(to right,rgba(255,151,151,0.2) 25%,transparent);
+}

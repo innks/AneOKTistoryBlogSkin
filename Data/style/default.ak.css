@@ -1,0 +1,354 @@
+@charset "utf-8";
+/*
+ * AneOK #2
+ * NexT-Ti Skin v2 리메이크(Remake)
+ *
+ * Noto Sans KR - 300, 400, 700, 900
+ * 
+ */
+
+:root {
+  --body-bg-color:#F0F0F3; /* Color1 - BODY back-color */
+  --content-bg-color:#FFFFFF; /* Color0 */
+  --card-bg-color:#2c2c2c;
+  --text-color:#4D5058; /* Color4 */
+  --text-bg-color:#FFFFFF;
+  --link-color:#4A42EC; /* Color5 - rgba(74, 66, 236, 1)*/
+  --link-hover-color:#4A42EC; /* #4A42EC; */
+  --e-text-color:#110D23; /* Color2 - 강조 emphasize */
+  --a-text-color:#999AA7; /* Color3 - 보조 assistant */
+  --line-color:#BCC4D0; /* Color6 - 라인 */
+  --m-text-color:#636469; /* Color7 - 보조보다 진하게 중간 middle */
+  --a-line-color:#EFEFEE; /* 보조 assistant */
+  --table-row-odd-bg-color: #f9f9f9;
+  --table-row-hover-bg-color: #f5f5f5;
+  --muted-color:#97A1A9;
+}
+
+::selection,::-webkit-selection,::-moz-selection{background-color:var(--card-bg-color);color:var(--content-bg-color)}
+
+/* 기본 셋업 */
+html,body,header,nav,section,article,aside,footer,main,a,button,input,textarea,img,ul,ol,li,p,h1,h2,h3,h4,h5,h6,div,span {
+  margin: 0;
+  padding: 0;
+
+  /* 폰트 크기 상속 */
+  font-size: inherit;
+
+  /* 폰트를 부드럽게 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* 웹킷 마음대로 폰트 크기 조절 막음 */
+  -webkit-text-size-adjust: none;
+
+  /* 웹킷 마음대로 눌림 하이라이트 막음 */
+  -webkit-tap-highlight-color: transparent;
+
+  /* 모바일 롱터치 기본 UI 제거 */
+  -webkit-touch-callout: none;
+  -moz-touch-callout: none;
+}
+*,::after,::before{box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box}
+
+/* 기본 */
+html{
+  font-weight:normal;
+  line-height:1.5;
+  font-size:16px; /* 기본 폰트 크기 설정 */
+  color:var(--text-color);
+}
+body{margin:0}
+a {
+  border-bottom:1px solid var(--line-color);
+  text-decoration:none;
+  cursor:pointer;
+  color:var(--text-color);
+}
+a:active,a:hover{outline: none}
+a:hover {
+  border-bottom-color:var(--text-color);
+  text-decoration: none;
+  color:var(--link-hover-color);
+}
+abbr[title]{-webkit-text-decoration-style:dotted;text-decoration:underline dotted}
+b,strong{font-weight: bolder}
+:not(pre) > code,
+:not(pre) > kbd,
+:not(pre) > samp{
+  font-size:90%;
+  white-space:nowrap;
+}
+em {color:#f0506e}
+ins {text-decoration:none;background-color:#FCF8E3;color:var(--a-text-color)}
+mark,.mark {background-color:#FCF8E3;color:var(--a-text-color);padding:.2rem}
+q {font-style: italic;}
+small,.small{font-size:80%}
+address {font-style: normal}
+sub,sup {vertical-align:baseline;position:relative;font-size:75%;line-height:0}
+sup {top:-0.5em}
+sub {bottom:-0.25em}
+address {font-style: normal}
+audio,canvas,iframe,img,svg,video{vertical-align: middle}
+canvas,img,video {box-sizing:border-box;max-width:100%;height:auto;}
+iframe,video,embed,object{max-width:100%;}
+@supports (display: block) {svg{box-sizing:border-box;max-width:100%;height:auto;}}
+svg:not(:root){overflow:hidden;}
+img:not([src]){visibility:hidden;min-width:1px;}
+iframe {border:0;}
+
+p {
+  word-break:break-all;
+  margin: 0 0 16px 0
+}
+ul,
+ol,
+dl,
+pre,
+address,
+fieldset,
+figure,
+blockquote,
+.table,
+.note,
+.exbody {
+  margin: 0 0 20px 0
+}
+/* 인접한 요소 인 경우 여백 추가 */
+* + p {
+  margin-top: 16px
+}
+
+* + ul,
+* + ol,
+* + dl,
+* + pre,
+* + address,
+* + fieldset,
+* + figure,
+* + blockquote,
+* + .table,
+* + .note,
+* + .exbody {
+  margin-top: 20px
+}
+
+legend {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: inherit;
+  width: 100%;
+  padding: 0;
+}
+button, input[type=submit], input[type=reset], input[type=button] {
+  overflow: visible;
+  cursor: pointer;
+}
+input[type=text], input[type=email], input[type=password], input[type=submit], textarea {
+  -webkit-appearance: none
+}
+button {
+  background: transparent;
+  overflow: visible;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+ul,
+ol {
+  padding-right: 0px
+}
+ul > li > ul,
+ul > li > ol,
+ol > li > ol,
+ol > li > ul {
+  margin: 0 0 0 15px
+}
+dt {
+  font-weight: bold
+}
+dd {
+  margin-right: 0
+}
+/* hr */
+hr {
+  border-top: 1px solid var(--line-color);
+  text-align: inherit;
+  margin: 0 0 20px 0;
+  overflow: visible;
+  border: 0;
+}
+* + hr {
+  margin-top: 20px
+}
+h1,h2,h3,h4,h5,h6,
+.h1,.h2,.h3,.h4,.h5,.h6 {
+  margin: 0 0 20px 0;
+  font-weight:700;
+  color:var(--e-text-color)
+}
+* + h1,* + .h1,* + h2,* + .h2,* + h3,* + .h3,
+* + h4,* + .h4,* + h5,* + .h5,* + h6,* + .h6, {
+  margin-top: 52px
+}
+h1:first-child, h2:first-child, h3:first-child, 
+h4:first-child, h5:first-child, h6:first-child {
+  margin-top: 0
+}
+h1 small,h2 small,h3 small,h4 small,h5 small,h6 small,
+.h1 small,.h2 small,.h3 small,.h4 small,.h5 small,.h6 small,
+h1 .small,h2 .small,h3 .small,h4 .small,h5 .small,h6 .small,
+.h1 .small,.h2 .small,.h3 .small,.h4 .small,.h5 .small,.h6 .small {
+  font-weight:400;
+  line-height:1;
+  color:var(--a-text-color)
+}
+h1,.h1 {
+  font-size: 2.23125rem;
+  line-height: 1.2;
+}
+h2,.h2 {
+  font-size: 2rem;
+  line-height: 1.3;
+}
+h3,.h3 {
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+h4,.h4 {
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+h5,.h5 {
+  font-size: 16px;
+  line-height: 1.4;
+}
+h6,.h6 {
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+/* screen >= 1024px 데스크톰 영역 */
+@media (min-width: 1024px) {
+  h1,.h1 {
+    font-size: 3.2rem
+  }
+  h2,.h2 {
+    font-size: 2.25rem
+  }
+  h3,.h3 {
+    font-size: 2rem
+  }
+  h4,.h4 {
+    font-size: 1.75rem
+  }
+  h5,.h5 {
+    font-size: 1.25rem
+  }
+  h6,.h6 {
+    font-size: 1rem
+  }
+}
+h1 small, h2 small,
+.h1 small, .h2 small,
+h1 .small, h2 .small,
+.h1 .small, .h2 .small {
+font-size:50%
+}
+h3 small,h4 small,
+.h3 small,.h4 small,
+h3 .small,h4 .small,
+.h3 .small,.h4 .small {
+font-size:60%
+}
+blockquote {
+  font-size: 1.25rem;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--text-color)
+}
+blockquote p:last-of-type {
+  margin-bottom: 0
+}
+blockquote footer {
+  font-size: 0.875rem;
+  margin-top: 10px;
+  line-height: 1.5;
+  color: var(--a-text-color)
+}
+blockquote footer:::before {
+  content: "— "
+}
+/* 모든 브라우저에서 올바른 표시를 추가하십시오. */
+summary {
+  display: list-item
+}
+/* IE에서 올바른 디스플레이를 추가하십시오. */
+template {
+  display: none
+}
+/* 1. Edge, IE 10+ 및 Firefox에서 올바른 디스플레이를 추가하십시오.
+ * 2. IE에서 올바른 디스플레이를 추가하십시오. */
+details,
+main {
+  /* 2 */
+  display: block
+}
+/* code */
+a>code {
+  color:inherit
+}
+kbd {
+  background-color:#2E2E2E;
+  border-radius:.2rem;
+  padding:.2rem .4rem;
+  font-size:87.5%;
+  color:var(--content-bg-color)
+}
+kbd kbd {
+  font-weight:700;
+  font-size:100%;  
+  padding:0;
+}
+pre code {
+  font-size:inherit;
+  word-break:normal;
+  color:inherit;
+  font-weight: 400;
+}
+
+@media print {
+  *, *::before, *::after {
+    background: transparent !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+    color: var(--text-color) !important;
+  }
+  a, a:visited {
+    text-decoration: underline
+  }
+  pre, blockquote {
+    page-break-inside: avoid;
+    border: 1px solid var(--line-color);
+  }
+  thead {
+    display: table-header-group
+  }
+  tr, img {
+    page-break-inside: avoid
+  }
+  img {
+    max-width: 100% !important
+  }
+  @page {
+    margin: 0.5cm
+  }
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3
+  }
+  h2, h3 {
+    page-break-after: avoid
+  }
+}
+
