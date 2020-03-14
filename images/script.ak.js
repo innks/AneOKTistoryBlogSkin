@@ -18,7 +18,7 @@ $(document).ready(function() {  /* 화면이 모두 로드되고 나면 거의 �
 		$thisCategory += '<li><a href="' + $(this).attr('href') + '">' + array[0] + '<small class="xcnt">(' + array[1] + '</small></a></li>';
 		$('.category-side-list').html($thisCategory);
 	});
-	$('.site-nav').find('li a').each(function () {
+	$('#head-nav').find('li a').each(function () {
 		$thisMenu += '<li><a href="' + $(this).attr('href') + '">' + $(this).text() + '</a></li>';
 		$('.menu-side-list').html($thisMenu);
 	});	
