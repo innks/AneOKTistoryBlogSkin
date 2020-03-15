@@ -569,7 +569,8 @@ img {box-shadow:0px 15px 15px -20px var(--e-text-color);margin:1.5rem 0 2rem}
 /* 포스터 이미지 그림자 없애기*/
 #tt-body-page figure.imageblock img.no,
 figure.imageblock img.no,
-img.no{box-shadow:none;margin:0}
+img.no,
+.no-shadow img{box-shadow:none;margin:0}
 
 /* 포스터 안 이미지 설명 */
 figure figcaption {margin-top:-1.5rem}
@@ -595,7 +596,7 @@ figure figcaption {margin-top:-1.5rem}
 .table td{vertical-align:top;padding:12px 12px}
 .table td >:last-child{margin-bottom:0}
 .table tfoot{font-size:.875rem}
-.table > tr:not(:first-child),.table >:not(:first-child) > tr,.table >:first-child > tr:not(:first-child){border-top:1px solid var(--line-color)}
+.table > tr:not(:first-child),.table >:not(:first-child) > tr,.table >:first-child > tr:not(:first-child){border-top:1px solid var(--a-line-color)}
 .table tbody tr{transition:background-color 0.1s linear}
 .table tbody{border-bottom:1px solid rgba(102, 119, 136, .1);border-top:1px solid var(--line-color)}
 
