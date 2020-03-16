@@ -15,6 +15,8 @@
   --line-color:#BCC4D0; /* Color6 - 라인 */
   --m-text-color:#636469; /* Color7 - 보조보다 진하게 중간 middle */
   --a-line-color:#EFEFEE; /* 보조 assistant */
+  --table-row-odd-bg-color: #f9f9f9;
+  --table-row-hover-bg-color: #f5f5f5;
   --muted-color:#97A1A9;
 }
 
@@ -573,17 +575,17 @@ code,pre {font-family:Consolas,monaco,'AritaDotum','Malgun Gothic',sans-serif}
 .comments .comment-list ul li ul{margin:10px 0 -10px;position:relative}
 .comments .comment-list ul li ul li{padding:10px 0 10px 15px;border-top:1px solid var(--a-line-color);border-bottom:0;padding-inline-start:48px}
 .comments .comment-list ul li ul li::before{content:"re:";font-weight:400;font-size:16px;color:var(--text-bg-color);position:absolute;top:25px;left:20px;background-color:var(--text-color);border-radius:4px;padding:0 5px}
-.comments .comment-list .author-meta{position:relative;overflow:hidden;width:100%;padding:15px 0 0 5px;box-sizing:border-box}
-.comments .comment-list .author-meta span{display:inline-block;text-decoration:none;font-size:1rem;color:var(--e-text-color)}
-.comments .comment-list .author-meta a{text-decoration:none;font-size:1rem;color:var(--text-color);border-bottom:0}
-.comments .comment-list .author-meta .date{margin-left:10px;font-size:.825rem;color:var(--a-text-color)}
-.comments .comment-list .author-meta .date::before{content:"";display:inline-block;width:1px;height:9px;margin-right:10px;background-color:#B2B2B2}
-.comments .comment-list .author-meta .date a{margin-left:5px;color:var(--a-text-color);font-size:13px}
-.comments .comment-list .author-meta .date a::before{content:"["}
-.comments .comment-list .author-meta .date a::after{content:"]"}
-.comments .comment-list .author-meta .date a:hover{color:var(--e-text-color)}
-.comments .comment-list .author-meta .control{position:absolute;top:-5px;right:0}
-.comments .comment-list .author-meta .control a{margin:0 2px;font-size:12px;color:var(--a-text-color);border-bottom:0}
+.comments .comment-list ul li .author-meta{position:relative;overflow:hidden;width:100%;padding:15px 0 0 5px;box-sizing:border-box}
+.comments .comment-list ul li .author-meta span{display:inline-block;text-decoration:none;font-size:1rem;color:var(--text-color)}
+.comments .comment-list ul li .author-meta a{text-decoration:none;font-size:1rem;color:var(--text-color);border-bottom:0}
+.comments .comment-list ul li .author-meta .date{margin-left:10px;font-size:.825rem;color:var(--a-text-color)}
+.comments .comment-list ul li .author-meta .date::before{content:"";display:inline-block;width:1px;height:9px;margin-right:10px;background-color:#B2B2B2}
+.comments .comment-list ul li .author-meta .date a{margin-left:5px;color:var(--a-text-color);font-size:13px}
+.comments .comment-list ul li .author-meta .date a::before{content:"["}
+.comments .comment-list ul li .author-meta .date a::after{content:"]"}
+.comments .comment-list ul li .author-meta .date a:hover{color:var(--e-text-color)}
+.comments .comment-list ul li .author-meta .control{position:absolute;top:-5px;right:0}
+.comments .comment-list ul li .author-meta .control a{margin:0 2px;font-size:12px;color:var(--a-text-color);border-bottom:0}
 .comments .comment-list ul li p{padding:0 0 0 58px;font-size:1rem;line-height:1.5714;color:var(--m-text-color)}
 .comments .comment-form .field{position:relative;overflow:hidden;width:100%;margin-bottom:8px}
 .comments .comment-form input[type=text],.comments .comment-form input[type=password],
@@ -707,9 +709,9 @@ code,pre {font-family:Consolas,monaco,'AritaDotum','Malgun Gothic',sans-serif}
 .links-of-author{display:flex;flex-wrap:wrap;justify-content:center;margin:5px -5px 0;background-color:var(--card-bg-color);border-bottom-left-radius:4px;border-bottom-right-radius:4px;padding-bottom:10px}
 .links-of-author a{margin:5px 2px 0;text-align:left;box-sizing:border-box;display:inline-block;padding:5px;border:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;color:var(--a-text-color)}
 .links-of-author a::after,.links-of-author a::before{display:none}
-.links-of-author a[target=_blank]{border-bottom:0;color:var(--a-text-color)}
 .links-of-author a[target=_blank]:hover,
 .links-of-author a:hover{border-radius:4px;color:var(--content-bg-color)}
+.links-of-author a[target=_blank]{border-bottom:0;color:var(--a-text-color)}
 .links-of-author i{margin:0 2px;font-size:18px}
 .links-of-author a.resize1 {margin-top: 5px;}
 .links-of-author a.resize2 {margin-top: 5px;}
@@ -732,6 +734,7 @@ code,pre {font-family:Consolas,monaco,'AritaDotum','Malgun Gothic',sans-serif}
 .back-to-top{display:none;position:fixed;right:40px;bottom:60px;text-decoration:none;z-index:1001;background-color:var(--body-bg-color);box-shadow:0 2px 10px 0 rgba(0,0,0,0.12),0 3px 10px -2px rgba(0,0,0,0.06),0 1px 15px 0 rgba(0,0,0,0.12);border-radius:10px;padding:12px 10px 5px 10px;width:44px;background:rgba(255,255,255,0.7);/*background: url(./images/topBtn.svg) no-repeat top center;width:50px;height:50px;*/}
 .back-to-top a,.back-to-top a:hover{border-bottom:0;text-align:center;color:var(--text-color)}
 .back-to-top img{margin:0}
+.back-to-top i{font-size: 24px}
 .back-to-top i{font-size: 24px}
 .back-to-top.on{display:block}
 .back-to-top.on #s-progress{font-size:10px;margin:2px 0 0 -2px}
@@ -786,7 +789,7 @@ code,pre {font-family:Consolas,monaco,'AritaDotum','Malgun Gothic',sans-serif}
   #footer .footer-counter a img{width:434px;height:19px;object-fit:cover;object-position:top}	  
 
   #sidebar{display:block;}
-  	#sidebar.on{position:fixed !important;top:12px !important;margin-top:0 !important}
+  	.sidebar-affix{position:fixed !important;top:12px !important;margin-top:0 !important}
 
   #tt-body-page .sidebar-nav{display:block}
   #tt-body-page .sidebar-nav .sidebar-nav-active.on{display:block}

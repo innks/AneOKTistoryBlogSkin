@@ -8,7 +8,8 @@ setTimeout(function () {
 
 $(document).ready(function() {  /* 화면이 모두 로드되고 나면 거의 마지막으로 실행하는 함수 */
 	// --- 모바일 네비 - 전체 카테고리 중 첫번째 카테고리 값 만을 가져와서 뿌려줍니다.
-	var $thisCategory = '', $thisMenu = '';
+	var $thisCategory = '';
+	var $thisMenu = '';
 	$('.tt_category').find('.category_list>li>a').each(function () {  // each 반복문, find 찾기
 		var array = $(this).text().split('(');
 		$thisCategory += '<li><a href="' + $(this).attr('href') + '">' + array[0] + '<small class="xcnt">(' + array[1] + '</small></a></li>';
@@ -26,29 +27,34 @@ $(document).ready(function() {  /* 화면이 모두 로드되고 나면 거의 �
 	});
 
   // --- 전체 카테고리 중 전체 포스트숫자 리턴
-	var $cnt = $('#category-top-list .link_tit .c_cnt').text();
+	var $category = $('#category-top-list .link_tit .c_cnt');
+	var $cnt = $category.text();
 	var $cnt_num = $cnt.substr(1 , $cnt.length - 2);        
 	$('.category-cnt-num').append($cnt_num);
 
 	// -- 버전 출력
+	$("#blog-logo-ver").html("AneOK <small>blog " + blogInfo.logoVer + "</small>");		
+	$(".blog-logover").html(blogInfo.logoVer);
+	$(".blog-version").html(blogInfo.version);
+	$(".blog-update").html(blogInfo.update);
+	$(".blog-build").html(blogInfo.Build);	
 	var ve = "<img src='https://img.shields.io/badge/" + blogInfo.name + " Blog-v" + blogInfo.version + "-4a65f6.svg'> " +
 					 "<img src='https://img.shields.io/badge/jquery-" + dependenciesVer.jquery + " -red.svg'> <img src='https://img.shields.io/badge/Bootstrap-" + dependenciesVer.Bootstrap + 
 					 "-563d7c.svg'> <img src='https://img.shields.io/badge/Iconfont IcoMoon-" + dependenciesVer.iconFont + 
 					 "-d9534f.svg'> <img src='https://img.shields.io/badge/DynamicScrollspy-" + dependenciesVer.DynamicScrollspy + "-214a74.svg'>";
-	$("#blog-logo-ver").html("AneOK <small>blog " + blogInfo.logoVer + "</small>"),
-	$(".blog-logover").html(blogInfo.logoVer),
-	$(".blog-version").html(blogInfo.version),
-	$(".blog-update").html(blogInfo.update),
-	$(".blog-build").html(blogInfo.Build),
 	$(".versionView").html(ve);
 
 	// --- 사이드바 화면 고정 및 TOP버튼
 	var ibOffset = $('#sidebar').offset();
 	$(window).scroll(function() {
 	    if ($(document).scrollTop() > ibOffset.top) {
-	      $('#sidebar, .back-to-top, .wrap-inner').addClass('on');
+	      $('#sidebar').addClass('on');
+	      $('.back-to-top').addClass('on');
+	      $('.wrap-inner').addClass('on');
 	    } else {
-	      $('#sidebar, .back-to-top, .wrap-inner').removeClass('on');
+	      $('#sidebar').removeClass('on');
+	      $('.back-to-top').removeClass('on');
+	      $('.wrap-inner').removeClass('on');
 	    };
 	});
 

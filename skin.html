@@ -42,8 +42,8 @@
     <div class="mobileBtn"><span></span></div>
     <nav class="mobileBtn-nav">
       <div class="xmain"><ul class="category-side-list"></ul></div>
-        <hr>
-        <div class="xsub"><ul class="menu-side-list"></ul></div>
+      <hr>
+      <div class="xsub"><ul class="menu-side-list"></ul></div>
     </nav> 
   </header>	
 	<main id="main">
@@ -105,9 +105,7 @@
           <s_index_article_rep>
             <div class="group-list" id="indexList">
               <p class="post-list">
-                <a href="[##_article_rep_link_##]">
-                  <span class="article-info title">[##_article_rep_title_##]</span>
-                </a>
+                <a href="[##_article_rep_link_##]"><span class="article-info title">[##_article_rep_title_##]</span></a>
               </p>
               <p class="post-list mt--2">
                 <span class="post-category"><abbr title="[##_article_rep_category_##]">[##_article_rep_category_##]</abbr></span>                  
@@ -120,8 +118,7 @@
           <s_permalink_article_rep>
             <s_article_rep_thumbnail>
             <div class="cgroup group-border group-cover" id="post">
-              <div class="inner-header" style="background-image:url('[##_article_rep_thumbnail_raw_url_##]')">
-              </div>
+              <div class="inner-header" style="background-image:url('[##_article_rep_thumbnail_raw_url_##]')"></div>
             </div>
             </s_article_rep_thumbnail>
 
@@ -163,9 +160,7 @@
 
             <!-- 태그 { -->
             <s_tag_label>
-              <div class="tagTrail">
-                <i class="icon-tag"></i> [##_tag_label_rep_##]
-              </div>
+              <div class="tagTrail"><i class="icon-tag"></i> [##_tag_label_rep_##]</div>
             </s_tag_label>
             <!-- } 태그 -->
 
@@ -279,23 +274,23 @@
         <s_random_tags>
             <li><a href="[##_tag_link_##]" class="tag"> [##_tag_name_##]</a></li>
         </s_random_tags>
-      </ul>
+        </ul>
       </div><!-- } 추가 자리 -->
 
       <!-- 푸더 { -->
       <footer id="footer">
-          <div class="copyright">
-            <p>© 2020 NexT, © 2014 – 2020 AneOK</p>
-            <p><a href="https://www.tistory.com/" target="_blank">Tistory</a> skin (Hexo Theme <a href="https://theme-next.org" title="Hexo Theme" target="_blank">NexT.Gemini</a> v7..) > change : 
-              <script>
-              document.write("<a href='https://aneok.tistory.com/' title='AneOK' target='_blank'>AneOK <small class='grs'>blog " + blogInfo.logoVer + "</small></a> - <a href='[##_blog_link_##]manage/' target='_top' title='Login → [##_blog_link_##]manage/' target='_blank'><i class='icon-admin'></i></a> v" + blogInfo.version + "</p><p style='font-size:10px;'>window (" + screen.width + ' x ' + screen.height +') <div id="Parse_Area"></div>');
-              </script>
-              <!--받아온 데이터들이 들어갈 div -->
-            </p>
-          </div>
-          <div class="footer-counter">
-            <p class="wwwCounts"><a href="https://info.flagcounter.com/ux7n"><img src="https://s01.flagcounter.com/count/ux7n/bg_F0F0F3/txt_757575/border_F0F0F3/columns_6/maxflags_6/viewers_3/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a></p>
-          </div>
+        <div class="copyright">
+          <p>© 2020 NexT, © 2014 – 2020 AneOK</p>
+          <p><a href="https://www.tistory.com/" target="_blank">Tistory</a> skin (Hexo Theme <a href="https://theme-next.org" title="Hexo Theme" target="_blank">NexT.Gemini</a> v7..) > change : 
+            <script>
+            document.write("<a href='https://aneok.tistory.com/' title='AneOK' target='_blank'>AneOK <small class='grs'>blog " + blogInfo.logoVer + "</small></a> - <a href='[##_blog_link_##]manage/' target='_top' title='Login → [##_blog_link_##]manage/' target='_blank'><i class='icon-admin'></i></a> v" + blogInfo.version + "</p><p style='font-size:10px;'>window (" + screen.width + ' x ' + screen.height +') <div id="Parse_Area"></div>');
+            </script>
+            <!--받아온 데이터들이 들어갈 div -->
+          </p>
+        </div>
+        <div class="footer-counter">
+          <p class="wwwCounts"><a href="https://info.flagcounter.com/ux7n"><img src="https://s01.flagcounter.com/count/ux7n/bg_F0F0F3/txt_757575/border_F0F0F3/columns_6/maxflags_6/viewers_3/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a></p>
+        </div>
       </footer>
       <!-- } 푸더 -->
 
@@ -425,7 +420,7 @@
 <script src="./images/jquery.sieve.min.js?v=0.3.0"></script><!-- page in search JavaScript -->
 <script src="./images/bootstrap.ak.min.js?v=4.4.1.ad"></script><!-- Toc용 bootstrap JavaScript  -->
 <script src="./images/dynamicscrollspy.ak.min.js?b=1"></script><!-- Toc용 JavaScript  -->
-<script src="./images/script.ak.js?b=10"></script><!-- this blog JavaScript  -->
+<script src="./images/script.ak.min.js?b=10"></script><!-- this blog JavaScript  -->
 <script>
 // 목차 출력 - h2로 시작해야 보임
 $(function() {
