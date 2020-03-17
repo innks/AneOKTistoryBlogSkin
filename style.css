@@ -52,6 +52,10 @@ h2::after,h3::after {margin-left:24px;content:'';display:inline-block;vertical-a
 .pb-2{padding-bottom:.5rem!important}
 .pt-3{padding-top:1rem!important}
 .pb-3{padding-bottom:1rem!important}
+.pl-0{padding-left: 0!important}
+.pl-1{padding-left: .25rem!important}
+.pl-2{padding-left: .5rem!important}
+.pl-3{padding-left: 1rem!important}
 
 
 .text-left{text-align:left!important;}
