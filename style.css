@@ -435,7 +435,7 @@ h2.c5::after,h3.c5::after{display:none}
   list-style-type: none
 }
 .exbody > ul > li {
-  padding: 8px 8px 8px 36px;
+  padding: 4px 8px 2px 36px;
   position: relative
 }
 .exbody > ul > li > p {
@@ -454,15 +454,18 @@ h2.c5::after,h3.c5::after{display:none}
   top: 18px
 }
 .exbody > ul > li+li {
-    border-top: solid 1px rgba(102, 119, 136, .05)
+  border-top: solid 1px rgba(102, 119, 136, .05);
+  padding-top: 0;
+}
+.exbody > ul > li:nth-child(n+2) {
+	margin-top: 0;
 }
 .exbody > p {
-  padding: 16px;
+  padding: 8px 16px;
   margin: 0
 }
 .exbody > pre~p,
 .exbody > ul~p,
-.exbody > iframe~p,
 .exbody > table~p {  
   background: #f1f1f1;
   color: #678;
@@ -472,8 +475,6 @@ h2.c5::after,h3.c5::after{display:none}
 .exbody > pre~p a:visited,
 .exbody > ul~p a,
 .exbody > ul~p a:visited,
-.exbody > iframe~p a,
-.exbody > iframe~p a:visited,
 .exbody > table~p a,
 .exbody > table~p a:visited {
   color: #345;
@@ -482,7 +483,6 @@ h2.c5::after,h3.c5::after{display:none}
 }
 .exbody > pre~p a:hover,
 .exbody > ul~p a:hover,
-.exbody > iframe~p a:hover,
 .exbody > table~p a:hover {
   color: var(--e-text-color)
 }
@@ -503,19 +503,36 @@ h2.c5::after,h3.c5::after{display:none}
 .exbody ul.-setup {
 	background-color: #f1f1f1
 }
+.exbody > p.-setup + p,
+.exbody > p.-setup + ul,
+.exbody > p.-setup + table {
+	margin-top:0
+}
+.exbody.ex > ul > li+li,
+.exbody.ex > *:not(:first-child) {
+  border-top: 0;
+}
+.exbody > h5 {
+  font-size: 14px;
+  margin: 0;
+  padding: 7px 16px 4px;
+  font-weight: 400;
+  background-color: #e8e9ea;
+  color: #678;
+}
 .exbody p.-setup code,
 .exbody ul.-setup code,
 .exbody > pre~p code,
 .exbody > ul~p code,
-.exbody > iframe~p code,
 .exbody > table~p code {
  	background-color:var(--a-line-color)!important;
  	color: var(--e-text-color)!important;
  	font-weight:700!important;
 }
-.exbody.ex > ul > li+li,
-.exbody.ex > *:not(:first-child) {
-  border-top: 0;
+.exbody h5 code {
+	background-color: #e8e9ea!important;
+	color: var(--e-text-color)!important;
+ 	font-weight:700!important;
 }
 /* diff 기능 */
 .exbody.diff .del{background:#fdd}
