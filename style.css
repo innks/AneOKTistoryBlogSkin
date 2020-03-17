@@ -251,13 +251,17 @@ figure figcaption {margin-top:-1.5rem}
 .table td{vertical-align:top;padding:12px 12px}
 .table td >:last-child{margin-bottom:0}
 .table tfoot{font-size:.875rem}
-.table > tr:not(:first-child),.table >:not(:first-child) > tr,.table >:first-child > tr:not(:first-child){border-top:1px solid var(--a-line-color)}
+.table > tr:not(:first-child),
+.table >:not(:first-child) > tr,
+.table >:first-child > tr:not(:first-child){border-top:1px solid var(--a-line-color)}
 .table tbody tr{transition:background-color 0.1s linear}
 .table tbody{border-bottom:1px solid rgba(102, 119, 136, .1);border-top:1px solid var(--line-color)}
 
 .table.ex td:first-child{white-space:nowrap}
 .table.ex td,
 .table.ex th {padding:6px 16px;vertical-align:top;}
+.table.ex td[colspan],
+.table.ex td[colspan] {white-space:normal;}
 .table.ex tr th:last-child,
 .table.ex tr td:last-child{}
 .table.ex tr+tr {border-top: solid 1px rgba(102, 119, 136, .1)}
