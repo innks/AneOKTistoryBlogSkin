@@ -74,8 +74,8 @@ h2::after,h3::after {margin-left:24px;content:'';display:inline-block;vertical-a
 .f60,.f60p{font-size: 60%!important;}
 .f50,.f50p{font-size: 50%!important;}
 
-.x2 {font-size: 2rem;}
-.x3 {font-size: 3rem;}
+.x2 {font-size: 200%;}
+.x3 {font-size: 300%;}
 
 /* 포스트 안 bootstrap .row */
 .row{margin-top:0;}
@@ -545,6 +545,10 @@ h2.c5::after,h3.c5::after{display:none}
 /* diff 기능 */
 .exbody.diff .del{background:#fdd}
 .exbody.diff .add{background:#dfd}
+.exbody.diff .del::before{content:'- ';}
+.exbody.diff .add::before{content:'+ ';}
+.exbody.diff .nu {font-weight: 300;color: #678;}
+.exbody.diff .x{color:#cb2431; font-weight: 700;}
 
 /* exbody icon */
 .exbody p.-setup.html::before,
