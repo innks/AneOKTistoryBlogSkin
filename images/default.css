@@ -101,10 +101,7 @@ pre,
 address,
 fieldset,
 figure,
-blockquote,
-.table,
-.note,
-.exbody {
+blockquote{
   margin: 0 0 20px 0
 }
 /* 인접한 요소 인 경우 여백 추가 */
@@ -119,10 +116,7 @@ blockquote,
 * + address,
 * + fieldset,
 * + figure,
-* + blockquote,
-* + .table,
-* + .note,
-* + .exbody {
+* + blockquote {
   margin-top: 20px
 }
 
@@ -346,7 +340,7 @@ pre code {
 }
 
 /*
- * layout.ak.css
+ * layout
  */
 
 /* font */
