@@ -69,7 +69,7 @@ b,strong{font-weight: bolder}
 :not(pre) > code,
 :not(pre) > kbd,
 :not(pre) > samp{
-  font-size:90%;
+  font-size: 0.875rem;
   white-space:nowrap;
 }
 em {color:#f0506e}
@@ -266,23 +266,22 @@ blockquote footer {
 blockquote footer:::before {
   content: "— "
 }
-/* 모든 브라우저에서 올바른 표시를 추가하십시오. */
+/* HTML5 elements
+ ========================================================================== */
 summary {
   display: list-item
 }
-/* IE에서 올바른 디스플레이를 추가하십시오. */
 template {
   display: none
 }
-/* 1. Edge, IE 10+ 및 Firefox에서 올바른 디스플레이를 추가하십시오.
- * 2. IE에서 올바른 디스플레이를 추가하십시오. */
+/* IE에서 디스플레이를 추가. */
 details,
 main {
-  /* 2 */
   display: block
 }
+
 /* code */
-a>code {
+a > code {
   color:inherit
 }
 kbd {
@@ -304,40 +303,13 @@ pre code {
   font-weight: 400;
 }
 
-@media print {
-  *, *::before, *::after {
-    background: transparent !important;
-    text-shadow: none !important;
-    box-shadow: none !important;
-    color: var(--text-color) !important;
-  }
-  a, a:visited {
-    text-decoration: underline
-  }
-  pre, blockquote {
-    page-break-inside: avoid;
-    border: 1px solid var(--line-color);
-  }
-  thead {
-    display: table-header-group
-  }
-  tr, img {
-    page-break-inside: avoid
-  }
-  img {
-    max-width: 100% !important
-  }
-  @page {
-    margin: 0.5cm
-  }
-  p, h2, h3 {
-    orphans: 3;
-    widows: 3
-  }
-  h2, h3 {
-    page-break-after: avoid
+/* 브라우저는 렌더링 속도, 정밀도에 대한 가독성을 강조 */
+@media screen and (min-width: 960px) { 
+  html, body {
+      text-rendering: optimizeLegibility;
   }
 }
+
 
 /*
  * layout

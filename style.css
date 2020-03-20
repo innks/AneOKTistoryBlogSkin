@@ -12,7 +12,7 @@
  */
 
 ul,ol {list-style: none;}
-code{padding:2px 4px;font-size: 90%;color: #c7254e;background-color:#f9f2f4;border-radius: 3px;}
+code{padding:3px 4px 1px;font-size: 90%;color: #c7254e;background-color:#f9f2f4;border-radius: 3px;}
 pre>code {font-size:14px;line-height: 1.5;word-wrap:break-word;}
 ol,ul,dl{font-size:16px;padding-left:0;list-style:none}
 ol li,ul li{margin-left:12px;padding-left:0}
@@ -297,20 +297,20 @@ dl.dl dd{margin-left:20px}
 
 /* hr */
 /* <div class="hr"><p class="h6">중 간 선</p></div> 선 - 1줄 */
-.hr{display:flex;flex-basis:100%;align-items:center;color:var(--e-text-color);font-size:.875rem;margin:3rem 0px 2rem;clear: both;}
-.hr-icon::before,.hr-icon::after,
-.hr::before,.hr::after{content:"";flex-grow:1;background-color:var(--line-color);height:1px;font-size:0px;line-height:0px;}
-.hr .h6,
-.hr .h5,
+.hr {display:flex;flex-basis:100%;align-items:center;color:var(--e-text-color);font-size:.875rem;margin:3rem 0px 2rem;clear: both;}
+.hr::before,.hr::after,
+.hr-icon::before,.hr-icon::after {content:'';flex-grow:1;height:1px;font-size:0px;line-height:0px;}
+.hr::before, .hr-icon::before {background:linear-gradient(to right,transparent 50%, rgba(116,95,181,0.2) 100%);margin-right:0;}
+.hr::after, .hr-icon::after {background:linear-gradient(to right,rgba(116,95,181,0.2),transparent 50%);margin-left:0;}
+.hr span {margin-bottom:0;-webkit-margin-before:0;}
 .hr span,
-.hr-icon span{margin-bottom:0;-webkit-margin-before:0;}
+.hr-icon span {padding-left: 16px; padding-right: 16px;}
 
 .hr-icon{display:flex;flex-basis:100%;align-items:center;color:var(--e-text-color);font-size:.875rem;margin:5rem 0px 5rem;clear: both;}
-.hr::before,
-.hr-icon::before{background:linear-gradient(to right,transparent 50%, rgba(116,95,181,0.2) 100%);margin-right:16px;}
-.hr::after,
-.hr-icon::after{background:linear-gradient(to right,rgba(116,95,181,0.2),transparent 50%);margin-left:16px;}
-.hr-icon span.i::after{content: ' ';display: block;text-indent: -99px;width: 50px;height: 50px;background: url(./images/break.svg) no-repeat;background-size: 50px 50px;}
+.hr-icon span{margin-bottom:0;-webkit-margin-before:0; text-indent: -9999px;}
+.hr-icon span.i::after{content:'';display: block;text-indent: -99px;width: 50px;height: 50px;background: url(./images/break.svg) no-repeat;background-size: 50px 50px;margin-top: -10px;}
+.hr-icon span.icon:after {content:''; display: block; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25'%3E%3Cpath d='M19 6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14.66h.01c.01.1.05.2.12.28a.5.5 0 0 0 .7.03l5.67-4.12 5.66 4.13a.5.5 0 0 0 .71-.03.5.5 0 0 0 .12-.29H19V6zm-6.84 9.97L7 19.64V6a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v13.64l-5.16-3.67a.49.49 0 0 0-.68 0z' fill-rule='evenodd'%3E%3C/path%3E%3C/svg%3E"); width: 24px;height: 24px; background-size: 24px 24px;}
+
 
 /* 추가 정보 오른쪽 라인 박스 */
 .add-info{float:right;margin:10px 2%}
@@ -539,6 +539,60 @@ h2.c5::after,h3.c5::after{display:none}
   background-color: #e8e9ea;
   color: #678;
 }
+
+.exbody > h5.info,
+.exbody > h5.i{
+	background-color:#428bca!important;
+}
+.exbody > h5.info code,
+.exbody > h5.i code{
+	background-color:#76abd9!important;
+}
+.exbody > h5.primary,
+.exbody > h5.p{
+	background-color:#6f42c1!important;
+}
+.exbody > h5.primary code,
+.exbody > h5.p code {
+	background-color:#9473d1!important;
+}
+.exbody > h5.success,
+.exbody > h5.s {
+  background-color: #5cb85c!important;
+}
+.exbody > h5.success code,
+.exbody > h5.s code {
+	background-color:#8ccd8c!important;
+}
+.exbody > h5.warning,
+.exbody > h5.w {
+  background-color: #f0ad4e!important;
+}
+.exbody > h5.warning code,
+.exbody > h5.w code {
+	background-color:#f6cf97!important;
+}
+.exbody > h5.danger,
+.exbody > h5.d {
+	background-color:#d9534f!important;
+}
+.exbody > h5.danger code,
+.exbody > h5.d code {
+	background-color:#e68e8c!important;	
+}
+.exbody > h5.info,
+.exbody > h5.i,
+.exbody > h5.primary,
+.exbody > h5.p,
+.exbody > h5.success,
+.exbody > h5.s,
+.exbody > h5.warning,
+.exbody > h5.w,
+.exbody > h5.danger,
+.exbody > h5.d {
+	color:var(--content-bg-color);
+}
+
 .exbody p.-setup code,
 .exbody ul.-setup code,
 .exbody > pre~p code,
