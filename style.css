@@ -109,6 +109,61 @@ h2::after,h3::after {margin-left:24px;content:'';display:inline-block;vertical-a
 figure.fileblock .desc,#tt-body-page figure.fileblock .desc{line-height:normal;}
 figure.fileblock{font-weight:400;}
 
+.entry-content .btn_more, .entry-content .btn_less {
+  position: relative
+}
+.entry-content .txt_view {
+  margin-top: 25px
+}
+.entry-content .txt_fold,
+.entry-content .btn_more {
+  display: block;
+  padding: 0 14px;
+  color: var(--e-text-color)!important;
+  font-size: 19px!important;
+  font-weight: 600;
+  z-index: 2;
+}
+.entry-content .btn_more::before {
+  font-family: 'iconfont';
+  content: '\e784';
+  color: var(--e-text-color);
+  margin-right: 5px;
+  vertical-align: top;
+  font-size: 16px;
+  line-height: 8px;
+  padding-right: 0;
+}
+.entry-content .moreless_content .txt_fold::before {
+	font-family: 'iconfont';
+  content: '\e784';
+  transform: rotate(90deg);
+  color: var(--e-text-color);
+  margin-right: 5px;
+  vertical-align: top;
+  font-size: 16px;
+  line-height: 8px;
+  padding-right: 0;  
+}
+.entry-content .moreless_content .btn_less::before,
+.entry-content .moreless_content .btn_less:last-child {
+	display: none;
+}
+.entry-content .btn_more:hover, .entry-content .btn_less:hover {
+  transition-duration: .5s
+}
+.entry-content .btn_more::after,
+.entry-content .moreless_content .txt_fold::after {
+  z-index: 1;
+  content: "";
+  position: absolute;
+  top: 10px;
+  height: 1px;
+  width: 100%;
+  margin-left: 16px;
+  background: linear-gradient(to right,rgba(116,95,181,0.2),transparent 50%);
+}
+
 /* code */
 code.n{background-color:var(--a-line-color)!important;color: var(--e-text-color)!important;font-weight:700!important;}
 
