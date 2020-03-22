@@ -286,6 +286,8 @@ a.a-none.img.r img,
 a.a-none.img.no img,
 .img.no img{border-radius:0!important;border:1px solid var(--e-text-color);padding:0 !important}
 
+a.t-up {color: var(--link-color);}
+
 /* 이미지 그림자 */
 #tt-body-page figure.imageblock img, 
 figure.imageblock img,

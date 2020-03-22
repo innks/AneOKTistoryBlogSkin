@@ -8,12 +8,12 @@
   --text-color:#4D5058; /* Color4 */
   --text-bg-color:#FFFFFF;
   --link-color:#007bff; /* Color5 - rgba(74, 66, 236, 1)*/
-  --link-hover-color:#0056b3; /* #4A42EC; */
+  --link-hover-color:#0056b3; /* Color6 - #4A42EC; */
   --m-link-color:#009dff;
   --e-text-color:#110D23; /* Color2 - 강조 emphasize */
   --a-text-color:#999AA7; /* Color3 - 보조 assistant */
-  --line-color:#BCC4D0; /* Color6 - 라인 */
-  --m-text-color:#636469; /* Color7 - 보조보다 진하게 중간 middle */
+  --line-color:#BCC4D0; /* Color7- 라인 */
+  --m-text-color:#636469; /* Color8 - 보조보다 진하게 중간 middle */
   --a-line-color:#EFEFEE; /* 보조 assistant */
   --muted-color:#97A1A9;
 }
