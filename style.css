@@ -39,7 +39,7 @@ fieldset{border:1px solid var(--line-color);border-radius:5px;padding:8px 12px 0
 /* 옆 라인용으로 추가 { */
 h2, h3{white-space: nowrap;overflow: hidden;}
 /* 옆 라인용 */
-h2::after,h3::after {margin-left:24px;content:'';display:inline-block;vertical-align:middle;width:100%;height:1px;background:linear-gradient(to right,rgba(116,95,181,0.2),transparent 50%)}
+h2::after,h3::after {display:none;margin-left:24px;content:'';vertical-align:middle;width:100%;height:1px;background:linear-gradient(to right,rgba(116,95,181,0.2),transparent 50%)}
 
 .h-hash {color:var(--content-bg-color);}
 .lead{font-size:1.75rem;line-height:1.5;font-weight:300}
@@ -152,16 +152,34 @@ figure.fileblock{font-weight:400;}
 .entry-content .btn_more:hover, .entry-content .btn_less:hover {
   transition-duration: .5s
 }
+
 .entry-content .btn_more::after,
 .entry-content .moreless_content .txt_fold::after {
-  z-index: 1;
-  content: "";
-  position: absolute;
-  top: 10px;
-  height: 1px;
-  width: 100%;
-  margin-left: 16px;
-  background: linear-gradient(to right,rgba(116,95,181,0.2),transparent 50%);
+  display:none;
+  content: '';
+}
+
+@media (min-width:1024px) { /* screen >= 480px 데스크톰 영역 */
+  h2::after,h3::after {display:inline-block;}
+  .entry-content .btn_more::after,
+  .entry-content .moreless_content .txt_fold::after {
+    display:inline-block;
+    content: '';
+    z-index: 1;
+    color:#92a0ad;
+    margin-left: 5px;
+    opacity: 0;
+  }
+  .entry-content .btn_more:hover::after,
+  .entry-content .btn_more:visited::after {
+    content: ' open';
+    opacity: 1;
+  }
+  .entry-content .moreless_content .txt_fold:hover::after,
+  .entry-content .moreless_content .txt_fold:visited::after {
+    content: ' close';
+    opacity: 1;
+  }
 }
 
 /* code */
