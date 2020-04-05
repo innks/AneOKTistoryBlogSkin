@@ -584,12 +584,11 @@ code,pre {font-family:Consolas,monaco,'AritaDotum','Malgun Gothic',sans-serif}
 .related-articles ul li .data .date{margin-top:0.3125rem;font-size:0.8125rem;color:#ccc}
 .related-articles ul::after{content:'';display:block;width:100%;clear:both}
 
-#pagination-wrap{padding:15px 10px}
-.pagination{display: flow-root;margin:10px auto;}
+#pagination-wrap{padding:15px 10px;;margin:10px auto;}
+.pagination {}
 .pagination a{display:none}
-.pagination .prev,.pagination .next{width:50px;height:50px;border:1px solid var(--a-line-color);vertical-align:middle;box-sizing:border-box;padding:10px 10px 10px 17px}
-.pagination .prev i,.pagination .next i{font-size:1.25rem;color:var(--e-text-color)}
-.pagination .prev:hover,.pagination .next:hover{background-color:transparent;border-color:var(--line-color)}
+.pagination .prev,.pagination .next{width:50px;height:50px;border:1px solid var(--line-color);vertical-align:middle;box-sizing:border-box;padding:10px}
+.pagination .prev:hover,.pagination .next:hover{background-color:transparent;border-color:var(--e-text-color)}
 .pagination .current{display:block;font-size:1em;line-height:50px;text-align:center}
 .pagination .prev{display:block;float:left;margin:0}
 .pagination .next{display:block;float:right;margin:0}
@@ -737,16 +736,16 @@ code,pre {font-family:Consolas,monaco,'AritaDotum','Malgun Gothic',sans-serif}
 	  .tagTrail{font-size:13px}
 	  .post-metaed li{display:inline-block;border-left:solid 1px var(--a-line-color);padding:0 5px 0 9px}
 
-  .pagination-wrap{padding:20px 30px}
-	  .pagination{display:block;text-align:center;margin-top:28px}
-	  .pagination .current{display:none}
-	  .pagination .prev,.pagination .next{margin-top:-18px;padding:10px}
-	  .pagination .view-more{display:inline-block;width:158px;height:50px;border:1px solid var(--line-color);font-size:0.875em;line-height:50px;color:var(--text-color)}
-	  .pagination .view-more:hover{border-color:#4d4d4d;background:none}
-	  .pagination a{display:inline-block;width:24px;height:24px;margin:-14px 4px 0;font-size:1em;line-height:24px;color:var(--a-text-color);vertical-align:middle;border-bottom:0}
-	  .pagination a:hover{border-top:1px solid var(--e-text-color);color:var(--e-text-color)}
-	  .pagination .selected{color:var(--e-text-color)}
-	  .pagination .no-more-prev,.pagination .no-more-next{display:none}
+  #pagination-wrap{padding:20px 30px}
+    .pagination {display:block;text-align:center;line-height: 28px;}
+    .pagination .current{display:none}
+    .pagination .prev,.pagination .next{}
+    .pagination .view-more{display:inline-block;width:158px;height:50px;border:1px solid var(--line-color);font-size:0.875em;line-height:50px;color:var(--text-color)}
+    .pagination .view-more:hover{border-color:#4d4d4d;background:none}
+    .pagination a{display:inline-block;width:24px;margin:11px 0;font-size:1em;color:var(--text-color);vertical-align:middle;border-bottom:0;border-top:1px solid var(--content-bg-color);}
+    .pagination a:hover{border-top:1px solid var(--link-color);color:var(--e-text-color);text-decoration: none;}
+    .pagination .selected{color:var(--e-text-color)}
+    .pagination .no-more-prev,.pagination .no-more-next{display:none}
 	
   #footer{font-size:13px;}
   #footer .footer-counter a img{width:434px;height:19px;object-fit:cover;object-position:top}	  
