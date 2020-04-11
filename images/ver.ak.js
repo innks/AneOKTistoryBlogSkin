@@ -3,11 +3,11 @@
 var blogInfo = {
 	"name": "AneOK",
 	"logoVer": "v2", //공개
-	"Build": "23", //유지 Build or Maintenance Version
-	"version": "2.0.7", //일반적인
+	"Build": "146", //유지 Build or Maintenance Version ...?b=숫자 더한값
+	"version": "2.0.8", //일반적인
 	"startDate": "2019. 4. 29",
 	"update_startDate": "2019. 12. 03",
-	"update": "2020. 03. 15"
+	"update": "2020. 04. 10"
 };
 var dependenciesVer = {
 	"Bootstrap": "4.4.1 somePart",

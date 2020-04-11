@@ -13,7 +13,7 @@
 
 ul,ol {list-style: none;}
 code{padding:3px 4px 1px;font-size: 90%;color: #c7254e;background-color:#f9f2f4;border-radius: 3px;}
-pre>code {font-size:14px;line-height: 1.5;word-wrap:break-word;}
+pre > code, pre code {font-size:14px;line-height: 1.5;word-wrap:break-word;}
 ol,ul,dl{font-size:16px;padding-left:0;list-style:none}
 ol li,ul li{margin-left:12px;padding-left:0}
 li:::after{clear:both}

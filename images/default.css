@@ -585,9 +585,9 @@ code,pre {font-family:Consolas,monaco,'AritaDotum','Malgun Gothic',sans-serif}
 .related-articles ul::after{content:'';display:block;width:100%;clear:both}
 
 #pagination-wrap{padding:15px 10px;;margin:10px auto;}
-.pagination {}
+.pagination {overflow: auto;}
 .pagination a{display:none}
-.pagination .prev,.pagination .next{width:50px;height:50px;border:1px solid var(--line-color);vertical-align:middle;box-sizing:border-box;padding:10px}
+.pagination .prev,.pagination .next{width:50px;height:50px;border:1px solid var(--line-color);vertical-align:middle;box-sizing:border-box;padding:10px 17px;}
 .pagination .prev:hover,.pagination .next:hover{background-color:transparent;border-color:var(--e-text-color)}
 .pagination .current{display:block;font-size:1em;line-height:50px;text-align:center}
 .pagination .prev{display:block;float:left;margin:0}
@@ -598,7 +598,7 @@ code,pre {font-family:Consolas,monaco,'AritaDotum','Malgun Gothic',sans-serif}
 #etc-wrap a:hover{border-bottom:0;color:var(--link-color)}
 #etc-wrap .h2{font-size:16px;font-weight:400;text-transform:uppercase}
 #etc-wrap .h2 i{font-size:100%;margin-right: 2px;vertical-align:top;color:var(--link-color);}
-#etc-wrap ul{margin:0 0 10px 0;font-size:13px;letter-spacing:0;display:inline-block;padding:0}
+#etc-wrap ul{margin:0 0 10px 0;font-size:13px;letter-spacing:0;display:inline-block;padding:0;list-style: none;}
 #etc-wrap ul::after,#etc-wrap ul::before{display:none}
 #etc-wrap ul::after{clear:both}
 #etc-wrap li{margin:0 10px 5px 0;padding:0;float:left}
