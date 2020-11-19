@@ -505,8 +505,11 @@ h2.c5::after,h3.c5::after{display:none}
 .changelog li:last-child{margin-bottom:0}
 .changelog li::after{clear:both}
 .changelog li::before,.changelog li::after{content:"";display:table}
-.changelog span{display:inline-block;padding:0 10px;background-color:#1e87f0;line-height:1.5;font-size:12px;color:var(--content-bg-color);vertical-align:middle;white-space:nowrap;border-radius:2px;text-transform:uppercase;flex:none;width:90px;margin-top:3px;margin-right:20px !important;color:var(--content-bg-color);box-sizing:border-box;max-width:100%;text-align:center}
+.changelog>ul>li>span{display:inline-block;padding:0 10px;background-color:#1e87f0;line-height:1.5;font-size:12px;color:var(--content-bg-color);vertical-align:middle;white-space:nowrap;border-radius:2px;text-transform:uppercase;flex:none;width:90px;margin-top:3px;margin-right:20px !important;color:var(--content-bg-color);box-sizing:border-box;max-width:100%;text-align:center}
 .changelog ul li div{color:var(--m-text-color)}
+.changelog h3 span.gith-c {font-size:14px;font-weight:300 !important;}
+.changelog h3 span.gith-c a{color:var(--a-text-color) !important;text-decoration: none;border-bottom: 1px dotted #c6cbd1;}
+.changelog h3 span.gith-c a:hover{color:var(--e-text-color);text-decoration:underline;}
 .changelog .changed,.changelog .c{background-color:#1e87f0 !important}
 .changelog .fixed,.changelog .f{background-color:#f0506e !important}
 .changelog .added,.changelog .a{background-color:#32d296 !important}
