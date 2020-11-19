@@ -37,3 +37,13 @@
     src: local('※'),
         url('https://tistory3.daumcdn.net/tistory/3088055/skin/images/Arita4.0_B.woff') format('woff');
 }
+
+@font-face {
+font-family:Luckiest Guy;
+font-style:normal;
+font-display:swap;
+font-weight:400;
+src:local("Luckiest Guy Regular"),
+    local(LuckiestGuy-Regular),
+    url('https://tistory4.daumcdn.net/tistory/3088055/skin/images/LuckiestGuy-Regular.woff') format('woff');
+}

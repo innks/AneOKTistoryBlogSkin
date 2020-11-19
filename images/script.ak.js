@@ -31,10 +31,11 @@ $(document).ready(function() {  /* 화면이 모두 로드되고 나면 거의 �
 	$('.category-cnt-num').append($cnt_num);
 
 	// -- 버전 출력
-	var ve = "<img src='https://img.shields.io/badge/" + blogInfo.name + " Blog-v" + blogInfo.version + "-4a65f6.svg'> " +
+	var ve = "<img src='https://img.shields.io/badge/" + blogInfo.name + " Blog-" + blogInfo.version + "-4a65f6.svg'> " +
 					 "<img src='https://img.shields.io/badge/jquery-" + dependenciesVer.jquery + " -red.svg'> <img src='https://img.shields.io/badge/Bootstrap-" + dependenciesVer.Bootstrap + 
-					 "-563d7c.svg'> <img src='https://img.shields.io/badge/Iconfont IcoMoon-" + dependenciesVer.iconFont + 
-					 "-d9534f.svg'> <img src='https://img.shields.io/badge/DynamicScrollspy-" + dependenciesVer.DynamicScrollspy + "-214a74.svg'>";
+					 "-563d7c.svg'> <img src='https://img.shields.io/badge/Iconfont-" + dependenciesVer.iconFont + 
+					 "-d9534f.svg'> <img src='https://img.shields.io/badge/DynamicScrollspy-" + dependenciesVer.DynamicScrollspy + 
+					 "-214a74.svg'> <img src='https://img.shields.io/badge/HighlightJs-" + dependenciesVer.highlightJs + "-660000.svg'>";
 	$("#blog-logo-ver").html("AneOK <small>blog " + blogInfo.logoVer + "</small>"),
 	$(".blog-logover").html(blogInfo.logoVer),
 	$(".blog-version").html(blogInfo.version),

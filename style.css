@@ -319,37 +319,41 @@ a.t-up {color: var(--link-color);}
 figure.imageblock img,
 img {box-shadow:0px 15px 15px -20px var(--e-text-color);margin:1.5rem 0 2rem}
 
-/* 포스터 이미지 그림자 없애기*/
-#tt-body-page figure.imageblock img.no,
-figure.imageblock img.no,
-img.no,
-.no-shadow img{box-shadow:none;margin:0}
-
 /* 포스터 이미지 그림자 있고 마진 0*/
 #tt-body-page figure.imageblock img.no-ma,
 figure.imageblock img.no-ma,
 img.no-ma,
 .no-ma img{box-shadow:0px 15px 15px -20px var(--e-text-color);margin:0}
 
+/* 포스터 이미지 그림자 없애기*/
+#tt-body-page figure.imageblock img.no,
+figure.imageblock img.no,
+img.no,
+.no-shadow img{box-shadow:none;margin:0}
+
 /* 포스터 안 이미지 설명 */
 figure figcaption {margin-top:-1.5rem}
 
 /* 그림 밑이나 동여상 밑 설명 */
 .cap {margin-top: -14px;font-size: 13px;color: var(--e-text-color);line-height: 15px}
+.cap-c {margin-top: -14px;font-size: 13px;color: var(--e-text-color);line-height: 15px;text-align: center;}
 .cap1 {color: var(--e-text-color);font-size: 13px;font-style: normal;font-weight: 400;line-height: 22px;letter-spacing: 0;-moz-osx-font-smoothing: grayscale;-webkit-font-smoothing: antialiased}
 .cap1::before {content: '';display: block;margin-top: 0;width: 30px;height: 2px;background-color: var(--line-color)}
 .cap2 {margin-top: -14px;margin-left: 0;margin-bottom: 30px;border-left: 2px solid var(--line-color);padding-left: 10px;text-align: left;font-size: 13px;color: var(--e-text-color);line-height: 15px}
 .cap1-c {color: var(--e-text-color);font-size: 13px;font-style: normal;font-weight: 400;line-height: 22px;letter-spacing: 0;-moz-osx-font-smoothing: grayscale;-webkit-font-smoothing: antialiased;text-align: center;}
 .cap1-c::before {content: '';display: block;margin-top: 0;width: 30px;height: 2px;background-color: var(--line-color)}
 * + .cap,
+* + .cap-c,
 * + .cap1,
 * + .cap1-c,
 * + .cap2 {margin-top: -20px}
 .no-shadow + .cap,
+.no-shadow + .cap-c,
 .no-shadow + .cap1,
 .no-shadow + .cap1-c,
 .no-shadow + .cap2 {margin-top: -10px}
 .tt-youtube-plugin + .cap,
+.tt-youtube-plugin + .cap-c,
 .tt-youtube-plugin + .cap1,
 .tt-youtube-plugin + .cap1-c,
 .tt-youtube-plugin + .cap2 {margin-top: 5px}
@@ -440,7 +444,7 @@ dl.dl dd{margin-left:20px}
 .table-colors td{font-size:13px;padding:5px;}
 
 /* ak-title-size는 영어를 사용하는 것이 이쁨, 중앙 정렬이 이쁨 */
-.title-1{color:var(--e-text-color);font-size:45px;font-weight:900;line-height:1.2;margin-bottom:-.3rem!important;letter-spacing:.2px;}
+.title-1{color:var(--e-text-color);font-size:45px;/*font-weight:900;*/line-height:1.2;margin-bottom:-.3rem!important;letter-spacing:0px;}
 .title-2{color:var(--e-text-color);font-size:25px;font-weight:700;line-height:1.25;margin:.5em 0 .2em}
 .title-3{color:#6d7c90;margin-bottom:.5em}
 h2.title-1, h3.title-1{white-space:normal;}
@@ -457,7 +461,7 @@ h2.title-2,h3.title-2 {white-space: nowrap;overflow: hidden;white-space: nowrap;
 }
 
 .cmain{ /* 영어가 잘보임 */
-  width:100%;font-weight:900;margin-bottom:.2em;-webkit-box-direction:normal;}
+  width:100%;/*font-weight:900;*/margin-bottom:.2em;-webkit-box-direction:normal;}
 .cmain small{color:var(--a-text-color);font-weight:400;background-image:none;-webkit-text-fill-color: var(--a-text-color);letter-spacing:.2px}
 h2.c1::after,h3.c1::after,
 h2.c2::after,h3.c2::after,

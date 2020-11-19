@@ -325,8 +325,7 @@ code,pre {font-family:Consolas,monaco,'AritaDotum','Malgun Gothic',sans-serif}
 .logo-area{font-family:'Avenir Next Regular',sans-serif;}
 .font-mjo{font-family:'Nanum Myeongjo',serif,!important}
 .font-arial{font-family:Arial,sans-serif,!important}
-.title-1,
-.cmain{font-family:'AvenirNext Bold','AritaDotum',sans-serif}
+.title-1,.cmain{font-family: 'Luckiest Guy','AritaDotum','Malgun Gothic',sans-serif}
 
 /* 로딩 화면 */
 .loaded #loader{opacity:0;transition-duration:.5s}
