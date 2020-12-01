@@ -138,7 +138,7 @@ figure.fileblock{font-weight:400;}
   color: var(--e-text-color);
   margin-right: 5px;
   vertical-align: top;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 8px;
   padding-right: 0;
 }
@@ -149,7 +149,7 @@ figure.fileblock{font-weight:400;}
   color: var(--e-text-color);
   margin-right: 5px;
   vertical-align: top;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 8px;
   padding-right: 0;  
 }
@@ -199,6 +199,9 @@ code.n{background-color:var(--a-line-color)!important;color: var(--e-text-color)
 .note p:last-child,.note ul:last-child,.note ol:last-child,.note table:last-child,.note pre:last-child,.note blockquote:last-child{margin-bottom:0}
 
 .note code{border-radius:.25rem}
+.note ol,.note ol li{list-style:decimal;margin-left:12px}
+.note ul,.note ul li{list-style:disc;margin-left:12px}
+.note ul ul,.note ul ul li{list-style:circle;margin-left:6px}
 
 .note:not(.no-icon){padding-left: 45px}
 .note:not(.no-icon)::before{position:absolute;font-family:'iconfont';font-size:larger;top:13px;left:15px}
@@ -227,7 +230,7 @@ code.n{background-color:var(--a-line-color)!important;color: var(--e-text-color)
 .note.danger h2,.note.danger h3,.note.danger h4,.note.danger h5,.note.danger h6,.note.d h2,.note.d h3,.note.d h4,.note.d h5,.note.d h6{color:#d9534f}
 .note.danger:not(.no-icon)::before,.note.d:not(.no-icon)::before{content:"\e783";color:#d9534f;margin-top:8px}
 
-.note + .note {margin-top:-.25rem}
+.note + .note {margin-top:-21px}
 
 @media (max-width: 1023.98px) {
  .note:not(.no-icon)::before,
@@ -393,10 +396,11 @@ dl.dl dd{margin-left:20px}
 .hr::before, .hr-icon::before {background:linear-gradient(to right,transparent 50%, rgba(116,95,181,0.2) 100%);margin-right:0;}
 .hr::after, .hr-icon::after {background:linear-gradient(to right,rgba(116,95,181,0.2),transparent 50%);margin-left:0;}
 .hr span {margin-bottom:0;-webkit-margin-before:0;}
+.hr .h5 {padding-right: 10px; padding-left: 10px;margin-bottom:0;-webkit-margin-before:0;}
 .hr span,
 .hr-icon span {padding-left: 16px; padding-right: 16px;}
 
-.hr-icon{display:flex;flex-basis:100%;align-items:center;color:var(--e-text-color);font-size:.875rem;margin:5rem 0px 5rem;clear: both;}
+.hr-icon {display:flex;flex-basis:100%;align-items:center;color:var(--e-text-color);font-size:.875rem;margin:5rem 0px 5rem;clear: both;}
 .hr-icon span{margin-bottom:0;-webkit-margin-before:0; text-indent: -9999px;}
 .hr-icon span.i::after{content:'';display: block;text-indent: -99px;width: 50px;height: 50px;background: url(./images/break.svg) no-repeat;background-size: 50px 50px;margin-top: -10px;}
 .hr-icon span.icon:after {content:''; display: block; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25'%3E%3Cpath d='M19 6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14.66h.01c.01.1.05.2.12.28a.5.5 0 0 0 .7.03l5.67-4.12 5.66 4.13a.5.5 0 0 0 .71-.03.5.5 0 0 0 .12-.29H19V6zm-6.84 9.97L7 19.64V6a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v13.64l-5.16-3.67a.49.49 0 0 0-.68 0z' fill-rule='evenodd'%3E%3C/path%3E%3C/svg%3E"); width: 24px;height: 24px; background-size: 24px 24px;}
@@ -724,3 +728,12 @@ h2.c5::after,h3.c5::after{display:none}
 .exbody p.-setup.css::before {content: "{css;}"; margin-right:4px}
 .exbody p.-setup.js::before {content: "javaScript();"; margin-right:4px}
 .exbody p.-setup.bash::before {content: "~/bash$"; margin-right:4px}
+
+/* 링크 클레스에 마우스 오버면 밑줄 효과 34px = h2정도 */
+.links{color: #909090;display: blck;text-decoration: none;}
+.links:hover{color: #000;}
+.links em:before{background-color: #f54;bottom: 3px;content: '';height: 7px;left: 0; position: absolute;width: 0;z-index: -1;}
+.links:hover em:before{moz-transition: width .3s ease-out;transition: width .3s ease-out;webkit-transition: width .3s ease-out;width: 100%;}
+.links:hover em:after{color: #000;}
+.links em{color: #000;margin: 0;position: relative;font-style: normal;font-weight: 900;}
+.links em:after{color: #909090;font-size: 10.5px;letter-spacing: 0;line-height: 11px;position: absolute;right: -16px;top: 8px;}

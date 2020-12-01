@@ -65,7 +65,7 @@ a:hover {
   color:var(--link-hover-color);
 }
 abbr[title]{-webkit-text-decoration-style:dotted;text-decoration:underline dotted}
-b,strong{font-weight: bolder}
+b,strong{font-weight:bolder;color:#000;}
 :not(pre) > code,
 :not(pre) > kbd,
 :not(pre) > samp{
@@ -663,8 +663,8 @@ code,pre {font-family:Consolas,monaco,'AritaDotum','Malgun Gothic',sans-serif}
 .sides ul li{position:relative;box-sizing:border-box;padding:1px 15px 1px 10px;text-align:left;line-height:inherit;transition-property:background-color;transition-duration:0.2s;transition-timing-function:ease-in-out;transition-delay:0s;display:block;font-size:13px;overflow-wrap:break-word;word-wrap:break-word;outline:none}
 .sides ul li a{color:var(--m-text-color)}
 .sides ul li:hover{background:#f9f9f9;border-bottom-color:var(--content-bg-color)}
-.sides ul li .info{color:var(--e-text-color);font-size:.7rem}
-.sides ul li span{font-size: 14px;color:var(--muted-color);}
+.sides ul li .info{color:var(--e-text-color);font-size:.75rem}
+.sides ul li span{color:var(--muted-color);}
 
 .counter p{font-size:.625rem;color:var(--a-text-color);margin-top:7px;margin-bottom:0}
 

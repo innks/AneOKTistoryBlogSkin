@@ -16,7 +16,7 @@
 
     //extend options priorities: passed, existing, defaults / 옵션 우선 순위 확장 : 통과, 기존, 기본값
     this.options = $.extend({}, {
-      affix: false, //use affix by default, doesn't work for Bootstrap 4 / 기본 : true / 기본적으로 접미사를 사용하고, 부트 스트랩 4에서는 작동하지 않습니다.
+      affix: false, //use affix by default, doesn't work for Bootstrap 4 / 기본 : true / 기본적으로 접미사를 사용하고, 부트 스트랩 4에서는 작동하지 않습니다.      
       tH: 2, //lowest-level header to be included (H2) / 포함될 최저 레벨 헤더 (H2)
       bH: 6, //highest-level header to be included (H6) / 포함될 최상위 레벨 헤더 (H6)
       exclude: false, //jquery filter / jquery 필터
