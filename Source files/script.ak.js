@@ -26,29 +26,38 @@ $(document).ready(function() {  /* 화면이 모두 로드되고 나면 거의 �
 	});
 
   // --- 전체 카테고리 중 전체 포스트숫자 리턴
-	var $cn=$("#category-top-list .link_tit .c_cnt").text(),$c_n=$cn.substr(1,$cn.length-2);$(".category-cnt-num").append($c_n);
+	var $cnt = $('#category-top-list .link_tit .c_cnt').text();
+	var $cnt_num = $cnt.substr(1 , $cnt.length - 2);        
+	$('.category-cnt-num').append($cnt_num);
 
 	// -- 버전 출력
-	var ve = "<img src='https://img.shields.io/badge/" + blogInfo.name + " Blog-v" + blogInfo.version + "-4a65f6.svg'> " +
-					 "<img src='https://img.shields.io/badge/jquery-" + jQuery.fn.jquery + " -red.svg'> <img src='https://img.shields.io/badge/Bootstrap-" + dependenciesVer.Bootstrap + 
-					 "-563d7c.svg'> <img src='https://img.shields.io/badge/Iconfont IcoMoon-" + dependenciesVer.iconFont + 
-					 "-d9534f.svg'> <img src='https://img.shields.io/badge/DynamicScrollspy-" + dependenciesVer.DynamicScrollspy + "-214a74.svg'>";
-	$("#blog-logo-ver").html("AneOK <small>blog " + blogInfo.logoVer + "</small>"),
-	$(".blog-logover").html(blogInfo.logoVer),
-	$(".blog-version").html(blogInfo.version),
-	$(".blog-update").html(blogInfo.update),
-	$(".blog-build").html(blogInfo.Build),
+	var ve = "<img src='https://img.shields.io/badge/" + AneOK.NAME + "-" + AneOK.VERSION + "-4a65f6.svg'> " +
+					 "<img src='https://img.shields.io/badge/jquery-" + VERSION.JQUERY + 
+					 "-red.svg'> <img src='https://img.shields.io/badge/Iconfont-" + VERSION.ICONFONT + 
+					 "-d9534f.svg'> <img src='https://img.shields.io/badge/DynamicScrollspy-" + VERSION.DYNAMIC_SCROLLSPY + 
+					 "-214a74.svg'> <img src='https://img.shields.io/badge/HighlightJs-" + VERSION.HIGHLIGHT_JS + "-660000.svg'><br /><img src='https://img.shields.io/badge/Bootstrap CSS-" + VERSION.BOOTSTRAP_CSS + "-8a13fd.svg'> <img src='https://img.shields.io/badge/Bootstrap JS-" + VERSION.BOOTSTRAP_JS + "-563d7c.svg'>";
+	$("#blog-logo-ver").html("AneOK <small>blog " + AneOK.LOGO_VERSION + "</small>"),
+	$(".blog-logover").html(AneOK.LOGO_VERSION),
+	$(".blog-version").html(AneOK.VERSION),
+	$(".blog-update").html(AneOK.UPDATE),
+	$(".blog-build").html(AneOK.BUILD),
 	$(".versionView").html(ve);
 
 	// --- 사이드바 화면 고정 및 TOP버튼
-	var ibOffset=$("#sidebar").offset();
-	$(window).scroll(function(){$(document).scrollTop()>ibOffset.top?$("#sidebar, .back-to-top, .wrap-inner").addClass("on"):$("#sidebar, .back-to-top, .wrap-inner").removeClass("on")});
+	var ibOffset = $('#sidebar').offset();
+	$(window).scroll(function() {
+	    if ($(document).scrollTop() > ibOffset.top) {
+	      $('#sidebar, .back-to-top, .wrap-inner').addClass('on');
+	    } else {
+	      $('#sidebar, .back-to-top, .wrap-inner').removeClass('on');
+	    };
+	});
 
 	// --- TOP 버튼 클릭시 
 	$('.back-to-top, .wrap-inner, .side-top-btn').click(function() { 
 		$('html, body').animate({ 
-		scrollTop : 0 // 0(페이지 상단) 까지 animation 이동합니다. 
-		}, 500); // 속도 500 
+		scrollTop : 0 // 0 까지 animation 이동합니다. 
+		}, 500); // 속도 400 
 	return false; 
 	});
 
@@ -84,9 +93,9 @@ $(document).ready(function() {  /* 화면이 모두 로드되고 나면 거의 �
 
 	  // --- 새로운 에디터에서 pre찾고 code 추가하기
 	  $('.entry-content pre.html').children("code:not(.html)").addClass("html");
-	  $('.entry-content pre.js').children("code:not(.js)").addClass("js");
-	  $('.entry-content pre.css').children("code:not(.css)").addClass("css");
-	  $('.entry-content pre.bash').children("code:not(.bash)").addClass("bash");
+	  $('.entry-content pre.js').children("code:not(.js)").addClass("html");
+	  $('.entry-content pre.css').children("code:not(.css)").addClass("html");
+	  $('.entry-content pre.bash').children("code:not(.bash)").addClass("html");
 
 });
 
@@ -97,7 +106,7 @@ hljs.initHighlightingOnLoad();
 var searchTemplate = "<div class='input-group mb-3'><div class='input-group-prepend'>" + 
 "<span class='input-group-text' id='basic-addon1'>검 색</span></div>" + 
 "<input type='text' class='form-control' placeholder='여기에 단어를 적으세요' aria-label='단어검색' aria-describedby='basic-addon1'></div>";
-$(".table-sieve").sieve({searchTemplate: searchTemplate});
+$(".table-sieve").sieve({searchTemplate: searchTemplate	});
 // 페이지내에 keyword 클래스안을 검색합니다. 검색후 나머지 keyword 클래스는 숨깁니다.
 $(".p-sieve").sieve({searchTemplate: searchTemplate,  itemSelector: ".keyword"});
 // li 태그 안을 검색합니다. 검색후 나머지 페이지내에 모든 li는 숨깁니다.
@@ -119,14 +128,14 @@ function openSide(eid,eclass) {
   document.getElementById(eid).style.display = "block";  
 };
 
-// --- 사이드바 Toc 클릭시 부드럽게 top에서 특정 위치 이동
+// --- 사이드바 Toc 부드럽게 특정 위치 이동
 function tocHGo(gid) {
 	return $('html, body').stop().animate({
 		scrollTop:$(gid).offset().top - 65
-	}, 150);
+	}, 50);
 };
 
-// --- TOP 버튼 하단 페이지 높이 계산
+// --- TOP 버튼 하단 페이지 높이
 $(window).on('scroll', function(){
   var currentPercentage = ($(window).scrollTop() / ($(document).outerHeight() - $(window).height())) * 100;
   $('#s-progress').text(Math.round(currentPercentage)+'%');

@@ -2,22 +2,23 @@
 <html lang="ko">
 
 <head>
-  <title>[##_page_title_##] blog - v2.1</title>
+  <title>[##_page_title_##] blog - v2.2</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width">
-  <link rel="stylesheet" type="text/css" href="./images/font.css?b=3"><!-- 400은 티스토리에서 기본 로드됨 -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.0/styles/github.min.css"><!-- highlight.js -->
+  <link rel="stylesheet" type="text/css" href="./images/font.min.css?_B_=3"><!-- 400은 티스토리에서 기본 로드됨 -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/github.min.css"><!-- highlight.js -->
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/load-awesome@1.1.0/css/line-scale.min.css"><!-- loading css -->
-  <link rel="stylesheet" type="text/css" href="./images/iconfont.min.css?item=116">
-  <link rel="stylesheet" type="text/css" href="./images/out.min.css?b=1">
-  <link rel="stylesheet" type="text/css" href="./images/default.css?b=11">
+  <link rel="stylesheet" type="text/css" href="./images/iconfont.min.css?_i_=116">
+  <link rel="stylesheet" type="text/css" href="./images/bak5.min.css?_B_=2">
+  <link rel="stylesheet" type="text/css" href="./images/add.min.css?_B_=1">  
+  <link rel="stylesheet" type="text/css" href="./images/default.min.css?_B_=11">
   <link rel="stylesheet" type="text/css" href="./style.css">
 
-  <script src="./images/ver.ak.js?b=212"></script><!-- 블로그 버전 Data -->
+  <script src="./images/BSV.js?_B_=202"></script><!-- 블로그 버전 Data -->
 </head>
 
 <body id="[##_body_id_##]" data-spy="scroll">
-<div id="loader">
+<div id="loader"> 
   <div class="la-line-scale __ak-loading__">
     <div></div><div></div><div></div><div></div><div></div>
   </div>
@@ -94,7 +95,8 @@
                 <script>
                 //<![CDATA[
                 if (updated != "") {
-                  document.write("<li title='포스트 수정 날짜'><span><span class='pm-info'><i class='icon-calendar-plus'></i> Edited on</span><span class='pm-value'>" + updated + "</span></span></li>");
+                  document.write("<li title='포스트 수정 날짜'><span><span class='pm-info'><i class='icon-calendar-plus'></i> Edited on</span><span class='pm-value'>" + updated + 
+                  	"</span></span></li>");
                 }
                 </script>
               </ul>
@@ -150,7 +152,8 @@
                 <script>
                 //<![CDATA[
                 if (updated != "") {
-                  document.write("<li title='포스트 수정 날짜'><span><span class='pm-info'><i class='icon-calendar-plus'></i> Edited on</span><span class='pm-value'>" + updated + "</span></span></li>");
+                  document.write("<li title='포스트 수정 날짜'><span><span class='pm-info'><i class='icon-calendar-plus'></i> Edited on</span><span class='pm-value'>" + updated + 
+                  	"</span></span></li>");
                 }
                 </script>
                 <li><s_rp_count><span class="pm-info"><i class="icon-comment"></i> Comment</span><a href="#m3" class="pm-value">[##_article_rep_rp_cnt_##]</a></s_rp_count></li>
@@ -295,7 +298,9 @@
           <p>© 2020 NexT, © 2014 – 2020 AneOK</p>
           <p><a href="https://www.tistory.com/" target="_blank">Tistory</a> skin (Hexo Theme <a href="https://theme-next.org" title="Hexo Theme" target="_blank">NexT.Gemini</a> v7..) > change : 
             <script>
-            document.write("<a href='https://aneok.tistory.com/' title='AneOK' target='_blank'>AneOK <small class='grs'>blog " + blogInfo.logoVer + "</small></a> - <a href='[##_blog_link_##]manage/' target='_top' title='Login → [##_blog_link_##]manage/' target='_blank'><i class='icon-admin'></i></a> v" + blogInfo.version + "</p><p style='font-size:10px;'>window (" + screen.width + ' x ' + screen.height +') <div id="Parse_Area"></div>');
+            document.write("<a href='https://aneok.tistory.com/' title='AneOK' target='_blank'>AneOK <small class='grs'>blog " + AneOK.LOGO_VERSION + 
+            	"</small></a> - <a href='[##_blog_link_##]manage/' target='_top' title='Login → [##_blog_link_##]manage/' target='_blank'><i class='icon-admin'></i></a> v" + AneOK.VERSION + 
+            	"</p><p style='font-size:10px;'>window (" + screen.width + ' x ' + screen.height +') <div id="Parse_Area"></div>');
             </script>
             <!--받아온 데이터들이 들어갈 div -->
           </p>
@@ -428,11 +433,11 @@
   <div class="back-to-top" style=""><a href="#"><i class="icon-up-arrow"></i><p id="s-progress"></p></a></div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.0/highlight.min.js"></script><!-- highlight.js -->
-<script src="./images/jquery.sieve.min.js?v=0.3.0"></script><!-- page in search JavaScript -->
-<script src="./images/bootstrap.ak.min.js?v=4.4.1.ad"></script><!-- Toc용 bootstrap JavaScript  -->
-<script src="./images/dynamicscrollspy.ak.min.js?b=3"></script><!-- Toc용 JavaScript  -->
-<script src="./images/script.ak.js?b=13"></script><!-- this blog JavaScript  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script><!-- highlight.js -->
+<script src="./images/jquery.sieve.min.js?_V_=0.3.0"></script><!-- page in search JavaScript -->
+<script src="./images/bootstrap.ak.min.js?_V_=4.4.1.ad"></script><!-- Toc용 bootstrap JavaScript  -->
+<script src="./images/dynamicscrollspy.ak.min.js?_B_=3"></script><!-- Toc용 JavaScript  -->
+<script src="./images/script.ak.min.js?_B_=15"></script><!-- this blog JavaScript  -->
 <script>
 // 목차 출력 - h2로 시작해야 보임
 $(function() {
