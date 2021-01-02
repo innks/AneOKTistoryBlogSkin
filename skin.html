@@ -10,11 +10,11 @@
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/load-awesome@1.1.0/css/line-scale.min.css"><!-- loading css -->
   <link rel="stylesheet" type="text/css" href="./images/iconfont.min.css?_i_=116">
   <link rel="stylesheet" type="text/css" href="./images/bak5.min.css?_B_=2">
-  <link rel="stylesheet" type="text/css" href="./images/add.min.css?_B_=1">  
-  <link rel="stylesheet" type="text/css" href="./images/default.min.css?_B_=11">
+  <link rel="stylesheet" type="text/css" href="./images/add.min.css?_B_=6">  
+  <link rel="stylesheet" type="text/css" href="./images/default.min.css?_B_=17">
   <link rel="stylesheet" type="text/css" href="./style.css">
 
-  <script src="./images/BSV.js?_B_=202"></script><!-- 블로그 버전 Data -->
+  <script src="./images/BSV.js?_B_=204"></script><!-- 블로그 버전 Data -->
 </head>
 
 <body id="[##_body_id_##]" data-spy="scroll">
@@ -56,6 +56,7 @@
           <a href="https://aneok.tistory.com/60">인터넷 코드 정리 사이트</a>
         </div>
       </nav><!-- } 본문 상부 메뉴 -->
+
       <article id="mContent" class="common-wrap">
         <s_list>
           <div class="cgroup" id="list">
@@ -75,12 +76,13 @@
         <s_article_rep>
           <s_page_rep>
             <div class="cgroup group-border group-cover" id="post">
-              <div class="inner-header" style="background-image:url('./images/tistory-top-logo.png')">
+              <div class="inner-header" style="background-image:url('./images/tistory-top-logo.jpg')">
               </div>
             </div>
             <div class="inner-title">
               <div class="top-category" title="[##_article_rep_category_##]">Documents</div>
-              <div class="h1 title">[##_article_rep_title_##]</div>   
+              <div class="h1 title">[##_article_rep_title_##]</div>
+              <script type="text/javascript">var $QRCodeURL = "[##_article_rep_link_##]";</script> 
               <div class="date">[##_article_rep_date_##]</div> 
             </div>
             <div class="wrap-inner"><div class="title"><a href="#" title="처음으로">[##_article_rep_title_##]</a></div></div>
@@ -88,20 +90,27 @@
               [##_article_rep_desc_##]
             </div>
 
-            <!-- 포스트 날짜 및 최근날짜(스크립트) 댓글 { -->
-            <div class="post-metaed">
-              <ul><li title="저자"><span><span class="pm-info"><i class="icon-admin"></i> By</span><span class="pm-value">[##_article_rep_author_##]</span></span></li>
-                  <li title="포스트 작성 날짜"><span><span class="pm-info"><i class="icon-calendar"></i> Posted on</span><span class="pm-value">[##_article_rep_simple_date_##]</span></span></li>
-                <script>
-                //<![CDATA[
-                if (updated != "") {
-                  document.write("<li title='포스트 수정 날짜'><span><span class='pm-info'><i class='icon-calendar-plus'></i> Edited on</span><span class='pm-value'>" + updated + 
-                  	"</span></span></li>");
-                }
-                </script>
-              </ul>
+            <div class="post-meta row">
+              <div class="post-qr col-md" style="margin-top: -7px;">
+                <div id="post-qrcode" class="no-shadow"></div>
+              </div>
+              <div class="post-metaed-ed col-auto">
+                <!-- 포스트 날짜 및 최근날짜(스크립트) 댓글 { -->
+                <div class="post-metaed">
+                  <ul><li title="저자"><span><span class="pm-info"><i class="icon-admin"></i> By</span><span class="pm-value">[##_article_rep_author_##]</span></span></li>
+                      <li title="포스트 작성 날짜"><span><span class="pm-info"><i class="icon-calendar"></i> Posted on</span><span class="pm-value">[##_article_rep_simple_date_##]</span></span></li>
+                    <script>
+                    //<![CDATA[
+                    if (updated != "") {
+                      document.write("<li title='포스트 수정 날짜'><span><span class='pm-info'><i class='icon-calendar-plus'></i> Edited on</span><span class='pm-value'>" + updated + 
+                      	"</span></span></li>");
+                    }
+                    </script>
+                  </ul>
+                </div>
+                <!-- } 포스트 날짜 및 최근날짜(스크립트) 댓글 -->
+              </div>
             </div>
-            <!-- } 포스트 날짜 및 최근날짜(스크립트) 댓글 -->
           </s_page_rep>
 
           <s_index_article_rep>
@@ -127,6 +136,7 @@
             <div class="inner-title">
               <div class="top-category" title="[##_article_rep_category_##]">[##_article_rep_category_##]</div>
               <div class="h1 title">[##_article_rep_title_##]</div>
+              <script type="text/javascript">var $QRCodeURL = "[##_article_rep_link_##]";</script>
               <div class="date">[##_article_rep_date_##]</div>
               <div class="post-meta">
                 <s_ad_div>
@@ -145,27 +155,35 @@
               [##_article_rep_desc_##]
             </div>
 
-            <!-- 포스트 날짜 및 최근날짜(스크립트) 댓글 { -->
-            <div class="post-metaed">
-              <ul><li title="저자"><span><span class="pm-info"><i class="icon-admin"></i> By</span><span class="pm-value">[##_article_rep_author_##]</span></span></li>
-                  <li title="포스트 작성 날짜"><span><span class="pm-info"><i class="icon-calendar"></i> Posted on</span><span class="pm-value">[##_article_rep_simple_date_##]</span></span></li>
-                <script>
-                //<![CDATA[
-                if (updated != "") {
-                  document.write("<li title='포스트 수정 날짜'><span><span class='pm-info'><i class='icon-calendar-plus'></i> Edited on</span><span class='pm-value'>" + updated + 
-                  	"</span></span></li>");
-                }
-                </script>
-                <li><s_rp_count><span class="pm-info"><i class="icon-comment"></i> Comment</span><a href="#m3" class="pm-value">[##_article_rep_rp_cnt_##]</a></s_rp_count></li>
-              </ul>
-            </div>
-            <!-- } 포스트 날짜 및 최근날짜(스크립트) 댓글 -->
 
-            <!-- 태그 { -->
-            <s_tag_label>
-              <div class="tagTrail"><i class="icon-tag"></i> [##_tag_label_rep_##]</div>
-            </s_tag_label>
-            <!-- } 태그 -->
+            <div class="post-meta row">
+              <div class="post-qr col-md">
+                <div id="post-qrcode" class="no-shadow"></div>
+              </div>
+              <div class="post-metaed-ed col-auto">
+              <!-- 포스트 날짜 및 최근날짜(스크립트) 댓글 { -->
+                <div class="post-metaed">
+                  <ul><li title="저자"><span><span class="pm-info"><i class="icon-admin"></i> By</span><span class="pm-value">[##_article_rep_author_##]</span></span></li>
+                      <li title="포스트 작성 날짜"><span><span class="pm-info"><i class="icon-calendar"></i> Posted on</span><span class="pm-value">[##_article_rep_simple_date_##]</span></span></li>
+                    <script>
+                    //<![CDATA[
+                    if (updated != "") {
+                      document.write("<li title='포스트 수정 날짜'><span><span class='pm-info'><i class='icon-calendar-plus'></i> Edited on</span><span class='pm-value'>" + updated + 
+                      	"</span></span></li>");
+                    }
+                    </script>
+                    <li><s_rp_count><span class="pm-info"><i class="icon-comment"></i> Comment</span><a href="#m3" class="pm-value">[##_article_rep_rp_cnt_##]</a></s_rp_count></li>
+                  </ul>
+                </div>
+                <!-- } 포스트 날짜 및 최근날짜(스크립트) 댓글 -->
+
+                <!-- 태그 { -->
+                <s_tag_label>
+                  <div class="tagTrail"><i class="icon-tag"></i> [##_tag_label_rep_##]</div>
+                </s_tag_label>
+                <!-- } 태그 -->
+              </div>
+            </div>
 
             <!-- 본문하단 카테고리글 더보기 { -->
             <s_article_related>
@@ -283,6 +301,10 @@
       </script>
       </div><!-- } 추가 자리 -->
 
+      <div id="etc-wrap" class="common-wrap" style="padding: 10px 30px">
+        <p class="f90 text mb-0"><i class="icon-left-quote text-link"></i> 포스팅되는 모든 글은 게시자의 주관적인 관점이 포함되어 있으며, 절대적인 것은 아닙니다. 포스팅 글을 참조 후 발생되는 모든 책임은 본인에게 있음을 알려드립니다. <i class="icon-right-quote text-link"></i></p>
+      </div>
+
       <div id="etc-wrap" class="common-wrap"><!-- 추가 자리 { -->
           <div class="h2"><i class="icon-tag"></i> Random Tag</div>
         <ul>
@@ -295,7 +317,7 @@
       <!-- 푸더 { -->
       <footer id="footer">
         <div class="copyright">
-          <p>© 2020 NexT, © 2014 – 2020 AneOK</p>
+          <p>© 2020 NexT, © 2014 – 2020 AneOK</p>          
           <p><a href="https://www.tistory.com/" target="_blank">Tistory</a> skin (Hexo Theme <a href="https://theme-next.org" title="Hexo Theme" target="_blank">NexT.Gemini</a> v7..) > change : 
             <script>
             document.write("<a href='https://aneok.tistory.com/' title='AneOK' target='_blank'>AneOK <small class='grs'>blog " + AneOK.LOGO_VERSION + 
@@ -422,7 +444,7 @@
               <a href="https://www.pinterest.co.kr/innklog/" target="_blank" title="Pinterest → https://www.pinterest.co.kr/innklog/"><i class="icon-pinterest"></i></a>
               <a href="https://www.facebook.com/profile.php?id=100008456914604" target="_blank" title="Facebook → https://www.facebook.com/profile.php?id=100008456914604"><i class="icon-facebook"></i></a>
               <a href="[##_blog_link_##]pages/%EB%B3%80%EA%B2%BD%EB%A1%9C%EA%B7%B8Changelog" target="_top" title="Post → v2 변경로그"><i class="icon-clock"></i></a>
-              <a href='[##_blog_link_##]manage/' target='_top' title='Login → [##_blog_link_##]manage/' target='_blank'><i class='icon-gear-line'></i></a>
+              <a href='[##_blog_link_##]manage/' target='_top' title='Login → [##_blog_link_##]manage/'><i class='icon-gear-line'></i></a>
             </div>
           </s_sidebar_element>
 
@@ -437,11 +459,19 @@
 <script src="./images/jquery.sieve.min.js?_V_=0.3.0"></script><!-- page in search JavaScript -->
 <script src="./images/bootstrap.ak.min.js?_V_=4.4.1.ad"></script><!-- Toc용 bootstrap JavaScript  -->
 <script src="./images/dynamicscrollspy.ak.min.js?_B_=3"></script><!-- Toc용 JavaScript  -->
-<script src="./images/script.ak.min.js?_B_=15"></script><!-- this blog JavaScript  -->
+<script src="./images/qrcode.min.js?_B_=1"></script><!-- QRCode용 -->
+<script src="./images/script.ak.min.js?_B_=21"></script><!-- this blog JavaScript  -->
 <script>
 // 목차 출력 - h2로 시작해야 보임
-$(function() {
-  $('#scrollspy').DynamicScrollspy({tH: 2,bH: 4,genIDs: true,hMark: false});});
+$(function() {$('#scrollspy').DynamicScrollspy({tH: 2,bH: 4,genIDs: true,hMark: false});});
+var qrcode = new QRCode(document.getElementById("post-qrcode"), {
+  text: "https://aneok.tistory.com"+$QRCodeURL,
+  width: 53,
+  height: 53,
+  colorDark : "#000000",
+  colorLight : "#ffffff",
+  correctLevel : QRCode.CorrectLevel.L
+});
 </script>
 </s_t3>
 </body>

@@ -36,7 +36,7 @@ $(document).ready(function() {  /* 화면이 모두 로드되고 나면 거의 �
 					 "-red.svg'> <img src='https://img.shields.io/badge/Iconfont-" + VERSION.ICONFONT + 
 					 "-d9534f.svg'> <img src='https://img.shields.io/badge/DynamicScrollspy-" + VERSION.DYNAMIC_SCROLLSPY + 
 					 "-214a74.svg'> <img src='https://img.shields.io/badge/HighlightJs-" + VERSION.HIGHLIGHT_JS + "-660000.svg'><br /><img src='https://img.shields.io/badge/Bootstrap CSS-" + VERSION.BOOTSTRAP_CSS + "-8a13fd.svg'> <img src='https://img.shields.io/badge/Bootstrap JS-" + VERSION.BOOTSTRAP_JS + "-563d7c.svg'>";
-	$("#blog-logo-ver").html("AneOK <small>blog " + AneOK.LOGO_VERSION + "</small>"),
+	$("#blog-logo-ver").html(AneOK.NAME + " <small>blog " + AneOK.LOGO_VERSION + "</small>"),
 	$(".blog-logover").html(AneOK.LOGO_VERSION),
 	$(".blog-version").html(AneOK.VERSION),
 	$(".blog-update").html(AneOK.UPDATE),

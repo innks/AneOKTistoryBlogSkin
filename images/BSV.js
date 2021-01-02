@@ -6,11 +6,11 @@ var updated = ""; // 업데이트 날짜 들어갈 문구
 var AneOK = {
 	"NAME": "AneOK",
 	"LOGO_VERSION": "v2", // 공개
-	"BUILD": "200", // 유지 Build or Maintenance Version ...?b=숫자 더한값
-	"VERSION": "2.2.0", // 일반적인
+	"BUILD": "204", // 유지 Build or Maintenance Version ...?b=숫자 더한값
+	"VERSION": "2.2.1", // 일반적인
 	"sDATE": "2019. 4. 29", // 블로그 시작일
 	"u_sDATE": "2019. 12. 03", // 업데이트 시작일
-	"UPDATE": "2020. 12. 19"
+	"UPDATE": "2021. 1. 2"
 };
 var VERSION = {
 	"BOOTSTRAP_CSS": "5.0.0 beta1",

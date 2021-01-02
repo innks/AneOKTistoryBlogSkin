@@ -349,7 +349,7 @@ code,pre {font-family:Consolas,monaco,'AritaDotum','Malgun Gothic',sans-serif}
 #head-title{display:inline-block;line-height:36px;font-weight:normal;position:relative;color:var(--text-bg-color);font-size:1.25rem;text-decoration:none;border-bottom:0}
 #head-title:hover,#head-title:focus{color:var(--text-bg-color);text-decoration:none}
 #blog-logo-ver small{font-size:.5rem;color:#acadaf}
-#head-meta p.desc{font-size:12px;font-weight:400;text-transform:lowercase;margin:0;color:#acadaf}
+#head-meta p.desc{font-size:10px;font-weight:900;margin:-10px 0 10px;color:#fff}
 
 #head-nav{display:none}
 #head-nav ul{padding-left:0;margin:20px 0 10px;}
@@ -511,8 +511,9 @@ code,pre {font-family:Consolas,monaco,'AritaDotum','Malgun Gothic',sans-serif}
 .wrap-inner .title a,
 .wrap-inner .title a:hover{color:var(--a-text-color);border-bottom:0}
 
+.post-meta {margin:50px 0 0;}
 /* 저자 및 업데이트 날짜, 글쓴 날짜, 테그등 */
-.post-metaed{margin:50px 0 0;padding:8px 0;border-top:solid 1px var(--a-line-color);border-bottom:solid 1px var(--a-line-color);list-style:none;line-height:normal}
+.post-metaed{padding:8px 0;border-top:solid 1px var(--a-line-color);border-bottom:solid 1px var(--a-line-color);list-style:none;line-height:normal}
 .post-metaed ul{margin-bottom:0}
 .post-metaed li:first-child{padding-left:0;border-left:none}
 .post-metaed li{border-left:0;padding:0;color:var(--a-text-color);font-size:12px;margin:0;display:block;line-height:1.6}
@@ -642,7 +643,7 @@ code,pre {font-family:Consolas,monaco,'AritaDotum','Malgun Gothic',sans-serif}
 .nav>.active>.nav{display:block}
 
 .sidebar-nav{display:none}
-.sidebar-nav{margin:0 0 20px;padding-left:0;}
+.sidebar-nav{margin:0 0 10px;padding-left:0;}
 .sidebar-nav .sidebar-nav-active{color:var(--link-color);border-bottom-color:var(--link-color)}
 .sidebar-nav .sidebar-nav-toc{padding:0 3px}
 .sidebar-nav .sidebar-nav-overview{margin-left:10px;padding:0 3px}
@@ -654,7 +655,7 @@ code,pre {font-family:Consolas,monaco,'AritaDotum','Malgun Gothic',sans-serif}
 .affix-top a:hover{color:var(--e-text-color)}
 .logo-area{font-weight:400;position:relative;height:40px;margin:1px 23% 14px;font-size:22px;}
 
-.side-menu{margin-top:20px}
+.side-menu{margin-top:10px}
 .side-tab{border-top:1px dotted var(--line-color);border-bottom:1px dotted var(--line-color)}
 .side-tab a{color:var(--m-text-color)}
 .side-tab a:hover{cursor:pointer;color:var(--e-text-color)}
@@ -741,7 +742,7 @@ code,pre {font-family:Consolas,monaco,'AritaDotum','Malgun Gothic',sans-serif}
     .pagination .prev,.pagination .next{}
     .pagination .view-more{display:inline-block;width:158px;height:50px;border:1px solid var(--line-color);font-size:0.875em;line-height:50px;color:var(--text-color)}
     .pagination .view-more:hover{border-color:#4d4d4d;background:none}
-    .pagination a{display:inline-block;width:24px;margin:11px 0;font-size:1em;color:var(--text-color);vertical-align:middle;border-bottom:0;border-top:1px solid var(--content-bg-color);}
+    .pagination a{display:inline-block;padding:0 .3rem;margin:11px 0;font-size:1em;color:var(--text-color);vertical-align:middle;border-bottom:0;border-top:1px solid var(--content-bg-color);}
     .pagination a:hover{border-top:1px solid var(--link-color);color:var(--e-text-color);text-decoration: none;}
     .pagination .selected{color:var(--e-text-color)}
     .pagination .no-more-prev,.pagination .no-more-next{display:none}
