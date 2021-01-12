@@ -369,11 +369,12 @@ code,pre {font-family:Consolas,monaco,'AritaDotum','Malgun Gothic',sans-serif}
 #tt-body-index #head-nav .t_menu_home a,
 #tt-body-page .About #head-nav .t_menu_page a,
 #tt-body-page .이.class #head-nav .t_menu_link_1 a,
-#tt-body-page .v2.변경로그 #head-nav .t_menu_link_2 a{background:#f9f9f9;border-bottom-color:0}
+#tt-body-page .Skin.change.log #head-nav .t_menu_link_2 a{background:#f9f9f9;border-bottom-color:0}
 #tt-body-index #head-nav .t_menu_home a:after,
 #tt-body-page .About #head-nav .t_menu_page a:after,
 #tt-body-page .이.class #head-nav .t_menu_link_1 a:after,
-#tt-body-page .v2.변경로그 #head-nav .t_menu_link_2 a:after{content:" ";position:absolute;top:50%;margin-top:-3px;right:25px;width:6px;height:6px;background-color:var(--m-text-color);border-radius:50%}
+#tt-body-page .Skin.change.log #head-nav .t_menu_link_2 a:after {content:" ";position:absolute;top:50%;margin-top:-3px;right:25px;width:6px;height:6px;background-color:var(--m-text-color);border-radius:50%}
+/* #tt-body-page .v2.변경로그 #head-nav .t_menu_link_2 a:after */
 
 #header .head-search{position:relative}
 #header .head-search input{position:relative;padding-left:15px;padding-right:50px;width:calc(100vw - 40px);height:40px;font-size:inherit;border:1px solid var(--line-color);background-color:var(--content-bg-color);margin:13px 20px -5px;font-family:inherit}

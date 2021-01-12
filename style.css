@@ -128,4 +128,157 @@ h1 .small,h2 .small,h3 .small,h4 .small,h5 .small,h6 .small,
   .post-metaed-ed {width: calc(100% - 65px)}
 }
 
-
+/* 스킨 변경 로그 ( Skin change log ) */
+.components-container {overflow: hidden;}
+.component-container:first-child {
+  border-top-width: 1px;
+  border-radius: 4px 4px 0 0 !important;
+  -moz-border-radius: 4px 4px 0 0 !important;
+  -webkit-border-radius: 4px 4px 0 0 !important;
+  -o-border-radius: 4px 4px 0 0 !important;
+  -ms-border-radius: 4px 4px 0 0 !important;
+}
+.component-container {
+  border-bottom-width: 1px;
+  border-left-width: 1px !important;
+  border-right-width: 1px;
+  border-top-width: 0px;
+  float: none;
+  width: 100%;
+}
+.component-container:last-child {
+  border-radius: 0 0 4px 4px !important;
+  moz-border-radius: 0 0 4px 4px !important;
+  ms-border-radius: 0 0 4px 4px !important;
+  o-border-radius: 0 0 4px 4px !important;
+  webkit-border-radius: 0 0 4px 4px !important;
+}
+.is-group {
+  padding: 1.4rem 1.25rem 1.3rem;
+  border-style: solid;
+}
+.component-container.is-group>.component-inner-container {
+  cursor: pointer;
+}
+.component-container .name {
+  vertical-align: middle;
+  overflow: hidden;
+  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: inline-block;
+  font-weight: 500;
+  max-width: 75%;
+  color:#000;
+}
+.component-container .component-status {
+  display: inline-block;
+  font-size: 0.875rem;
+  float: right;
+}
+.shared-partial {
+  padding-top: 5px;
+  margin-bottom: -2px;
+} 
+.shared-partial svg {
+  margin: 0;
+  padding: 0;
+  height: 34px;
+  width: 100%;
+  overflow: hidden;
+}
+.shared-partial svg rect:hover {
+  fill: #5e6c84;
+}
+.component-inner-container .legend {
+  display: flex;
+  display: -ms-flexbox;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  top: -2px;
+  padding-left: 5px;
+}
+.component-inner-container .legend .legend-light {
+  color: #aaaaaa;
+  opacity: 0.8;
+  flex: 0 0 auto;
+  font-size: .875rem;
+  position: relative;
+}
+.component-inner-container .legend .spacer {
+  background: #aaaaaa;
+  opacity: 0.3;
+  flex: 1;
+  margin: 0.75rem 1rem 0 1rem;
+  height: 1px;    
+}
+.component-inner-container .legend .tc {
+  color: #000;
+  opacity: 1;
+  font-weight: 700;
+}
+.status-events {
+  margin-top: 70px;
+  margin-bottom:70px;
+}  
+.status-day {
+  margin-top: 35px;
+}
+.status-day .date {
+  font-weight: 500;
+  border-bottom: 1px solid #171717;
+  padding-bottom: 3px;
+  margin-bottom: 10px;
+  font-size: 29px;
+  line-height: 29px;
+  font-size: 1.75rem;
+  line-height: 1.8125rem;
+}
+.status-day .date small {
+  font-size:14px;
+}
+.status-day .date .gith-c {
+  font-size: 14px;
+  font-weight: 300!important;
+}
+.status-day .date .gith-c a, .status-day .update .a-links {    
+  color:#aaa;
+}
+.status-day .title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29px;
+  font-size: 1.25rem;
+  line-height: 1.8125rem;
+}
+.status-day .title.a {
+  color:#00bc87;
+}
+.status-day .title.c {
+  color:#1e87f0;
+}
+.status-day .title.f {
+  color:#faa05a;
+} 
+.status-day .title.d {
+  color:#dc3545;
+}   
+.status-day .update {
+  margin: 0.5rem 0;
+}
+.status-day h2:after,
+.status-day h3:after {
+  display: none;
+}
+.page-footer {
+  padding-top: 0.75rem;
+  margin: 70px 0;
+  border-top: 1px solid #171717;
+  overflow: hidden;
+}
+#tooltip {
+    position: relative;
+    font-size:14px;
+    padding-left:5px;
+}
