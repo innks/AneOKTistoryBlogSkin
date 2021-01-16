@@ -2,19 +2,20 @@
 <html lang="ko">
 
 <head>
-  <title>[##_page_title_##] blog - v2.2</title>
+  <title>[##_page_title_##] blog - v2.x</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width">
+  <meta name="naver-site-verification" content="a0d270166e76942f59d4f19424684a9d2fd43d5a" />
   <link rel="stylesheet" type="text/css" href="./images/font.min.css?_B_=3"><!-- 400은 티스토리에서 기본 로드됨 -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/github.min.css"><!-- highlight.js -->
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/load-awesome@1.1.0/css/line-scale.min.css"><!-- loading css -->
-  <link rel="stylesheet" type="text/css" href="./images/iconfont.min.css?_i_=116">
+  <link rel="stylesheet" type="text/css" href="./images/iconfont.min.css?_i_=117">
   <link rel="stylesheet" type="text/css" href="./images/bak5.min.css?_B_=2">
-  <link rel="stylesheet" type="text/css" href="./images/add.min.css?_B_=6">  
+  <link rel="stylesheet" type="text/css" href="./images/add.min.css?_B_=8">  
   <link rel="stylesheet" type="text/css" href="./images/default.min.css?_B_=18">
   <link rel="stylesheet" type="text/css" href="./style.css">
 
-  <script src="./images/BSV.js?_B_=212"></script><!-- 블로그 버전 Data -->
+  <script src="./images/BSV.js?_B_=215"></script><!-- 블로그 버전 Data -->
 </head>
 
 <body id="[##_body_id_##]" data-spy="scroll">
@@ -103,7 +104,7 @@
                     //<![CDATA[
                     if (updated != "") {
                       document.write("<li title='포스트 수정 날짜'><span><span class='pm-info'><i class='icon-calendar-plus'></i> Edited on</span><span class='pm-value'>" + updated + 
-                      	"</span></span></li>");
+                        "</span></span></li>");
                     }
                     </script>
                   </ul>
@@ -169,7 +170,7 @@
                     //<![CDATA[
                     if (updated != "") {
                       document.write("<li title='포스트 수정 날짜'><span><span class='pm-info'><i class='icon-calendar-plus'></i> Edited on</span><span class='pm-value'>" + updated + 
-                      	"</span></span></li>");
+                        "</span></span></li>");
                     }
                     </script>
                     <li><s_rp_count><span class="pm-info"><i class="icon-comment"></i> Comment</span><a href="#m3" class="pm-value">[##_article_rep_rp_cnt_##]</a></s_rp_count></li>
@@ -321,8 +322,8 @@
           <p><a href="https://www.tistory.com/" target="_blank">Tistory</a> skin (Hexo Theme <a href="https://theme-next.org" title="Hexo Theme" target="_blank">NexT.Gemini</a> v7..) > change : 
             <script>
             document.write("<a href='https://aneok.tistory.com/' title='AneOK' target='_blank'>AneOK <small class='grs'>blog " + AneOK.LOGO_VERSION + 
-            	"</small></a> - <a href='[##_blog_link_##]manage/' target='_top' title='Login → [##_blog_link_##]manage/' target='_blank'><i class='icon-admin'></i></a> v" + AneOK.VERSION + 
-            	"</p><p style='font-size:10px;'>window (" + screen.width + ' x ' + screen.height +') <div id="Parse_Area"></div>');
+              "</small></a> - <a href='[##_blog_link_##]manage/' target='_top' title='Login → [##_blog_link_##]manage/' target='_blank'><i class='icon-admin'></i></a> v" + AneOK.VERSION + 
+              "</p><p style='font-size:10px;'>window (" + screen.width + ' x ' + screen.height +') <div id="Parse_Area"></div>');
             </script>
             <!--받아온 데이터들이 들어갈 div -->
           </p>
@@ -439,12 +440,12 @@
                    'L50 100' - 0,0에서 50,100까지 선을 그립니다 (하단 중심점).
                    'L100 0' - 50,100에서 100 0까지의 선을 그립니다 (오른쪽 상단 모서리)
                    'z' - 마지막 점 (100,0)에서 첫 번째 점 (0,0)까지 선을 그려 경로를 닫습니다. -->
-              <a href="[##_blog_link_##]admin/entry/post" target="_top" title="Edit → [##_blog_link_##]admin/entry/post" class="resize1"><i class="icon-edit"></i></a>
+              <a href="[##_blog_link_##]manage/newpost/" target="_top" title="Edit → [##_blog_link_##]manage/newpost/" class="resize1"><i class="icon-edit"></i></a>
               <a href="https://github.com/innks/AneOKTistoryBlogSkin" target="_blank" title="Github → AneOKTistoryBlogSkin"><i class="icon-github"></i></a>
               <a href="https://www.pinterest.co.kr/innklog/" target="_blank" title="Pinterest → https://www.pinterest.co.kr/innklog/"><i class="icon-pinterest"></i></a>
               <a href="https://www.facebook.com/profile.php?id=100008456914604" target="_blank" title="Facebook → https://www.facebook.com/profile.php?id=100008456914604"><i class="icon-facebook"></i></a>
               <a href="[##_blog_link_##]pages/%EB%B3%80%EA%B2%BD%EB%A1%9C%EA%B7%B8Changelog" target="_top" title="Post → v2 변경로그"><i class="icon-clock"></i></a>
-              <a href='[##_blog_link_##]manage/' target='_top' title='Login → [##_blog_link_##]manage/'><i class='icon-gear-line'></i></a>
+              <a href='[##_blog_link_##]manage/' target='_top' title='Login → [##_blog_link_##]manage/' style='margin-top: 6px;margin-left: 0;'><i class='icon-circle-Plug' style='font-size: 20px;'></i></a>
             </div>
           </s_sidebar_element>
 
@@ -458,7 +459,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script><!-- highlight.js -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js?_B_=3"></script><!-- Tooltip용 JavaScript  -->
 <script src="./images/jquery.sieve.min.js?_V_=0.3.0"></script><!-- page in search JavaScript -->
-<script src="./images/jquery.sieve.min.js?_V_=0.3.0"></script><!-- page in search JavaScript -->
 <script src="./images/bootstrap.ak.min.js?_V_=4.4.1.ad"></script><!-- Toc용 bootstrap JavaScript  -->
 <script src="./images/dynamicscrollspy.ak.min.js?_B_=3"></script><!-- Toc용 JavaScript  -->
 <script src="./images/qrcode.min.js?_B_=1"></script><!-- QRCode용 -->
@@ -468,11 +468,7 @@
 $(function() {$('#scrollspy').DynamicScrollspy({tH: 2,bH: 4,genIDs: true,hMark: false});});
 var qrcode = new QRCode(document.getElementById("post-qrcode"), {
   text: "https://aneok.tistory.com"+$QRCodeURL,
-  width: 53,
-  height: 53,
-  colorDark : "#000000",
-  colorLight : "#ffffff",
-  correctLevel : QRCode.CorrectLevel.L
+  width: 53, height: 53, colorDark : "#000000", colorLight : "#ffffff", correctLevel : QRCode.CorrectLevel.L
 });
 </script>
 </s_t3>
