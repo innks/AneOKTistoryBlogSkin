@@ -1,44 +1,9 @@
 'use strict';
-// -- 웹 페이지 로딩
-$(window).on("load", function(e) {
-  setTimeout(function() {
-    $('#loader').remove()
-  }, 300); // 로딩이 완료시
-});
-
-const AneOK.boot = {}
-
-AneOK.boot.registerEvents = {
-  AneOK.utils.isCategorys();
-  AneOK.utils.totalPostNumberReturn();  
-}
 
 $(document).ready(function() {
   /* 화면이 모두 로드되고 나면 거의 마지막으로 실행하는 함수 */
 	
-  // --- 모바일 네비 - 상위버튼
-  $('.mobileBtn').click(function() {
-    $('.mobileBtn').toggleClass('clicked');
-    $('.mobileBtn-nav').toggleClass('show');
-	});
 	
-  // --- 사이드바 화면 고정 및 TOP버튼
-  let ibOffset = $('#sidebar').offset();
-  $(window).scroll(function() {
-    if ($(document).scrollTop() > ibOffset.top) {
-      $('#sidebar, .back-to-top, .wrap-inner').addClass('on');
-    } else {
-      $('#sidebar, .back-to-top, .wrap-inner').removeClass('on');
-    };
-	});
-	
-  // --- TOP 버튼 클릭시 
-  $('.back-to-top, .wrap-inner, .side-top-btn').click(function() {
-    $('html, body').animate({
-      scrollTop: 0 // 0 까지 animation 이동합니다. 
-    }, 500); // 속도 400 
-    return false;
-	});
 	
   // --- Tabs 스타일 Tabs tag listener (without twitter bootstrap).
   const tNav = '.tabs ul.nav-tabs ';
@@ -67,13 +32,6 @@ $(document).ready(function() {
       }
     }
 	});
-	
-  // --- 새로운 에디터에서 pre찾고 code 추가하기
-  $('.entry-content pre.html').children("code:not(.html)").addClass("html");
-  $('.entry-content pre.js').children("code:not(.js)").addClass("html");
-  $('.entry-content pre.css').children("code:not(.css)").addClass("html");
-  $('.entry-content pre.bash').children("code:not(.bash)").addClass("html");
-	$('.entry-content pre.json').children("code:not(.json)").addClass("html");
 	
 });
 
@@ -130,6 +88,12 @@ $(window).on('scroll', function() {
 
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  AneOK.registerEvents();
-};
+
+// -- 웹 페이지 로딩
+$(window).on("load", function(e) {
+  setTimeout(function() {
+    $('#loader').remove()
+  }, 300); // 로딩이 완료시
+});
+
+window.addEventListener('DOMContentLoaded', () => {};

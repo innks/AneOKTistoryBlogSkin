@@ -6,16 +6,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width">
   <meta name="naver-site-verification" content="a0d270166e76942f59d4f19424684a9d2fd43d5a" />
-  <link rel="stylesheet" type="text/css" href="./images/font.min.css?_B_=3"><!-- 400은 티스토리에서 기본 로드됨 -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/github.min.css"><!-- highlight.js -->
+
+  <link rel="stylesheet" type="text/css" href="./images/font.min.css?_B_=3"><!--  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" /><!-- highlight.js -->
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/load-awesome@1.1.0/css/line-scale.min.css"><!-- loading css -->
   <link rel="stylesheet" type="text/css" href="./images/iconfont.min.css?_i_=117">
   <link rel="stylesheet" type="text/css" href="./images/bak5.min.css?_B_=2">
-  <link rel="stylesheet" type="text/css" href="./images/add.min.css?_B_=8">  
-  <link rel="stylesheet" type="text/css" href="./images/default.min.css?_B_=18">
+  <link rel="stylesheet" type="text/css" href="./images/add.min.css?_B_=10">  
+  <link rel="stylesheet" type="text/css" href="./images/default.min.css?_B_=21">
   <link rel="stylesheet" type="text/css" href="./style.css">
 
-  <script src="./images/BSV.js?_B_=215"></script><!-- 블로그 버전 Data -->
+  <script src="./images/BSVerNote.js?_B_=223"></script><!-- 블로그 버전 Data -->
 </head>
 
 <body id="[##_body_id_##]" data-spy="scroll">
@@ -83,7 +84,7 @@
             <div class="inner-title">
               <div class="top-category" title="[##_article_rep_category_##]">Documents</div>
               <div class="h1 title">[##_article_rep_title_##]</div>
-              <script type="text/javascript">var $QRCodeURL = "[##_article_rep_link_##]";</script> 
+              <script type="text/javascript">let $QRCodeURL = "[##_article_rep_link_##]";</script> 
               <div class="date">[##_article_rep_date_##]</div> 
             </div>
             <div class="wrap-inner"><div class="title"><a href="#" title="처음으로">[##_article_rep_title_##]</a></div></div>
@@ -319,10 +320,10 @@
       <footer id="footer">
         <div class="copyright">
           <p>© 2020 NexT, © 2014 – 2020 AneOK</p>          
-          <p><a href="https://www.tistory.com/" target="_blank">Tistory</a> skin (Hexo Theme <a href="https://theme-next.org" title="Hexo Theme" target="_blank">NexT.Gemini</a> v7..) > change : 
+          <p><a href="https://www.tistory.com/" target="_blank">Tistory</a> skin (Hexo Theme <a href="https://theme-next.js.org/" title="Hexo Theme" target="_blank">NexT.Gemini</a> v7..) > change : 
             <script>
-            document.write("<a href='https://aneok.tistory.com/' title='AneOK' target='_blank'>AneOK <small class='grs'>blog " + AneOK.LOGO_VERSION + 
-              "</small></a> - <a href='[##_blog_link_##]manage/' target='_top' title='Login → [##_blog_link_##]manage/' target='_blank'><i class='icon-admin'></i></a> v" + AneOK.VERSION + 
+            document.write("<a href='https://aneok.tistory.com/' title='AneOK' target='_blank'>AneOK <small class='grs'>blog " + AneOKBlog.LOGO_VERSION + 
+              "</small></a> - <a href='[##_blog_link_##]manage/' target='_top' title='Login → [##_blog_link_##]manage/' target='_blank'><i class='icon-admin'></i></a> v" + AneOKBlog.VERSION + 
               "</p><p style='font-size:10px;'>window (" + screen.width + ' x ' + screen.height +') <div id="Parse_Area"></div>');
             </script>
             <!--받아온 데이터들이 들어갈 div -->
@@ -338,8 +339,8 @@
     <aside id="sidebar" class="common-wrap">
       <!-- 사이드바 탭 메뉴 (포스트 오픈시 보임) { -->
       <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc sidebar-nav-active" onclick="openSide('toc-wrap','sidebar-panel')">Table of Contents</li>
-        <li class="sidebar-nav-overview" onclick="openSide('overview-wrap','sidebar-panel')">Overview</li>
+        <li class="sidebar-nav-toc sidebar-nav-active" onclick="AneOK.utils.openSide('toc-wrap','sidebar-panel')">Table of Contents</li>
+        <li class="sidebar-nav-overview" onclick="AneOK.utils.openSide('overview-wrap','sidebar-panel')">Overview</li>
       </ul>
       <!-- } -->
 
@@ -381,9 +382,9 @@
             <!-- 글보관함, 댓글, 최신글 -->
             <div class="side-menu clearfix">
               <div class="btn-group btn-group-sm d-flex side-tab" role="group" aria-label="Basic example">
-                <a class="btn btn-link flex-fill" onclick="openSide('archive','sides')">글보관함</a>
-                <a class="btn btn-link flex-fill" onclick="openSide('recentComment','sides')">댓글</a>
-                <a class="btn btn-link flex-fill" onclick="openSide('recentPost','sides')">최신글</a>
+                <a class="btn btn-link flex-fill" onclick="AneOK.utils.openSide('archive','sides')">글보관함</a>
+                <a class="btn btn-link flex-fill" onclick="AneOK.utils.openSide('recentComment','sides')">댓글</a>
+                <a class="btn btn-link flex-fill" onclick="AneOK.utils.openSide('recentPost','sides')">최신글</a>
               </div>
               <div id="archive" class="sides">
                 <ul>
@@ -445,7 +446,7 @@
               <a href="https://www.pinterest.co.kr/innklog/" target="_blank" title="Pinterest → https://www.pinterest.co.kr/innklog/"><i class="icon-pinterest"></i></a>
               <a href="https://www.facebook.com/profile.php?id=100008456914604" target="_blank" title="Facebook → https://www.facebook.com/profile.php?id=100008456914604"><i class="icon-facebook"></i></a>
               <a href="[##_blog_link_##]pages/%EB%B3%80%EA%B2%BD%EB%A1%9C%EA%B7%B8Changelog" target="_top" title="Post → v2 변경로그"><i class="icon-clock"></i></a>
-              <a href='[##_blog_link_##]manage/' target='_top' title='Login → [##_blog_link_##]manage/' style='margin-top: 6px;margin-left: 0;'><i class='icon-circle-Plug' style='font-size: 20px;'></i></a>
+              <a href='[##_blog_link_##]manage/' target='_top' title='Login → [##_blog_link_##]manage/' style='margin-top: 6px;margin-left: 2px;'><i class='icon-circle-Plug' style='font-size: 20px;'></i></a>
             </div>
           </s_sidebar_element>
 
@@ -456,20 +457,14 @@
   <div class="back-to-top" style=""><a href="#"><i class="icon-up-arrow"></i><p id="s-progress"></p></a></div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script><!-- highlight.js -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script><!-- highlight.js -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js?_B_=3"></script><!-- Tooltip용 JavaScript  -->
 <script src="./images/jquery.sieve.min.js?_V_=0.3.0"></script><!-- page in search JavaScript -->
 <script src="./images/bootstrap.ak.min.js?_V_=4.4.1.ad"></script><!-- Toc용 bootstrap JavaScript  -->
-<script src="./images/dynamicscrollspy.ak.min.js?_B_=3"></script><!-- Toc용 JavaScript  -->
+<script src="./images/dynamicscrollspy.ak.min.js?_B_=4"></script><!-- Toc용 JavaScript  -->
 <script src="./images/qrcode.min.js?_B_=1"></script><!-- QRCode용 -->
-<script src="./images/script.ak.min.js?_B_=21"></script><!-- this blog JavaScript  -->
-<script>
-// 목차 출력 - h2로 시작해야 보임
-$(function() {$('#scrollspy').DynamicScrollspy({tH: 2,bH: 4,genIDs: true,hMark: false});});
-var qrcode = new QRCode(document.getElementById("post-qrcode"), {
-  text: "https://aneok.tistory.com"+$QRCodeURL,
-  width: 53, height: 53, colorDark : "#000000", colorLight : "#ffffff", correctLevel : QRCode.CorrectLevel.L
-});
-</script>
+<script src="./images/utils.js?_B_=36"></script><!-- this blog JavaScript  -->
+<script src="./images/data.js?_B_=2"></script><!-- this blog Data JavaScript  -->
+
 </s_t3>
 </body>

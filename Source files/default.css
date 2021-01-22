@@ -71,6 +71,8 @@ b,strong{font-weight:bolder;color:#000;}
 :not(pre) > samp{
   font-size: 0.875rem;
   white-space:nowrap;
+  direction: ltr;
+  unicode-bidi: bidi-override;
 }
 em {color:#f0506e}
 ins {text-decoration:none;background-color:#FCF8E3;color:var(--a-text-color)}
@@ -285,11 +287,13 @@ a > code {
   color:inherit
 }
 kbd {
-  background-color:#2E2E2E;
+  background-color:#212529;
   border-radius:.2rem;
   padding:.2rem .4rem;
-  font-size:87.5%;
-  color:var(--content-bg-color)
+  font-size:.8rem !important;
+  color:var(--content-bg-color);
+  font-family:SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
 }
 kbd kbd {
   font-weight:700;
@@ -317,7 +321,7 @@ pre code {
 
 /* font */
 body,button, input, textarea{background-color:var(--body-bg-color);font-family:'AritaDotum','Malgun Gothic',sans-serif;}
-code,pre {font-family:Consolas,monaco,'AritaDotum','Malgun Gothic',sans-serif}
+code,pre {font-family:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
 #head-meta{font-family:'Avenir Next Regular',sans-serif;}
 .inner-title .title{font-family:'Avenir Next Regular', 'AritaDotum','Malgun Gothic',sans-serif;}
 #sidebar::after{font-family:'Avenir Next Regular', sans-serif;}

@@ -552,11 +552,13 @@ h2.c5::after,h3.c5::after{display:none}
 .exbody p.-setup.html::before,
 .exbody p.-setup.css::before,
 .exbody p.-setup.js::before,
-.exbody p.-setup.bash::before{padding:4px 5px 3px;background-color:#282923;color:#fff;border-radius:3px;font-size:90%}
+.exbody p.-setup.bash::before,
+.exbody p.-setup.json::before {padding:4px 5px 3px;background-color:#282923;color:#fff;border-radius:3px;font-size:90%}
 .exbody p.-setup.html::before {content: "<html />";margin-right:4px;padding:3px 5px 2px!important;}
-.exbody p.-setup.css::before {content: "{css;}"; margin-right:4px}
+.exbody p.-setup.css::before {content: ".css{}"; margin-right:4px}
 .exbody p.-setup.js::before {content: "javaScript();"; margin-right:4px}
 .exbody p.-setup.bash::before {content: "~/bash$"; margin-right:4px}
+.exbody p.-setup.json::before {content: "{JSON}"; margin-right:4px}
 
 /* 링크 클레스에 마우스 오버면 밑줄 효과 34px = h2정도 */
 .links{color: #909090;display: blck;text-decoration: none;}
