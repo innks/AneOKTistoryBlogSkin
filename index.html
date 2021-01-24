@@ -5,9 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="Source files/utils.js"></script>
+
 </head>
 <body>
-  
+  <a href="[##_blog_link_##]" id="head-title" class="__animated__ __fadeInDown __delay-1s"><span id="blog-logo-ver"></span></a>
+  <p class="desc __animated__ __fadeInDown __delay-2s">[##_desc_##]</p>
+  <script>
+    const AneOK = {};
+    AneOK.utils = {
+      postRemoveClass: function(idElement, delClass) {
+        $(idElement).removeClass(delClass);
+      }
+    };
+    $(window).on("load", (e) => {
+        setTimeout(() => { 
+          AneOK.utils.postRemoveClass('#head-title', '__animated__ __fadeInDown __delay-1s');
+          // AneOK.utils.postRemoveClass('#head-title', '__fadeInDown');
+          // AneOK.utils.postRemoveClass('#head-title', '__delay-1s');
+        }, 500)
+    }); // 로딩이 완료시 300 카운터 후 삭제
+    // $('#head-title').removeClass();
+    
+  </script>
+
 </body>
 </html>

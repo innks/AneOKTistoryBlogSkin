@@ -345,7 +345,7 @@ code,pre {font-family:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Co
 
 /* 헤더 */
 #header{position:relative;width:auto;top:0;overflow:hidden;padding:0 0 20px 0;margin:0 auto;border-top-left-radius:0!important;border-top-right-radius:0!important}
-#head-meta{box-shadow:0 0 16px rgba(0,0,0,0.5);text-align:center;color:var(--a-text-color);padding: 20px 0;background-image: url('https://tistory2.daumcdn.net/tistory/3088055/skin/images/bg-head.gif')}
+#head-meta{box-shadow:0 0 16px rgba(0,0,0,0.5);text-align:center;color:var(--a-text-color);padding: 20px 0;background-image: url('https://tistory2.daumcdn.net/tistory/3088055/skin/images/bg-head.gif');height: 100px;}
 /*
 #head-meta{background-color:var(--h-back-color)};
 */

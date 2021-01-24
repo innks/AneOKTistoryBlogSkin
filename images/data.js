@@ -2,10 +2,12 @@
 $(function() {$('#scrollspy').DynamicScrollspy({tH: 2,bH: 4,genIDs: true,hMark: false});});
 
 // QRCode
-let qrcode = new QRCode(document.getElementById("post-qrcode"), {
-  text: "https://aneok.tistory.com" + $QRCodeURL,
-  width: 53, height: 53, colorDark : "#000000", colorLight : "#ffffff", correctLevel : QRCode.CorrectLevel.L
-});
+if ($QRCodeURL !== '') {
+	let qrcode = new QRCode(document.getElementById('post-qrcode'), {
+		text: "https://aneok.tistory.com" + $QRCodeURL,
+		width: 53, height: 53, colorDark: "#000000", colorLight: "#ffffff", correctLevel: QRCode.CorrectLevel.L
+	})
+}
 
 // -- 버전 출력
 const $ve = "<img src='https://img.shields.io/badge/" + AneOKBlog.NAME + "-" + AneOKBlog.VERSION + "-4a65f6.svg'> " +

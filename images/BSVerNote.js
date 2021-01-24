@@ -2,24 +2,27 @@
  *	document.write(VERSION.iconFont);
  */
 
-let updated = ""; // 업데이트 날짜 들어갈 문구
+let updated = ''; // 업데이트 날짜 들어갈 문구
+let $QRCodeURL = '';
+const AneOK = {};
+
 const AneOKBlog = {
-	"NAME": "AneOK",
-	"LOGO_VERSION": "v2.x", // 공개
-	"BUILD": "223", // 유지 Build or Maintenance Version ...?b=숫자 더한값
-	"VERSION": "2.2.2.2", // 일반적인
-	"sDATE": "2019. 4. 29", // 블로그 시작일
-	"u_sDATE": "2019. 12. 03", // 업데이트 시작일
-	"UPDATE": "2021. 1. 22"
+	'NAME': 'AneOK',
+	'LOGO_VERSION': 'v2.x', // 공개
+	'BUILD': '231', // 유지 Build or Maintenance Version ...?b=숫자 더한값
+	'VERSION': '2.2.3.1', // 일반적인
+	'sDATE': '2019. 4. 29', // 블로그 시작일
+	'u_sDATE': '2019. 12. 03', // 업데이트 시작일
+	'UPDATE': '2021. 1. 24'
 };
 const VERSION = {
-	"BOOTSTRAP_CSS": "5.0.0 beta1",
-	"BOOTSTRAP_JS": "4.4.1 ad",
-	"JQUERY": "3.4.1",
-	"popper.js": "1.14.7",
-	"ICONFONT": "117",
-	"DYNAMIC_SCROLLSPY": "0.2.0",
-	"HIGHLIGHT_JS": "10.5.0"	
+	'BOOTSTRAP_CSS': '5.0.0 beta1',
+	'BOOTSTRAP_JS': '4.4.1 ad',
+	'JQUERY': '3.4.1',
+	'popper.js': '1.14.7',
+	'ICONFONT': '117',
+	'DYNAMIC_SCROLLSPY': '0.2.0',
+	'HIGHLIGHT_JS': '10.5.0'	
 };
 
 const clog = [
@@ -31,13 +34,14 @@ const clog = [
 [0,''],[0,''],[0,''],[0,''],[0,''],[0,''],[0,''],[0,''],[0,''],[0,''], //51~60
 [0,''],[0,''],[0,''],[0,''],[0,''],[0,''],[0,''],[0,''],[0,''],[0,''], //61~71
 [0,''],[0,''],[0,''],[0,''],[0,''],[0,''],[0,''],[0,''],[0,''],[0,''], //71~80
-[0,''],[0,''],[0,''],
+[0,''],[0,''],
 [2,'v2.2.0 - 2020.12.21 부트스트랩 5 베타1, 파일변경, 일부 스타일(style.css) 부분을 변경/분리'],
 [1,'v2.2.1 - 2021.1.2 포스터 하단에 QRCode 추가'],
 [1,'v2.2.2 - 2021.1.12 Skin change log 페이지 추가'],
 [2,'v2.2.2.1 - 2021.1.13 Skin change log 페이지 디자인 변경'],
 [2,'v2.2.2.2 - 2021.1.16 iconFont 116 -> 117개로 1개 추가'],
-[2,'v2.2.3 - 2021.1.22 iconFont 116 -> JavaScript 기능을 개선 및 파일 변경']
+[1,'v2.2.3 - 2021.1.22 JavaScript 기능을 개선 및 파일 추가/변경'],
+[2,'v2.2.3.1 - 2021.1.24 loading부분 삭제 -> fadeIn으로 변경']
 ];
 
 /* 1 = #00bc87 // 추가

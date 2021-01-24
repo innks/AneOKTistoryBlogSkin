@@ -1,7 +1,5 @@
 'use strict';
 
-const AneOK = {};
-
 AneOK.utils = {
 
   // --- 모바일 네비 - 전체 카테고리 중 첫번째 카테고리 값 만을 가져와서 뿌려줍니다.
@@ -79,7 +77,7 @@ AneOK.utils = {
 
   // --- 모바일 네비 - 상위버튼클릭시
   mobileTopButton: function () {
-    $('.mobileBtn').click(() => {
+    $('.mobileBtn').click(function() {
       $('.mobileBtn').toggleClass('clicked');
       $('.mobileBtn-nav').toggleClass('show');
     });
@@ -105,7 +103,7 @@ AneOK.utils = {
 
   // --- TOP 버튼 클릭시 이동
   clickButttonTop: function() {
-    $('.back-to-top, .wrap-inner, .side-top-btn').click(() => {
+    $('.back-to-top, .wrap-inner, .side-top-btn').click( function() {
       $('html, body').animate({
         scrollTop: 0 // 0 까지 animation 이동합니다. 
       }, 500); // 속도 400 
@@ -144,15 +142,15 @@ AneOK.utils = {
   },
 
   // --- 사이드바 Toc 부드럽게 특정 위치 이동
-  tocHGo: function(gid) {
+  tocHeadingGo: function(gid) {
     return $('html, body').animate({
       scrollTop: $(gid).offset().top - 65
     }, 500);
   },
 
   // 접은글 텍스트 변경 스크립트 
-  newEditFoldingTitleChange: function () {  
-    $(".btn-toggle-moreless").each( () => { 
+  newEditFoldingTitleChange: function() {  
+    $(".btn-toggle-moreless").each( function() { 
       let text_more = $(this).parent().first().data("text-more"); 
       let text_less = $(this).parent().first().data("text-less"); 
       $(this).text(text_more); 
@@ -180,7 +178,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // -- 웹 페이지 로딩
-$(window).on("load", (e) => setTimeout(() => $('#loader').remove(), 300)); // 로딩이 완료시 300 카운터 후 삭제
-
-
+$(window).on("load", (e) => {
+  setTimeout(function() {
+    $('#head-title, #head-nav, #sidebar, #footer').removeClass();
+    $('.desc, #menuTop').removeClass('__animated__ __fadeInDown __delay-2s');
+    $('.inner-title, .wrap-inner').removeClass('__animated__ __fadeInDown __delay-3s');
+    $('.entry-content, .post-meta, .related-articles').removeClass('__animated__ __fadeInDown __delay-4s');
+    $('#pagination-wrap, #etc-wrap').removeClass('__animated__ __fadeInUp __delay-5s');
+  } , 500)
+}); // 로딩이 완료시 500 카운터 후 삭제
 
