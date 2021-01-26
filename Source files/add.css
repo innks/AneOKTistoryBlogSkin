@@ -1,3 +1,28 @@
+:root {--animate-duration: 250ms;--animate-delay: 250ms;--animate-repeat: 1}
+.__animated__.__delay-1s {-webkit-animation-delay: 200ms;animation-delay: 200ms;-webkit-animation-delay: 200ms;animation-delay: 200ms;}
+.__animated__.__delay-2s {-webkit-animation-delay: 400ms;animation-delay: 400ms;-webkit-animation-delay: 400ms;animation-delay: 400ms;}
+.__animated__.__delay-3s {-webkit-animation-delay: 550ms;animation-delay: 550ms;-webkit-animation-delay: 550ms;animation-delay: 550ms;}
+.__animated__.__delay-4s {-webkit-animation-delay: 700ms;animation-delay: 700ms;-webkit-animation-delay: 700ms;animation-delay: 700ms;}
+.__animated__.__delay-5s {-webkit-animation-delay: 1000ms;animation-delay: 1000ms;-webkit-animation-delay: 1000ms;animation-delay: 1000ms;}
+.__animated__.__delay-6s {-webkit-animation-delay: 1350ms;animation-delay: 1350ms;-webkit-animation-delay: 1350ms;animation-delay: 1350ms;}
+.__animated__.__repeat-3 {-webkit-animation-iteration-count: 3;animation-iteration-count: 3;-webkit-animation-iteration-count: calc(var(--animate-repeat)*3);animation-iteration-count: calc(var(--animate-repeat)*3);}
+@-webkit-keyframes pulse {0% {-webkit-transform: scaleX(1);transform: scaleX(1)} 50% {-webkit-transform: scale3d(1.05, 1.05, 1.05);transform: scale3d(1.05, 1.05, 1.05)} to {-webkit-transform: scaleX(1);transform: scaleX(1)}}
+@keyframes pulse {0% {-webkit-transform: scaleX(1);transform: scaleX(1)} 50% {-webkit-transform: scale3d(1.05, 1.05, 1.05);transform: scale3d(1.05, 1.05, 1.05)} to {-webkit-transform: scaleX(1);transform: scaleX(1)}}
+.__pulse {-webkit-animation-name: pulse;animation-name: pulse;-webkit-animation-timing-function: ease-in-out;animation-timing-function: ease-in-out}
+.__animated__ {-webkit-animation-duration: 1s;animation-duration: 1s;-webkit-animation-duration: var(--animate-duration);animation-duration: var(--animate-duration);-webkit-animation-fill-mode: both;animation-fill-mode: both;}
+@-webkit-keyframes fadeInDown {0% {opacity: 0;-webkit-transform: translate3d(0, -10px, 0);transform: translate3d(0, -10px, 0)} to {opacity: 1;-webkit-transform: translateZ(0);transform: translateZ(0)}}
+@keyframes fadeInDown {0% {opacity: 0;-webkit-transform: translate3d(0, -10px, 0);transform: translate3d(0, -10px, 0)} to {opacity: 1;-webkit-transform: translateZ(0);transform: translateZ(0)}}
+.__fadeInDown {-webkit-animation-name: fadeInDown;animation-name: fadeInDown}
+@-webkit-keyframes fadeInUp {0% {opacity: 0;-webkit-transform: translate3d(0, 10px, 0);transform: translate3d(0, 10px, 0)} to {opacity: 1;-webkit-transform: translateZ(0);transform: translateZ(0)}}
+@keyframes fadeInUp {0% {opacity: 0;-webkit-transform: translate3d(0, 10px, 0);transform: translate3d(0, 10px, 0)} to {opacity: 1;-webkit-transform: translateZ(0);transform: translateZ(0)}}
+.__fadeInUp {-webkit-animation-name: fadeInUp;animation-name: fadeInUp}
+@-webkit-keyframes fadeInUp2 {0% {opacity: 0;-webkit-transform: translate3d(0, 20px, 0);transform: translate3d(0, 20px, 0)} to {opacity: 1;-webkit-transform: translateZ(0);transform: translateZ(0)}}
+@keyframes fadeInUp2 {0% {opacity: 0;-webkit-transform: translate3d(0, 20px, 0);transform: translate3d(0, 20px, 0)} to {opacity: 1;-webkit-transform: translateZ(0);transform: translateZ(0)}}
+.__fadeInUp2 {-webkit-animation-name: fadeInUp2;animation-name: fadeInUp2}
+@-webkit-keyframes fadeIn {0% {opacity: 0} to {opacity: 1}}
+@keyframes fadeIn {0% {opacity: 0} to {opacity: 1}}
+.__fadeIn {-webkit-animation-name: fadeIn;animation-name: fadeIn}
+
 /* code */
 code.n{background-color:var(--a-line-color)!important;color: var(--e-text-color)!important;font-weight:700!important;}
 
@@ -222,19 +247,14 @@ dl.dl dd{margin-left:20px}
 /* hr */
 /* <div class="hr"><p class="h6">중 간 선</p></div> 선 - 1줄 */
 .hr {display:flex;flex-basis:100%;align-items:center;color:var(--e-text-color);font-size:.875rem;margin:3rem 0px 2rem;clear: both;}
-.hr::before,.hr::after,
-.hr-icon::before,.hr-icon::after {content:'';flex-grow:1;height:1px;font-size:0px;line-height:0px;}
-.hr::before, .hr-icon::before {background:linear-gradient(to right,transparent 50%, rgba(116,95,181,0.2) 100%);margin-right:0;}
-.hr::after, .hr-icon::after {background:linear-gradient(to right,rgba(116,95,181,0.2),transparent 50%);margin-left:0;}
-.hr span {margin-bottom:0;-webkit-margin-before:0;}
-.hr .h5 {padding-right: 10px; padding-left: 10px;margin-bottom:0;-webkit-margin-before:0;}
-.hr span,
-.hr-icon span {padding-left: 16px; padding-right: 16px;}
+.hr.hj {display:flex;align-items: center;background: url(https://aneok.tistory.com/attachment/cfile9.uf@9986E53A600FA27D0F88A7.svg) no-repeat top;height: 33px;width: 100%;padding:0;margin: 1.2rem 0 1rem;}
+.hr.logo {display:flex;align-items: center;background: url(https://aneok.tistory.com/attachment/cfile8.uf@99DF813B600FA27D0F5ED9.svg) no-repeat top;height: 40px;width: 100%;padding:0;margin: 1.2rem 0 1rem;}
+.hr span {margin-bottom:0;-webkit-margin-before:0;padding-left: 16px; padding-right: 16px;}
+.hr::before,.hr::after {content:'';flex-grow:1;height:1px;font-size:0px;line-height:0px;}
+.hr.hj::before,.hr.hj::after, .hr.logo::before,.hr.logo::after {display: none;}
 
-.hr-icon {display:flex;flex-basis:100%;align-items:center;color:var(--e-text-color);font-size:.875rem;margin:5rem 0px 5rem;clear: both;}
-.hr-icon span{margin-bottom:0;-webkit-margin-before:0; text-indent: -9999px;}
-.hr-icon span.i::after{content:'';display: block;text-indent: -99px;width: 50px;height: 50px;background: url(https://tistory4.daumcdn.net/tistory/3088055/skin/images/ak-mark-2.svg) no-repeat;background-size: 50px 50px;margin-top: -10px;}
-.hr-icon span.icon:after {content:''; display: block; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25'%3E%3Cpath d='M19 6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14.66h.01c.01.1.05.2.12.28a.5.5 0 0 0 .7.03l5.67-4.12 5.66 4.13a.5.5 0 0 0 .71-.03.5.5 0 0 0 .12-.29H19V6zm-6.84 9.97L7 19.64V6a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v13.64l-5.16-3.67a.49.49 0 0 0-.68 0z' fill-rule='evenodd'%3E%3C/path%3E%3C/svg%3E"); width: 24px;height: 24px; background-size: 24px 24px;}
+.hr .h5,.hr .h6 {padding-right: 10px;padding-left: 10px;margin-bottom: 0;-webkit-margin-before: 0;}
+
 
 /* 추가 정보 오른쪽 라인 박스 */
 .add-info{float:right;margin:10px 2%}

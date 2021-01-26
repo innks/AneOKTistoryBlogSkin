@@ -183,6 +183,7 @@ $(window).on("load", (e) => {
     $('#head-title, #head-nav, #sidebar, #footer').removeClass();
     $('.desc, #menuTop').removeClass('__animated__ __fadeInDown __delay-2s');
     $('.inner-title, .wrap-inner').removeClass('__animated__ __fadeInDown __delay-3s');
+    $('.inner-header').removeClass('__animated__ __fadeIn __delay-2s');
     $('.entry-content, .post-meta, .related-articles').removeClass('__animated__ __fadeInDown __delay-4s');
     $('#pagination-wrap, #etc-wrap').removeClass('__animated__ __fadeInUp __delay-5s');
   } , 500)
